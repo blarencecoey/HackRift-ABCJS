@@ -6,7 +6,7 @@ interface SplashScreenProps {
 
 export function SplashScreen({ onGetStarted }: SplashScreenProps) {
   return (
-    <div 
+    <div
       className="min-h-screen flex flex-col items-center justify-center px-8"
       style={{
         background: 'linear-gradient(135deg, #7EB8B3 0%, #F2C4B3 100%)'
@@ -18,28 +18,23 @@ export function SplashScreen({ onGetStarted }: SplashScreenProps) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center"
       >
-        <motion.h1 
-          className="mb-4"
-          style={{ 
-            fontSize: '64px',
-            color: '#FFFEF9',
-            letterSpacing: '0.05em'
-          }}
-          animate={{ 
+        <motion.img
+          src="src/assets/logo.jpg"
+          alt="YUNO Logo"
+          className="mb-4 w-64 h-auto object-contain"
+          animate={{
             scale: [1, 1.05, 1],
           }}
-          transition={{ 
+          transition={{
             duration: 2,
             repeat: Infinity,
-            ease: "easeInOut" 
+            ease: "easeInOut"
           }}
-        >
-          YUNO
-        </motion.h1>
-        
-        <motion.p 
+        />
+
+        <motion.p
           className="mb-12"
-          style={{ 
+          style={{
             fontSize: '18px',
             color: '#FFFEF9',
             opacity: 0.9
