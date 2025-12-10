@@ -1,21 +1,38 @@
+// Step 4: Update CommunityDetail.tsx to accept and use the prop.
+
 import { motion } from 'motion/react';
 import { ChevronLeft, Heart, MessageCircle, Share2, Calendar, Users } from 'lucide-react';
 import { useState } from 'react';
+import { CommunityData } from './CommunityDiscovery'; // Import the type
 
 interface CommunityDetailProps {
   onNavigate: (screen: string) => void;
+  community?: CommunityData | null;
 }
 
-export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
+export function CommunityDetail({ onNavigate, community }: CommunityDetailProps) {
   const [activeTab, setActiveTab] = useState('Feed');
 
   const tabs = ['Feed', 'Events', 'Members'];
+
+  // If no community is selected (shouldn't happen with correct flow, but good safety),
+  // we can show a loader or redirect. For now, we'll just check existence.
+  if (!community) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen text-[#4A5568]">
+        <p>No community selected.</p>
+        <button onClick={() => onNavigate('discover')} className="text-[#7EB8B3] underline mt-4">
+          Back to Discovery
+        </button>
+      </div>
+    );
+  }
 
   const posts = [
     {
       author: 'Sarah Chen',
       time: '2h ago',
-      content: 'Just finished an amazing workshop on design thinking! The collaborative energy was incredible. Anyone else there?',
+      content: `Just finished an amazing workshop in ${community.name}! The collaborative energy was incredible. Anyone else there?`,
       likes: 24,
       comments: 8,
       color: '#7EB8B3'
@@ -23,7 +40,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
     {
       author: 'James Lee',
       time: '5h ago',
-      content: 'Looking for a mentor in UX design. Would love to connect with experienced designers in the community!',
+      content: 'Looking for a mentor. Would love to connect with experienced members in this community!',
       likes: 18,
       comments: 12,
       color: '#F2C4B3'
@@ -40,7 +57,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
 
   const events = [
     {
-      title: 'Design Thinking Workshop',
+      title: `${community.name} Workshop`,
       date: 'Dec 15, 2025',
       time: '7:00 PM',
       attendees: 24
@@ -63,13 +80,13 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
   return (
     <div className="min-h-screen">
       {/* Cover Image with Gradient */}
-      <div 
+      <div
         className="relative h-64"
         style={{
-          background: 'linear-gradient(135deg, #7EB8B3 0%, #F2C4B3 100%)'
+          background: `linear-gradient(135deg, ${community.color} 0%, ${community.color}dd 100%)`
         }}
       >
-        <button 
+        <button
           onClick={() => onNavigate('discover')}
           className="absolute top-12 left-6 p-2 rounded-full"
           style={{
@@ -81,27 +98,26 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
         </button>
 
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-6">
-          <h1 className="mb-2" style={{ color: '#FFFEF9' }}>
-            Tech Creatives
+          <h1 className="mb-2 text-3xl font-bold font-serif" style={{ color: '#FFFEF9' }}>
+            {community.name}
           </h1>
           <div className="flex items-center gap-4 mb-4">
             <div className="flex items-center gap-2">
               <Users size={16} color="#FFFEF9" />
-              <span className="text-sm" style={{ color: '#FFFEF9' }}>234 members</span>
+              <span className="text-sm" style={{ color: '#FFFEF9' }}>{community.members} members</span>
             </div>
-            <span 
-              className="px-3 py-1 rounded-full text-xs"
-              style={{ backgroundColor: 'rgba(255,255,255,0.9)', color: '#7EB8B3' }}
+            <span
+              className="px-3 py-1 rounded-full text-xs font-bold"
+              style={{ backgroundColor: 'rgba(255,255,255,0.9)', color: community.color }}
             >
-              92% match
+              {community.match}% match
             </span>
           </div>
-          <button 
-            className="px-8 py-3 rounded-full"
+          <button
+            className="px-8 py-3 rounded-full font-semibold shadow-lg active:scale-95 transition-transform"
             style={{
               backgroundColor: '#FFFEF9',
-              color: '#7EB8B3',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+              color: community.color,
             }}
           >
             Join Community
@@ -110,7 +126,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
       </div>
 
       {/* Tabs */}
-      <div 
+      <div
         className="sticky top-0 px-6 pt-4"
         style={{ backgroundColor: '#F5F0EB' }}
       >
@@ -150,7 +166,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
                 }}
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <div 
+                  <div
                     className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       backgroundColor: post.color + '40',
@@ -200,7 +216,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div 
+                  <div
                     className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
                     style={{ backgroundColor: '#7EB8B3' + '20' }}
                   >
@@ -217,7 +233,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
                       <span className="text-sm" style={{ color: '#9CA3AF' }}>
                         {event.attendees} attending
                       </span>
-                      <button 
+                      <button
                         className="px-4 py-2 rounded-full"
                         style={{
                           backgroundColor: '#7EB8B3',
@@ -249,7 +265,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
                   boxShadow: '0 4px 20px rgba(0,0,0,0.04)'
                 }}
               >
-                <div 
+                <div
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"
                   style={{
                     background: 'linear-gradient(135deg, #7EB8B3 0%, #F2C4B3 100%)',
@@ -264,7 +280,7 @@ export function CommunityDetail({ onNavigate }: CommunityDetailProps) {
                 <p className="text-xs mb-3" style={{ color: '#9CA3AF' }}>
                   {member.role}
                 </p>
-                <button 
+                <button
                   className="w-full py-2 rounded-full"
                   style={{
                     backgroundColor: '#7EB8B3' + '20',
