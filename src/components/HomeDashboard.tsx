@@ -2,8 +2,8 @@ import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight, Home, Search, Heart, User, Award } from 'lucide-react'; // Icons for bottom nav later
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css'; // Ensure styles are imported
-import { useState } from 'react';
 import { SkillCount } from '../hooks/useUserProfile';
+import { useState, useEffect } from 'react';
 
 // Custom styles for DayPicker to match the design
 const calendarStyles = `
@@ -36,16 +36,92 @@ const calendarStyles = `
   .rdp-nav_button {
     color: #888888;
   }
+  .rdp-day_booked {
+    background-color: #F0F0F0; /* Light grey for booked dates */
+    color: #555555;
+    border-radius: 50%;
+  }
+  .rdp-day_booked:not(.rdp-day_selected) {
+    border: 1px dashed #D69E2E; /* Gold border for booked but not selected */
+  }
+  .my-today {
+    background-color: #E2E8F0; /* Solid gray circle for today */
+    color: #4A5568;
+    border-radius: 50%;
+    font-weight: bold;
+  }
 `;
 
 interface HomeDashboardProps {
   userName: string;
+  userId?: number;
   onNavigate: (screen: string) => void;
   topSkills: SkillCount[];
 }
 
-export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboardProps) {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date(2021, 8, 19)); // Sept 19, 2021 from mockup
+interface Booking {
+  booking_id: number;
+  user_id: number;
+  event_id: string; // e.g. "COURSE_0188"
+  event_type: string;
+  status: string;
+  booking_date: string; // "YYYY-MM-DD HH:mm:ss"
+}
+
+export function HomeDashboard({ userName, userId, onNavigate, topSkills }: HomeDashboardProps) {
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
+  const [bookings, setBookings] = useState<Booking[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  // Parse Booking Date Helper
+  const parseBookingDate = (dateStr: string) => {
+    // Basic parsing for "YYYY-MM-DD HH:mm:ss"
+    const [datePart, timePart] = dateStr.split(' ');
+    return new Date(`${datePart}T${timePart}`);
+  };
+
+  // Fetch Bookings
+  const fetchBookings = async () => {
+    if (!userId) return;
+    setLoading(true);
+    try {
+      const res = await fetch(`http://localhost:8001/user/${userId}/bookings`);
+      if (res.ok) {
+        const data = await res.json();
+        setBookings(data);
+      }
+    } catch (err) {
+      console.error("Failed to fetch bookings", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Trigger fetch on mount or userId change
+  useEffect(() => {
+    fetchBookings();
+  }, [userId]); // Re-fetch if userId changes
+
+  const bookedDates = bookings.map(booking => parseBookingDate(booking.booking_date));
+
+  const todaysBookings = bookings.filter(booking => {
+    if (!selectedDate) return false;
+    const bookingDay = parseBookingDate(booking.booking_date);
+    return (
+      bookingDay.getDate() === selectedDate.getDate() &&
+      bookingDay.getMonth() === selectedDate.getMonth() &&
+      bookingDay.getFullYear() === selectedDate.getFullYear()
+    );
+  }).sort((a, b) => {
+    const dateA = parseBookingDate(a.booking_date);
+    const dateB = parseBookingDate(b.booking_date);
+    return dateA.getTime() - dateB.getTime();
+  });
+
+  const formatTime = (dateStr: string) => {
+    const date = parseBookingDate(dateStr);
+    return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+  };
 
   return (
     <div className="min-h-screen pb-44"> {/* Increased padding for bottom nav visibility */}
@@ -61,7 +137,13 @@ export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboard
           />
         </div>
         <div className="flex flex-col">
-          <span className="text-xs text-gray-500 font-medium">Thu, 19 Sep</span>
+          <span className="text-xs text-gray-500 font-medium">
+            {selectedDate ? (
+              <>
+                {selectedDate.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short' })}
+              </>
+            ) : 'Select a date'}
+          </span>
           <h1 className="text-lg font-bold text-gray-800">
             Good Morning, {userName || 'Alyssa'}!
           </h1>
@@ -82,11 +164,15 @@ export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboard
               required
               selected={selectedDate}
               onSelect={setSelectedDate}
-              defaultMonth={new Date(2021, 8)}
+              defaultMonth={new Date()}
               showOutsideDays
+              modifiers={{
+                booked: bookedDates,
+              }}
               modifiersClassNames={{
                 selected: 'my-selected',
-                today: 'my-today'
+                today: 'my-today',
+                booked: 'my-booked'
               }}
             />
           </div>
@@ -99,29 +185,33 @@ export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboard
           <h2 className="text-base font-bold text-gray-800">Today's Plan</h2>
         </div>
         <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
-          {[
-            { title: 'Morning Refresh', time: '08:00 AM', color: '#FFF4E5' },
-            { title: 'Focus Time', time: '10:00 AM', color: '#E8F5E9' },
-            { title: 'Team Sync', time: '02:00 PM', color: '#E3F2FD' }
-          ].map((item, i) => (
-            <motion.div
-              key={`plan-${i}`}
-              className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
-              style={{ backgroundColor: '#FFFFFF' }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: item.color }}
+          {loading ? (
+            <p className="text-gray-500">Loading bookings...</p>
+          ) : todaysBookings.length > 0 ? (
+            todaysBookings.map((booking) => (
+              <motion.div
+                key={`plan-${booking.booking_id}`}
+                className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
+                style={{ backgroundColor: '#FFFFFF' }}
+                whileTap={{ scale: 0.98 }}
               >
-                <div className="w-2 h-2 rounded-full bg-gray-400 opacity-50" />
-              </div>
-              <div>
-                <span className="text-xs text-gray-400 font-medium block mb-1">{item.time}</span>
-                <h3 className="text-sm font-bold text-gray-700 leading-tight">{item.title}</h3>
-              </div>
-            </motion.div>
-          ))}
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: '#FFF4E5' }} // Placeholder color, ideally from event_type
+                >
+                  <div className="w-4 h-4 rounded-full bg-gray-400 opacity-50 flex items-center justify-center">
+                    <span className="text-[10px] text-white font-medium">{formatTime(booking.booking_date).trim().split(":")[0]}</span>
+                  </div>
+                </div>
+                <div>
+                  <span className="text-xs text-gray-400 font-medium block mb-1">{formatTime(booking.booking_date)}</span>
+                  <h3 className="text-sm font-bold text-gray-700 leading-tight">{booking.event_type}</h3>
+                </div>
+              </motion.div>
+            ))
+          ) : (
+            <p className="text-gray-500">No plans for this date.</p>
+          )}
         </div>
       </div>
 
@@ -142,17 +232,20 @@ export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboard
               style={{ backgroundColor: '#FFFFFF' }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className="flex justify-end">
-                <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: item.color }}
-                >
-                  <Heart size={14} className="text-gray-400" />
-                </div>
-              </div>
               <div>
                 <h3 className="text-sm font-bold text-gray-700 mb-1">{item.title}</h3>
-                <span className="text-xs text-gray-400">{item.participants}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-gray-400">{item.participants}</span>
+
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center hover:size-16 transition-all duration-300"
+                    style={{ backgroundColor: item.color }}
+                  >
+                    <Heart size={14} className="text-gray-400" />
+                  </div>
+                </div>
+
+
               </div>
             </motion.div>
           ))}

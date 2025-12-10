@@ -86,7 +86,7 @@ export default function App() {
   const renderScreen = () => {
     switch (currentScreen) {
       case 'splash':
-        return <SplashScreen onGetStarted={() => navigateTo('login')} />;
+        return <SplashScreen onGetStarted={() => navigateTo('home')} />;
       case 'login':
         return <LoginPage onLoginSuccess={handleLoginSuccess} />;
       case 'home':
