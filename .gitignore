@@ -1,1 +1,3 @@
 node_modules
+/api/local_vector_db
+/api/__pycache__
