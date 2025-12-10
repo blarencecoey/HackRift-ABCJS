@@ -62,6 +62,7 @@ export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
 
     try {
       const API_URL = import.meta.env.VITE_REC_API_URL || 'http://localhost:8000';
+      console.log('Fetching recommendations from:', API_URL); // Debugging
       const response = await fetch(`${API_URL}/recommend`, {
         method: 'POST',
         headers: {
