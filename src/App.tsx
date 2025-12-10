@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Home, Search, Heart, User, Compass, Users, TrendingUp } from 'lucide-react';
+import { Home, Search, Heart, User, Compass, Users, TrendingUp, BookOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SplashScreen } from './components/SplashScreen';
 import { LoginPage } from './components/LoginPage';
@@ -8,7 +8,7 @@ import { PersonalityAssessment } from './components/PersonalityAssessment';
 import { ResultsProfile } from './components/ResultsProfile';
 import { CommunityDiscovery } from './components/CommunityDiscovery';
 import { CommunityDetail } from './components/CommunityDetail';
-import { MentorMatching } from './components/MentorMatching';
+import { ReflectionPage } from './components/ReflectionPage';
 import { Profile } from './components/Profile';
 import { useUserProfile } from './hooks/useUserProfile';
 
@@ -119,8 +119,10 @@ export default function App() {
         return <CommunityDiscovery onNavigate={navigateTo} />;
       case 'community-detail':
         return <CommunityDetail onNavigate={navigateTo} />;
-      case 'mentors':
-        return <MentorMatching onNavigate={navigateTo} />;
+      case 'community-detail':
+        return <CommunityDetail onNavigate={navigateTo} />;
+      case 'reflection':
+        return <ReflectionPage onNavigate={navigateTo} />;
       case 'profile':
         return <Profile
           onNavigate={navigateTo}
@@ -168,7 +170,7 @@ export default function App() {
         </div>
 
         {showBottomNav && (
-          <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto px-4 pb-6 z-50">
+          <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto px-4 pb-6 z-[9999]">
             <div
               className="rounded-3xl px-6 py-3 flex items-center justify-between relative"
               style={{
@@ -192,10 +194,10 @@ export default function App() {
 
 
               <NavItem
-                icon={TrendingUp}
-                label="Path"
-                active={currentScreen === 'mentors'}
-                onClick={() => navigateTo('mentors')}
+                icon={BookOpen}
+                label="Reflection"
+                active={currentScreen === 'reflection'}
+                onClick={() => navigateTo('reflection')}
               />
               <NavItem
                 icon={User}
