@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { User, Lock, ArrowRight, Loader2, Mail, GraduationCap } from 'lucide-react';
+import { User, Lock, ArrowRight, Loader2, GraduationCap } from 'lucide-react';
 
 interface LoginPageProps {
     onLoginSuccess: (userName: string, userId: number, isNewUser: boolean) => void;
@@ -44,7 +44,6 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
             }
 
             // Success
-            // Determine if it was a registration or login based on local state
             const isNewUser = !isLogin;
             onLoginSuccess(data.username, data.user_id, isNewUser);
 
@@ -78,22 +77,20 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                     </p>
                 </div>
 
-                <div
-                    className="bg-[#FFFEF9] rounded-3xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
-                >
+                <div className="bg-[#FFFEF9] rounded-3xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        {/* Username */}
                         {/* Username */}
                         <div className="space-y-2">
                             <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
-                                <User size={18} />
+                                <User size={18} color="#7EB8B3" />
                                 <span>Username</span>
                             </label>
                             <input
                                 type="text"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                className="w-full px-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                className="w-full px-4 py-3 rounded-2xl text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                style={{ backgroundColor: '#F5F0EB' }}
                                 placeholder="Enter your username"
                                 required
                             />
@@ -102,14 +99,15 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                         {/* Password */}
                         <div className="space-y-2">
                             <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
-                                <Lock size={18} />
+                                <Lock size={18} color="#7EB8B3" />
                                 <span>Password</span>
                             </label>
                             <input
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full px-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                className="w-full px-4 py-3 rounded-2xl text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                style={{ backgroundColor: '#F5F0EB' }}
                                 placeholder="Enter your password"
                                 required
                             />
@@ -123,27 +121,34 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                                 className="space-y-2 overflow-hidden"
                             >
                                 <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
-                                    <GraduationCap size={18} />
+                                    <GraduationCap size={18} color="#7EB8B3" />
                                     <span>Education Level</span>
                                 </label>
-                                <div className="grid grid-cols-2 gap-2 p-1 bg-[#F5F0EB] rounded-2xl">
+                                <div
+                                    className="grid grid-cols-2 gap-2 p-1 rounded-2xl"
+                                    style={{ backgroundColor: '#F5F0EB' }}
+                                >
                                     <button
                                         type="button"
                                         onClick={() => setEducationLevel('Secondary')}
-                                        className={`py-2 px-2 rounded-xl text-sm font-medium transition-all duration-200 ${educationLevel === 'Secondary'
-                                            ? 'bg-white text-[#4A5568] shadow-sm'
-                                            : 'text-gray-400 hover:text-gray-600'
-                                            }`}
+                                        className="py-2.5 px-2 rounded-xl text-sm font-semibold transition-all duration-200"
+                                        style={{
+                                            backgroundColor: educationLevel === 'Secondary' ? '#7EB8B3' : 'transparent',
+                                            color: educationLevel === 'Secondary' ? '#FFFFFF' : '#9CA3AF',
+                                            boxShadow: educationLevel === 'Secondary' ? '0 2px 4px rgba(0,0,0,0.1)' : 'none'
+                                        }}
                                     >
                                         Secondary
                                     </button>
                                     <button
                                         type="button"
                                         onClick={() => setEducationLevel('Post-Secondary')}
-                                        className={`py-2 px-2 rounded-xl text-sm font-medium transition-all duration-200 ${educationLevel === 'Post-Secondary'
-                                            ? 'bg-white text-[#4A5568] shadow-sm'
-                                            : 'text-gray-400 hover:text-gray-600'
-                                            }`}
+                                        className="py-2.5 px-2 rounded-xl text-sm font-semibold transition-all duration-200"
+                                        style={{
+                                            backgroundColor: educationLevel === 'Post-Secondary' ? '#7EB8B3' : 'transparent',
+                                            color: educationLevel === 'Post-Secondary' ? '#FFFFFF' : '#9CA3AF',
+                                            boxShadow: educationLevel === 'Post-Secondary' ? '0 2px 4px rgba(0,0,0,0.1)' : 'none'
+                                        }}
                                     >
                                         Post-Secondary
                                     </button>
@@ -166,17 +171,18 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className={`w-full text-white py-4 rounded-2xl font-semibold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-6 ${isLogin
-                                ? 'bg-[#7EB8B3] shadow-[#7EB8B3]/30'
-                                : 'bg-[#D4A574] shadow-[#D4A574]/30'
-                                }`}
+                            className="w-full text-white py-4 rounded-2xl font-bold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-6"
+                            style={{
+                                backgroundColor: isLogin ? '#7EB8B3' : '#D4A574',
+                                boxShadow: isLogin ? '0 10px 20px -5px rgba(126, 184, 179, 0.4)' : '0 10px 20px -5px rgba(212, 165, 116, 0.4)'
+                            }}
                         >
                             {isLoading ? (
                                 <Loader2 className="animate-spin" size={20} />
                             ) : (
                                 <>
                                     <span>{isLogin ? 'Sign In' : 'Create Account'}</span>
-                                    <ArrowRight size={18} />
+                                    <ArrowRight size={20} />
                                 </>
                             )}
                         </button>
