@@ -1,6 +1,41 @@
 import { motion } from 'motion/react';
-import { Sparkles, Users, BookOpen, Compass, Heart, Smile, Meh, Frown, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Home, Search, Heart, User } from 'lucide-react'; // Icons for bottom nav later
+import { DayPicker } from 'react-day-picker';
+import 'react-day-picker/dist/style.css'; // Ensure styles are imported
 import { useState } from 'react';
+
+// Custom styles for DayPicker to match the design
+const calendarStyles = `
+  .rdp {
+    --rdp-cell-size: 40px;
+    --rdp-accent-color: #D69E2E; /* Gold/Bronze color from image for selected date */
+    --rdp-background-color: #D69E2E; 
+    margin: 0;
+  }
+  .rdp-day_selected:not([disabled]), .rdp-day_selected:focus:not([disabled]), .rdp-day_selected:active:not([disabled]), .rdp-day_selected:hover:not([disabled]) {
+    background-color: #BF905E; /* Approximate bronze/gold */
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  .rdp-day_today {
+    font-weight: bold;
+  }
+  .rdp-head_cell {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #888888;
+    font-weight: 500;
+  }
+  .rdp-caption_label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+  }
+  .rdp-nav_button {
+    color: #888888;
+  }
+`;
 
 interface HomeDashboardProps {
   userName: string;
@@ -8,295 +43,119 @@ interface HomeDashboardProps {
 }
 
 export function HomeDashboard({ userName, onNavigate }: HomeDashboardProps) {
-  const [selectedMood, setSelectedMood] = useState<string | null>(null);
-  const [reflection, setReflection] = useState('');
-
-  const moods = [
-    { icon: Star, label: 'Amazing', color: '#7EB8B3' },
-    { icon: Smile, label: 'Good', color: '#7A9A8B' },
-    { icon: Meh, label: 'Okay', color: '#F2C4B3' },
-    { icon: Frown, label: 'Low', color: '#9CA3AF' },
-  ];
-
-  const communities = [
-    { name: 'Tech Creatives', match: 92, members: 234, color: '#7EB8B3' },
-    { name: 'Mindful Makers', match: 88, members: 156, color: '#F2C4B3' },
-    { name: 'Career Explorers', match: 85, members: 189, color: '#7A9A8B' },
-  ];
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date(2021, 8, 19)); // Sept 19, 2021 from mockup
 
   return (
-    <div className="min-h-screen px-6 pt-12 pb-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <h1 className="mb-2" style={{ color: '#4A5568' }}>
-          Good morning, {userName}
-        </h1>
-        <p style={{ color: '#9CA3AF', fontSize: '14px' }}>
-          How are you feeling today?
-        </p>
-      </motion.div>
+    <div className="min-h-screen pb-44"> {/* Increased padding for bottom nav visibility */}
+      <style>{calendarStyles}</style>
 
-      {/* Mood Check-in */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-        className="mt-6 p-6 rounded-3xl"
-        style={{
-          backgroundColor: '#FFFEF9',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-        }}
-      >
-        <div className="flex items-center gap-2 mb-4">
-          <Heart size={20} style={{ color: '#F2C4B3' }} />
-          <span style={{ color: '#4A5568' }}>Mood Check-in</span>
+      {/* Header */}
+      <div className="pt-12 px-6 mb-6 flex items-start gap-4">
+        <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 border-2 border-white shadow-sm flex-shrink-0">
+          <img
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alyssa"
+            alt="Profile"
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className="flex gap-3 justify-between">
-          {moods.map((mood, index) => (
-            <motion.button
-              key={mood.label}
-              onClick={() => setSelectedMood(mood.label)}
-              className="flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300"
-              style={{
-                backgroundColor: selectedMood === mood.label ? mood.color + '15' : 'transparent',
-                border: selectedMood === mood.label ? `2px solid ${mood.color}` : '2px solid transparent'
+        <div className="flex flex-col">
+          <span className="text-xs text-gray-500 font-medium">Thu, 19 Sep</span>
+          <h1 className="text-lg font-bold text-gray-800">
+            Good Morning, {userName || 'Alyssa'}!
+          </h1>
+        </div>
+      </div>
+
+      {/* Calendar Widget */}
+      <div className="px-6 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="rounded-3xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+          style={{ backgroundColor: '#FFFFFF' }}
+        >
+          <div className="flex justify-center">
+            <DayPicker
+              mode="single"
+              required
+              selected={selectedDate}
+              onSelect={setSelectedDate}
+              defaultMonth={new Date(2021, 8)}
+              showOutsideDays
+              modifiersClassNames={{
+                selected: 'my-selected',
+                today: 'my-today'
               }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div 
-                className="w-12 h-12 rounded-full flex items-center justify-center"
-                style={{
-                  backgroundColor: '#F5F0EB',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-                }}
-              >
-                <mood.icon size={24} style={{ color: mood.color }} />
-              </div>
-              <span className="text-xs" style={{ color: '#9CA3AF' }}>{mood.label}</span>
-            </motion.button>
-          ))}
-        </div>
-      </motion.div>
+            />
+          </div>
+        </motion.div>
+      </div>
 
-      {/* Insights Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
-        className="mt-6 p-6 rounded-3xl cursor-pointer"
-        style={{
-          backgroundColor: '#FFFEF9',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-        }}
-        onClick={() => onNavigate('results')}
-        whileTap={{ scale: 0.98 }}
-      >
-        <div className="flex items-start justify-between">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles size={20} style={{ color: '#7EB8B3' }} />
-              <span style={{ color: '#4A5568' }}>Your Insights</span>
-            </div>
-            <div className="flex flex-wrap gap-2 mb-3">
-              <span 
-                className="px-3 py-1 rounded-full text-xs"
-                style={{ backgroundColor: '#7EB8B3' + '20', color: '#7EB8B3' }}
-              >
-                Creative
-              </span>
-              <span 
-                className="px-3 py-1 rounded-full text-xs"
-                style={{ backgroundColor: '#F2C4B3' + '20', color: '#7A9A8B' }}
-              >
-                Empathetic
-              </span>
-              <span 
-                className="px-3 py-1 rounded-full text-xs"
-                style={{ backgroundColor: '#7A9A8B' + '20', color: '#7A9A8B' }}
-              >
-                Curious
-              </span>
-            </div>
-            <p className="text-sm" style={{ color: '#9CA3AF' }}>
-              You&apos;re 73% complete on your journey
-            </p>
-          </div>
-          <div className="relative w-20 h-20 ml-4">
-            <svg className="transform -rotate-90" width="80" height="80">
-              <circle
-                cx="40"
-                cy="40"
-                r="34"
-                stroke="#F5F0EB"
-                strokeWidth="8"
-                fill="none"
-              />
-              <circle
-                cx="40"
-                cy="40"
-                r="34"
-                stroke="url(#gradient)"
-                strokeWidth="8"
-                fill="none"
-                strokeDasharray={`${2 * Math.PI * 34}`}
-                strokeDashoffset={`${2 * Math.PI * 34 * (1 - 0.73)}`}
-                strokeLinecap="round"
-              />
-              <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#7EB8B3" />
-                  <stop offset="100%" stopColor="#F2C4B3" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span style={{ color: '#4A5568' }}>73%</span>
-            </div>
-          </div>
+      {/* Today's Plan */}
+      <div className="mb-8">
+        <div className="px-6 mb-3">
+          <h2 className="text-base font-bold text-gray-800">Today's Plan</h2>
         </div>
-      </motion.div>
-
-      {/* Communities Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.3 }}
-        className="mt-6 p-6 rounded-3xl"
-        style={{
-          backgroundColor: '#FFFEF9',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-        }}
-      >
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2">
-            <Users size={20} style={{ color: '#7EB8B3' }} />
-            <span style={{ color: '#4A5568' }}>Your Communities</span>
-          </div>
-          <button 
-            onClick={() => onNavigate('discover')}
-            className="text-sm"
-            style={{ color: '#7EB8B3' }}
-          >
-            See all
-          </button>
-        </div>
-        <div className="flex gap-3 overflow-x-auto pb-2">
-          {communities.map((community, index) => (
+        <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
+          {[
+            { title: 'Morning Refresh', time: '08:00 AM', color: '#FFF4E5' },
+            { title: 'Focus Time', time: '10:00 AM', color: '#E8F5E9' },
+            { title: 'Team Sync', time: '02:00 PM', color: '#E3F2FD' }
+          ].map((item, i) => (
             <motion.div
-              key={index}
-              className="min-w-[160px] p-4 rounded-2xl cursor-pointer"
-              style={{
-                backgroundColor: '#F5F0EB',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-              }}
-              onClick={() => onNavigate('community-detail')}
+              key={`plan-${i}`}
+              className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
+              style={{ backgroundColor: '#FFFFFF' }}
               whileTap={{ scale: 0.98 }}
             >
-              <div 
-                className="w-full h-20 rounded-xl mb-3"
-                style={{ backgroundColor: community.color + '30' }}
-              />
-              <p className="mb-2" style={{ color: '#4A5568', fontSize: '14px' }}>
-                {community.name}
-              </p>
-              <div className="flex items-center justify-between">
-                <span 
-                  className="text-xs px-2 py-1 rounded-full"
-                  style={{ backgroundColor: community.color + '20', color: community.color }}
-                >
-                  {community.match}% match
-                </span>
-                <span className="text-xs" style={{ color: '#9CA3AF' }}>
-                  {community.members}
-                </span>
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: item.color }}
+              >
+                <div className="w-2 h-2 rounded-full bg-gray-400 opacity-50" />
+              </div>
+              <div>
+                <span className="text-xs text-gray-400 font-medium block mb-1">{item.time}</span>
+                <h3 className="text-sm font-bold text-gray-700 leading-tight">{item.title}</h3>
               </div>
             </motion.div>
           ))}
         </div>
-      </motion.div>
-
-      {/* Quick Actions */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.4 }}
-        className="mt-6 grid grid-cols-3 gap-3"
-      >
-        <ActionButton 
-          icon={BookOpen} 
-          label="Quiz" 
-          onClick={() => onNavigate('assessment')}
-        />
-        <ActionButton 
-          icon={Users} 
-          label="Mentors" 
-          onClick={() => onNavigate('mentors')}
-        />
-        <ActionButton 
-          icon={Compass} 
-          label="Explore" 
-          onClick={() => onNavigate('discover')}
-        />
-      </motion.div>
-
-      {/* Daily Reflection */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.5 }}
-        className="mt-6 p-6 rounded-3xl"
-        style={{
-          backgroundColor: '#FFFEF9',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-        }}
-      >
-        <p className="mb-3" style={{ color: '#4A5568' }}>
-          Daily Reflection
-        </p>
-        <p className="text-sm mb-4" style={{ color: '#9CA3AF' }}>
-          What made you smile today?
-        </p>
-        <textarea
-          value={reflection}
-          onChange={(e) => setReflection(e.target.value)}
-          placeholder="Write your thoughts..."
-          className="w-full px-4 py-3 rounded-2xl resize-none focus:outline-none"
-          style={{
-            backgroundColor: '#F5F0EB',
-            boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.04)',
-            color: '#4A5568',
-            fontSize: '14px'
-          }}
-          rows={3}
-        />
-      </motion.div>
-    </div>
-  );
-}
-
-function ActionButton({ icon: Icon, label, onClick }: { icon: any; label: string; onClick: () => void }) {
-  return (
-    <motion.button
-      onClick={onClick}
-      className="p-4 rounded-2xl flex flex-col items-center gap-2"
-      style={{
-        backgroundColor: '#FFFEF9',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-      }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <div 
-        className="w-12 h-12 rounded-full flex items-center justify-center"
-        style={{
-          backgroundColor: '#7EB8B3' + '20'
-        }}
-      >
-        <Icon size={24} style={{ color: '#7EB8B3' }} />
       </div>
-      <span className="text-sm" style={{ color: '#4A5568' }}>{label}</span>
-    </motion.button>
+
+      {/* Others you might enjoy */}
+      <div className="mb-4">
+        <div className="px-6 mb-3">
+          <h2 className="text-base font-bold text-gray-800">Others you might enjoy</h2>
+        </div>
+        <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
+          {[
+            { title: 'Art Therapy', participants: '12 joined', color: '#F3E5F5' },
+            { title: 'Yoga Basics', participants: '8 joined', color: '#E0F2F1' },
+            { title: 'Music Jam', participants: '24 joined', color: '#FFF3E0' }
+          ].map((item, i) => (
+            <motion.div
+              key={`other-${i}`}
+              className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
+              style={{ backgroundColor: '#FFFFFF' }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex justify-end">
+                <div
+                  className="w-8 h-8 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: item.color }}
+                >
+                  <Heart size={14} className="text-gray-400" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-gray-700 mb-1">{item.title}</h3>
+                <span className="text-xs text-gray-400">{item.participants}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
