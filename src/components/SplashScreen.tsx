@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import splashImage from '../assets/image.png';
 
 interface SplashScreenProps {
   onGetStarted: () => void;
@@ -25,32 +26,13 @@ export function SplashScreen({ onGetStarted }: SplashScreenProps) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-center flex flex-col items-center"
+        className="flex items-center justify-center"
       >
-        <h1
-          className="text-6xl mb-2 font-normal"
-          style={{
-            color: '#333333',
-            fontFamily: '"Plus Jakarta Sans", sans-serif', // Ensuring font if loaded, else fallback
-            letterSpacing: '-0.02em'
-          }}
-        >
-          yuno
-        </h1>
-
-        <motion.p
-          className=""
-          style={{
-            fontSize: '14px',
-            color: '#666666',
-            letterSpacing: '0.05em'
-          }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          Know Your Way, Know Your People
-        </motion.p>
+        <img
+          src={splashImage}
+          alt="Splash Screen"
+          className="max-w-[30%] max-h-[50vh] object-contain"
+        />
       </motion.div>
     </div>
   );
