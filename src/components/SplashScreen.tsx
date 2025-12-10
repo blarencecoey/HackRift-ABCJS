@@ -28,14 +28,14 @@ export function SplashScreen({ onGetStarted }: SplashScreenProps) {
         className="text-center flex flex-col items-center"
       >
         <h1
-          className="text-6xl mb-2 font-normal"
+          className="text-6xl mb-2 font-bold"
           style={{
             color: '#333333',
             fontFamily: '"Plus Jakarta Sans", sans-serif', // Ensuring font if loaded, else fallback
             letterSpacing: '-0.02em'
           }}
         >
-          yuno
+          YUNO
         </h1>
 
         <motion.p
