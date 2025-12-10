@@ -60,5 +60,6 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
+    allowedHosts: ['all', 'hackrift-abcjs-production.up.railway.app'],
   },
 });
