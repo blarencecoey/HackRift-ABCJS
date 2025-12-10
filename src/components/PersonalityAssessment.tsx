@@ -52,7 +52,8 @@ export function PersonalityAssessment({ onNavigate, userId, onAssessmentComplete
     // Save to backend if userId is available
     if (userId) {
       try {
-        const response = await fetch(`http://localhost:8001/user/${userId}/assessment`, {
+        const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
+        const response = await fetch(`${API_URL}/user/${userId}/assessment`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -234,6 +234,41 @@ HOLISTIC_TEMPLATES = [
 # HELPER FUNCTIONS
 # =============================================================================
 
+import google.generativeai as genai
+import os
+
+# Configure Gemini
+GENAI_API_KEY = os.getenv("GEMINI_API_KEY")
+if not GENAI_API_KEY:
+    # Fallback to a placeholder or print detailed warning if env var missing
+    # In production/docker, this should be injected.
+    print("[WARNING] GEMINI_API_KEY not set. Embedding generation will fail unless set.")
+else:
+    genai.configure(api_key=GENAI_API_KEY)
+
+# Use Gemini Embedding Model
+EMBEDDING_MODEL = "models/text-embedding-004"
+
+def get_embedding(text):
+    """Generate embedding using Gemini API"""
+    try:
+        # Check if key exists
+        if not GENAI_API_KEY:
+             return []
+        
+        # Strip newlines for robustness
+        text = text.replace("\n", " ")
+        
+        result = genai.embed_content(
+            model=EMBEDDING_MODEL,
+            content=text,
+            task_type="retrieval_document"
+        )
+        return result['embedding']
+    except Exception as e:
+        print(f"Error generating embedding for text '{text[:20]}...': {e}")
+        return []
+
 def generate_course_description(title: str, category: str, difficulty: str, provider: str) -> str:
     """Generate realistic course descriptions based on title and category."""
     

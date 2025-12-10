@@ -50,7 +50,8 @@ export default function App() {
   // Fetch user data from backend
   const fetchUserData = async (userId: number) => {
     try {
-      const response = await fetch(`http://localhost:8001/user/${userId}`);
+      const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
+      const response = await fetch(`${API_URL}/user/${userId}`);
       if (response.ok) {
         const data = await response.json();
         console.log("App: Fetched user data:", data); // Added log

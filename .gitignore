@@ -3,3 +3,4 @@ package-lock.json
 /api/local_vector_db
 /api/__pycache__
 /api/__pycache__
+.env
