@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Python Backend Service
+  backend:
+    build: 
+      context: ./api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the api directory for hot reloading
+      - ./api:/app
+      # Ensure the local database is accessible and persisted
+      - ./api/local_vector_db:/app/local_vector_db
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  # User Auth API Service
+  auth-backend:
+    build:
+      context: ./api
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./api:/app
+    command: uvicorn user_auth.user_api:app --host 0.0.0.0 --port 8001 --reload
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  # React Frontend Service
+  frontend:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount src for hot reloading
+      - ./src:/app/src
+      # Mount public for hot reloading assets
+      - ./public:/app/public
+      - ./index.html:/app/index.html
+      # Keep node_modules inside container specific
+      - /app/node_modules
+    depends_on:
+      - backend
+      - auth-backend
