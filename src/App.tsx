@@ -28,14 +28,59 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState<string>('splash');
   const [userName, setUserName] = useState('Guest');
   const { completedActivities, addActivity, removeActivity, getTopSkills } = useUserProfile();
+  const [userData, setUserData] = useState<{
+    userId: number | null;
+    username: string;
+    oceanScores: Record<string, number>;
+    riasecCode: string;
+  }>({
+
+    userId: null,
+    username: 'Guest',
+    oceanScores: {
+      Openness: 50,
+      Conscientiousness: 50,
+      Extraversion: 50,
+      Agreeableness: 50,
+      Neuroticism: 50
+    },
+    riasecCode: 'UNK'
+  });
+
+  // Fetch user data from backend
+  const fetchUserData = async (userId: number) => {
+    try {
+      const response = await fetch(`http://localhost:8001/user/${userId}`);
+      if (response.ok) {
+        const data = await response.json();
+        setUserData({
+          userId: data.user_id,
+          username: data.username,
+          oceanScores: data.ocean_scores,
+          riasecCode: data.riasec_code
+        });
+        setUserName(data.username);
+      }
+    } catch (error) {
+      console.error('Failed to fetch user data:', error);
+    }
+  };
 
   const navigateTo = (screen: string) => {
     setCurrentScreen(screen);
   };
 
-  const handleLoginSuccess = (name: string) => {
+  const handleLoginSuccess = (name: string, userId: number) => {
     setUserName(name);
+    fetchUserData(userId);  // Fetch complete user data
     navigateTo('home');
+  };
+
+  // Function to refresh user data (used after assessment completion)
+  const refreshCurrentUserData = () => {
+    if (userData.userId) {
+      fetchUserData(userData.userId);
+    }
   };
 
   const renderScreen = () => {
@@ -47,7 +92,11 @@ export default function App() {
       case 'home':
         return <HomeDashboard userName={userName} onNavigate={navigateTo} topSkills={getTopSkills(5)} />;
       case 'assessment':
-        return <PersonalityAssessment onNavigate={navigateTo} />;
+        return <PersonalityAssessment
+          onNavigate={navigateTo}
+          userId={userData.userId || undefined}
+          onAssessmentComplete={refreshCurrentUserData}
+        />;
       case 'results':
         return <ResultsProfile onNavigate={navigateTo} />;
       case 'discover':
@@ -57,7 +106,16 @@ export default function App() {
       case 'mentors':
         return <MentorMatching onNavigate={navigateTo} />;
       case 'profile':
-        return <Profile onNavigate={navigateTo} completedActivities={completedActivities} addActivity={addActivity} removeActivity={removeActivity} getTopSkills={getTopSkills} />;
+        return <Profile
+          onNavigate={navigateTo}
+          completedActivities={completedActivities}
+          addActivity={addActivity}
+          removeActivity={removeActivity}
+          getTopSkills={getTopSkills}
+          userName={userData.username}
+          oceanScores={userData.oceanScores}
+          riasecCode={userData.riasecCode}
+        />;
       default:
         return <HomeDashboard userName={userName} onNavigate={navigateTo} topSkills={getTopSkills(5)} />;
     }

@@ -10,6 +10,9 @@ interface ProfileProps {
   addActivity: (activity: Activity) => boolean;
   removeActivity: (activityId: string) => boolean;
   getTopSkills: (limit?: number) => SkillCount[];
+  userName?: string;
+  oceanScores?: Record<string, number>;
+  riasecCode?: string;
 }
 
 export function Profile({
@@ -17,28 +20,49 @@ export function Profile({
   completedActivities,
   addActivity,
   removeActivity,
-  getTopSkills
+  getTopSkills,
+  userName = 'Guest',
+  oceanScores,
+  riasecCode = 'UNK'
 }: ProfileProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<Activity[]>([]);
   const [showResults, setShowResults] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  const oceanTraits = [
-    { name: 'Openness', value: 68, color: '#7EB8B3' },
-    { name: 'Conscientiousness', value: 56, color: '#7A9A8B' },
-    { name: 'Extraversion', value: 72, color: '#7EB8B3' },
-    { name: 'Agreeableness', value: 72, color: '#F2C4B3' },
-    { name: 'Neuroticism', value: 48, color: '#9CA3AF' }
+  // Use dynamic OCEAN scores from props or fall back to default
+  const oceanTraits = oceanScores ? [
+    { name: 'Openness', value: oceanScores.Openness || 50, color: '#7EB8B3' },
+    { name: 'Conscientiousness', value: oceanScores.Conscientiousness || 50, color: '#7A9A8B' },
+    { name: 'Extraversion', value: oceanScores.Extraversion || 50, color: '#7EB8B3' },
+    { name: 'Agreeableness', value: oceanScores.Agreeableness || 50, color: '#F2C4B3' },
+    { name: 'Neuroticism', value: oceanScores.Neuroticism || 50, color: '#9CA3AF' }
+  ] : [
+    { name: 'Openness', value: 50, color: '#7EB8B3' },
+    { name: 'Conscientiousness', value: 50, color: '#7A9A8B' },
+    { name: 'Extraversion', value: 50, color: '#7EB8B3' },
+    { name: 'Agreeableness', value: 50, color: '#F2C4B3' },
+    { name: 'Neuroticism', value: 50, color: '#9CA3AF' }
   ];
 
+  // For RIASEC, we don't have individual scores yet, so calculate them from the code
+  // If riasecCode is "IAS", give I=80, A=70, S=60, others=50
+  const getRiasecValue = (code: string) => {
+    if (!riasecCode || riasecCode === 'UNK') return 50;
+    const position = riasecCode.indexOf(code);
+    if (position === 0) return 80;
+    if (position === 1) return 70;
+    if (position === 2) return 60;
+    return 45;
+  };
+
   const riasecTraits = [
-    { name: 'Realistic', value: 65, color: '#7EB8B3' },
-    { name: 'Investigative', value: 65, color: '#5A9FB0' },
-    { name: 'Artistic', value: 60, color: '#9B7FB8' },
-    { name: 'Social', value: 75, color: '#F2A85C' },
-    { name: 'Enterprising', value: 55, color: '#E85C5C' },
-    { name: 'Conventional', value: 65, color: '#5C7AE8' }
+    { name: 'Realistic', value: getRiasecValue('R'), color: '#7EB8B3' },
+    { name: 'Investigative', value: getRiasecValue('I'), color: '#5A9FB0' },
+    { name: 'Artistic', value: getRiasecValue('A'), color: '#9B7FB8' },
+    { name: 'Social', value: getRiasecValue('S'), color: '#F2A85C' },
+    { name: 'Enterprising', value: getRiasecValue('E'), color: '#E85C5C' },
+    { name: 'Conventional', value: getRiasecValue('C'), color: '#5C7AE8' }
   ];
 
   const personalityType = oceanTraits.reduce((max, trait) =>
@@ -48,6 +72,15 @@ export function Profile({
   const careerInclination = riasecTraits.reduce((max, trait) =>
     trait.value > max.value ? trait : max
   );
+
+  // Generate initials from username
+  const getUserInitials = (name: string): string => {
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return name.substring(0, 2).toUpperCase();
+  };
 
   const topSkills = getTopSkills(7);
 
@@ -117,11 +150,11 @@ export function Profile({
               color: '#FFFEF9'
             }}
           >
-            AT
+            {getUserInitials(userName)}
           </div>
           <div className="flex-1">
             <h2 className="mb-1" style={{ color: '#4A5568', fontSize: '20px' }}>
-              Alex Tan
+              {userName}
             </h2>
             <p className="text-sm mb-3" style={{ color: '#9CA3AF' }}>
               20 years old

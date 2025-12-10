@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { User, Lock, ArrowRight, Loader2, Mail, GraduationCap } from 'lucide-react';
 
 interface LoginPageProps {
-    onLoginSuccess: (userName: string) => void;
+    onLoginSuccess: (userName: string, userId: number) => void;
 }
 
 export function LoginPage({ onLoginSuccess }: LoginPageProps) {
@@ -44,7 +44,7 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
             }
 
             // Success
-            onLoginSuccess(data.username);
+            onLoginSuccess(data.username, data.user_id);
 
         } catch (err: any) {
             setError(err.message);

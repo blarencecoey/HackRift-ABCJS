@@ -34,6 +34,10 @@ class BookingResponse(BaseModel):
     status: str
     booking_date: str
 
+class AssessmentResult(BaseModel):
+    ocean_scores: Dict[str, int]
+    riasec_code: str
+
 class UserResponse(BaseModel):
     user_id: int
     username: str
@@ -206,6 +210,70 @@ def get_user_bookings(user_id: int):
         ))
     
     return results
+
+@app.get("/user/{user_id}", response_model=UserResponse)
+def get_user(user_id: int):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Fetch user and profile
+    cursor.execute("""
+        SELECT u.id, u.username, u.education_level,
+               p.riasec_code, p.ocean_scores
+        FROM users u
+        LEFT JOIN user_profiles p ON u.id = p.user_id
+        WHERE u.id = ?
+    """, (user_id,))
+    
+    row = cursor.fetchone()
+    conn.close()
+    
+    if not row:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    # Parse OCEAN scores from JSON string
+    ocean_data = {}
+    if row["ocean_scores"]:
+        try:
+            ocean_data = json.loads(row["ocean_scores"])
+        except:
+            ocean_data = {}
+    
+    return UserResponse(
+        user_id=row["id"],
+        username=row["username"],
+        education_level=row["education_level"],
+        riasec_code=row["riasec_code"] if row["riasec_code"] else "UNK",
+        ocean_scores=ocean_data
+    )
+
+@app.post("/user/{user_id}/assessment")
+def save_assessment(user_id: int, result: AssessmentResult):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    try:
+        # Convert ocean_scores dict to JSON string
+        ocean_json = json.dumps(result.ocean_scores)
+        
+        # Update user profile
+        cursor.execute("""
+            UPDATE user_profiles
+            SET riasec_code = ?, ocean_scores = ?
+            WHERE user_id = ?
+        """, (result.riasec_code, ocean_json, user_id))
+        
+        conn.commit()
+        
+        if cursor.rowcount == 0:
+            raise HTTPException(status_code=404, detail="User profile not found")
+        
+        return {"message": "Assessment saved successfully"}
+    except Exception as e:
+        conn.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
 
 if __name__ == "__main__":
     import uvicorn
