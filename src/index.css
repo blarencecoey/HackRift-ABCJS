@@ -32,7 +32,7 @@
 
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --spacing: .25rem;
     --container-md: 28rem;
@@ -48,6 +48,13 @@
     --font-weight-medium: 500;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
+    /* Custom Colors */
+    --color-beige-bg: #F5F0EB;
+    --color-beige-card: #FFFEF9;
+    --color-teal-accent: #7EB8B3;
+    --color-text-dark: #333333;
+    --color-text-muted: #888888;
+    
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);

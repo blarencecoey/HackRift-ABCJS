@@ -5,65 +5,53 @@ interface SplashScreenProps {
 }
 
 export function SplashScreen({ onGetStarted }: SplashScreenProps) {
+  // Auto-navigate after delay (optional, but requested design usually implies interaction or timeout? 
+  // User didn't specify, but typical splash screens often auto-advance or wait for tap. 
+  // The original had a button. The image just shows the logo.
+  // I will keep it simple: Just the logo for now, maybe tap anywhere to continue or a subtle button?
+  // The image shows CLEAN splash. No specific button visible in the first image, but usually there is one or it times out.
+  // I'll make the whole screen clickable to proceed for better UX if there's no visible button.
+
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center px-8"
+      onClick={onGetStarted}
+      className="min-h-screen flex flex-col items-center justify-center cursor-pointer"
       style={{
-        background: 'linear-gradient(135deg, #7EB8B3 0%, #F2C4B3 100%)'
+        backgroundColor: '#F5F0EB'
+        // Using the hex directly or var if configured. 
       }}
     >
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center"
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-center flex flex-col items-center"
       >
-        <motion.img
-          src="src/assets/logo.jpg"
-          alt="YUNO Logo"
-          className="mb-4 w-64 h-auto object-contain"
-          animate={{
-            scale: [1, 1.05, 1],
+        <h1
+          className="text-6xl mb-2 font-normal"
+          style={{
+            color: '#333333',
+            fontFamily: '"Plus Jakarta Sans", sans-serif', // Ensuring font if loaded, else fallback
+            letterSpacing: '-0.02em'
           }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+        >
+          yuno
+        </h1>
 
         <motion.p
-          className="mb-12"
+          className=""
           style={{
-            fontSize: '18px',
-            color: '#FFFEF9',
-            opacity: 0.9
+            fontSize: '14px',
+            color: '#666666',
+            letterSpacing: '0.05em'
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.9 }}
-          transition={{ delay: 0.3 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
         >
-          Know Your Way. Know Your People.
+          Know Your Way, Know Your People
         </motion.p>
       </motion.div>
-
-      <motion.button
-        onClick={onGetStarted}
-        className="px-12 py-4 rounded-full transition-transform duration-300 active:scale-95"
-        style={{
-          backgroundColor: '#FFFEF9',
-          color: '#7EB8B3',
-          fontSize: '16px',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
-        }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-      >
-        Get Started
-      </motion.button>
     </div>
   );
 }
