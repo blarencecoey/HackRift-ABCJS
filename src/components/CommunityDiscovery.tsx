@@ -206,36 +206,38 @@ export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
           whileTap={{ scale: 0.98 }}
         >
           <div
-            className="relative h-40 p-6 flex flex-col justify-end"
+            className="relative p-6 flex flex-col gap-4"
             style={{
               background: `linear-gradient(135deg, ${featuredCommunity.color} 0%, ${featuredCommunity.color}dd 100%)`,
               boxShadow: '0 8px 24px rgba(0,0,0,0.08)'
             }}
           >
-            <div className="absolute top-4 right-4">
+            <div className="flex justify-between items-start">
+              <h3 className="text-xl font-bold font-serif pr-24" style={{ color: '#FFFEF9' }}>
+                {featuredCommunity.name}
+              </h3>
               <div
-                className="px-3 py-1 rounded-full flex items-center gap-1"
+                className="absolute top-6 right-6 px-3 py-1 rounded-full flex items-center gap-1"
                 style={{ backgroundColor: 'rgba(255,255,255,0.3)', color: '#FFFEF9' }}
               >
                 <Sparkles size={14} />
-                <span className="text-xs">Top Match</span>
+                <span className="text-xs font-medium">Top Match</span>
               </div>
             </div>
-            <h3 className="mb-1" style={{ color: '#FFFEF9' }}>
-              {featuredCommunity.name}
-            </h3>
-            <p className="text-sm mb-3 line-clamp-2" style={{ color: '#FFFEF9', opacity: 0.9 }}>
+
+            <p className="text-sm leading-relaxed" style={{ color: '#FFFEF9', opacity: 0.95 }}>
               {featuredCommunity.description}
             </p>
-            <div className="flex items-center gap-4">
-              <span className="text-sm" style={{ color: '#FFFEF9' }}>
-                {featuredCommunity.members} interested
-              </span>
+
+            <div className="flex items-center gap-3 pt-2">
               <span
-                className="px-3 py-1 rounded-full text-xs"
-                style={{ backgroundColor: 'rgba(255,255,255,0.9)', color: featuredCommunity.color }}
+                className="px-3 py-1 rounded-full text-xs font-bold"
+                style={{ backgroundColor: '#FFFEF9', color: featuredCommunity.color }}
               >
                 {featuredCommunity.match}% match
+              </span>
+              <span className="text-xs font-medium opacity-90" style={{ color: '#FFFEF9' }}>
+                {featuredCommunity.members} interested
               </span>
             </div>
           </div>
