@@ -16,7 +16,7 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
     const [password, setPassword] = useState('');
     const [educationLevel, setEducationLevel] = useState<'Secondary' | 'Post-Secondary'>('Post-Secondary');
 
-    const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
+    const API_URL = import.meta.env.VITE_AUTH_API_URL || 'https://triumphant-enthusiasm-production.up.railway.app';
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
