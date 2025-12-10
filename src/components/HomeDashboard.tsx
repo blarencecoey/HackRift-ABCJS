@@ -84,7 +84,7 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
 
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(false);
-
+  const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
   // Parse Booking Date Helper
   const parseBookingDate = (dateStr: string) => {
     // Basic parsing for "YYYY-MM-DD HH:mm:ss"
@@ -101,7 +101,7 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
     }
     setLoading(true);
     try {
-      const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
+
       const res = await fetch(`${API_URL}/user/${userId}/bookings`);
       if (res.ok) {
         const data = await res.json();
@@ -188,7 +188,7 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
     console.log("Sending booking payload:", payload);
 
     try {
-      const res = await fetch('http://localhost:8001/book', {
+      const res = await fetch(`${API_URL}/book`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
