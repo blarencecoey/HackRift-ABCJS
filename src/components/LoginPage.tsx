@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { User, Lock, ArrowRight, Loader2, Mail, GraduationCap } from 'lucide-react';
 
 interface LoginPageProps {
-    onLoginSuccess: (userName: string, userId: number) => void;
+    onLoginSuccess: (userName: string, userId: number, isNewUser: boolean) => void;
 }
 
 export function LoginPage({ onLoginSuccess }: LoginPageProps) {
@@ -44,7 +44,9 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
             }
 
             // Success
-            onLoginSuccess(data.username, data.user_id);
+            // Determine if it was a registration or login based on local state
+            const isNewUser = !isLogin;
+            onLoginSuccess(data.username, data.user_id, isNewUser);
 
         } catch (err: any) {
             setError(err.message);

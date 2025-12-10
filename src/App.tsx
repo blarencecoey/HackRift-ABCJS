@@ -76,15 +76,20 @@ export default function App() {
     setCurrentScreen(screen);
   };
 
-  const handleLoginSuccess = (username: string, userId: number) => {
-    console.log("App: handleLoginSuccess called with", { username, userId });
+  const handleLoginSuccess = (username: string, userId: number, isNewUser: boolean) => {
+    console.log("App: handleLoginSuccess called with", { username, userId, isNewUser });
     setUserName(username);
     setUserData(prev => {
       console.log("App: setting userData with userId", userId);
       return { ...prev, userId };
     });
     fetchUserData(userId);  // Fetch complete user data
-    setCurrentScreen('home');
+
+    if (isNewUser) {
+      setCurrentScreen('assessment');
+    } else {
+      setCurrentScreen('home');
+    }
   };
 
   // Function to refresh user data (used after assessment completion)
