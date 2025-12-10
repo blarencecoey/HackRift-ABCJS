@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Home, Search, Heart, User, Compass, Users, TrendingUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SplashScreen } from './components/SplashScreen';
+import { LoginPage } from './components/LoginPage';
 import { HomeDashboard } from './components/HomeDashboard';
 import { PersonalityAssessment } from './components/PersonalityAssessment';
 import { ResultsProfile } from './components/ResultsProfile';
@@ -24,16 +25,23 @@ const NavItem = ({ icon: Icon, label, active, onClick }: { icon: any, label: str
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<string>('splash');
-  const [userName, setUserName] = useState('Alyssa');
+  const [userName, setUserName] = useState('Guest');
 
   const navigateTo = (screen: string) => {
     setCurrentScreen(screen);
   };
 
+  const handleLoginSuccess = (name: string) => {
+    setUserName(name);
+    navigateTo('home');
+  };
+
   const renderScreen = () => {
     switch (currentScreen) {
       case 'splash':
-        return <SplashScreen onGetStarted={() => navigateTo('home')} />;
+        return <SplashScreen onGetStarted={() => navigateTo('login')} />;
+      case 'login':
+        return <LoginPage onLoginSuccess={handleLoginSuccess} />;
       case 'home':
         return <HomeDashboard userName={userName} onNavigate={navigateTo} />;
       case 'assessment':
@@ -53,7 +61,7 @@ export default function App() {
     }
   };
 
-  const showBottomNav = !['splash', 'splash-screen'].includes(currentScreen);
+  const showBottomNav = !['splash', 'splash-screen', 'login'].includes(currentScreen);
 
   return (
     <div className="min-h-screen relative font-sans" style={{ backgroundColor: '#F5F0EB' }}>
