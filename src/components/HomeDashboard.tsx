@@ -1,10 +1,8 @@
 import { motion } from 'motion/react';
-import { ChevronLeft, ChevronRight, Home, Search, Heart, User, Sparkles } from 'lucide-react'; // Icons for bottom nav later
+import { ChevronLeft, ChevronRight, Home, Search, Heart, User } from 'lucide-react'; // Icons for bottom nav later
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css'; // Ensure styles are imported
 import { useState } from 'react';
-import { SkillCount } from '../hooks/useUserProfile';
-
 
 // Custom styles for DayPicker to match the design
 const calendarStyles = `
@@ -42,10 +40,9 @@ const calendarStyles = `
 interface HomeDashboardProps {
   userName: string;
   onNavigate: (screen: string) => void;
-  topSkills: SkillCount[];
 }
 
-export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboardProps) {
+export function HomeDashboard({ userName, onNavigate }: HomeDashboardProps) {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date(2021, 8, 19)); // Sept 19, 2021 from mockup
 
   return (
@@ -68,38 +65,6 @@ export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboard
           </h1>
         </div>
       </div>
-
-      {/* Top Skills Section */}
-      {topSkills.length > 0 && (
-        <div className="mb-8">
-          <div className="px-6 mb-3">
-            <h2 className="text-base font-bold text-gray-800">Your Top Skills</h2>
-          </div>
-          <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
-            {topSkills.map((skillCount, i) => (
-              <motion.div
-                key={`skill-${i}`}
-                className="min-w-[140px] h-[100px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
-                style={{ backgroundColor: '#FFFFFF' }}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-              >
-                <div className="flex items-center gap-2">
-                  <Sparkles size={16} style={{ color: '#7EB8B3' }} />
-                  <span className="text-xs font-medium" style={{ color: '#7EB8B3' }}>
-                    × {skillCount.count}
-                  </span>
-                </div>
-                <h3 className="text-sm font-bold text-gray-700 leading-tight">
-                  {skillCount.skill}
-                </h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Calendar Widget */}
       <div className="px-6 mb-8">
