@@ -13,16 +13,20 @@ import { Profile } from './components/Profile';
 import { useUserProfile } from './hooks/useUserProfile';
 
 // Defined NavItem component to fix the rendering error
-const NavItem = ({ icon: Icon, label, active, onClick }: { icon: any, label: string, active: boolean, onClick: () => void }) => (
-  <button
-    onClick={onClick}
-    className={`flex flex-col items-center justify-center p-2 transition-colors duration-200 ${active ? 'text-[#7EB8B3]' : 'text-gray-400'
-      }`}
-  >
-    <Icon size={24} strokeWidth={active ? 2.5 : 2} />
-    {/* Optional: Add label if needed for accessibility or design */}
-  </button>
-);
+const NavItem = ({ icon: Icon, label, active, onClick }: { icon: any, label: string, active: boolean, onClick: () => void }) => {
+  // console.log(`NavItem ${label} active:`, active); // Debug
+  return (
+    <button
+      onClick={onClick}
+      className="flex flex-col items-center justify-center p-1"
+    >
+      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${active ? 'bg-[#707070] text-white shadow-lg scale-110' : 'text-gray-400 hover:bg-gray-50'
+        }`}>
+        <Icon size={24} strokeWidth={active ? 2.5 : 2} />
+      </div>
+    </button>
+  );
+};
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<string>('splash');
