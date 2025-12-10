@@ -1,9 +1,7 @@
-// Step 4: Update CommunityDetail.tsx to accept and use the prop.
-
 import { motion } from 'motion/react';
 import { ChevronLeft, Heart, MessageCircle, Share2, Calendar, Users } from 'lucide-react';
 import { useState } from 'react';
-import { CommunityData } from './CommunityDiscovery'; // Import the type
+import { CommunityData } from './CommunityDiscovery';
 
 interface CommunityDetailProps {
   onNavigate: (screen: string) => void;
@@ -11,136 +9,136 @@ interface CommunityDetailProps {
 }
 
 export function CommunityDetail({ onNavigate, community }: CommunityDetailProps) {
-  const [activeTab, setActiveTab] = useState('Feed');
+  const [activeTab, setActiveTab] = useState('Overview');
 
-  const tabs = ['Feed', 'Events', 'Members'];
+  const tabs = ['Overview', 'Reviews', 'Classmates'];
 
-  // If no community is selected (shouldn't happen with correct flow, but good safety),
-  // we can show a loader or redirect. For now, we'll just check existence.
+  // Safety check
   if (!community) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen text-[#4A5568]">
-        <p>No community selected.</p>
-        <button onClick={() => onNavigate('discover')} className="text-[#7EB8B3] underline mt-4">
+      <div className="flex flex-col items-center justify-center min-h-screen text-[#4A5568] bg-[#F5F0EB]">
+        <p className="mb-4">No content selected.</p>
+        <button
+          onClick={() => onNavigate('discover')}
+          className="px-6 py-2 rounded-full bg-[#7EB8B3] text-white"
+        >
           Back to Discovery
         </button>
       </div>
     );
   }
 
-  const posts = [
+  // Dynamic Content Logic
+  const isTech = community.tags.some(t => ['Tech', 'Coding', 'Dev', 'AI', 'Data', 'Upskilling'].includes(t));
+  const isWellness = community.tags.some(t => ['Wellness', 'Mindfulness', 'Yoga', 'Health', 'Holistic'].includes(t));
+
+  // Reviews Data
+  const reviews = [
     {
-      author: 'Sarah Chen',
-      time: '2h ago',
-      content: `Just finished an amazing workshop in ${community.name}! The collaborative energy was incredible. Anyone else there?`,
-      likes: 24,
-      comments: 8,
+      author: 'Jamie L.',
+      rating: 5,
+      date: '2 days ago',
+      content: isTech ? 'Incredible depth! The project-based approach really helped me understand the concepts.' : 'A truly transformative experience. I felt so much lighter after just one session.',
       color: '#7EB8B3'
     },
     {
-      author: 'James Lee',
-      time: '5h ago',
-      content: 'Looking for a mentor. Would love to connect with experienced members in this community!',
-      likes: 18,
-      comments: 12,
+      author: 'Sam T.',
+      rating: 4,
+      date: '1 week ago',
+      content: isTech ? 'Great instructor, though the pace was a bit fast for beginners. fast-paced.' : 'Wonderful atmosphere and community. Highly recommend for anyone looking to de-stress.',
       color: '#F2C4B3'
     },
     {
-      author: 'Maya Kumar',
-      time: '1d ago',
-      content: 'Excited to share my latest project with you all. Thank you for the constant inspiration and support! 💚',
-      likes: 42,
-      comments: 15,
+      author: 'Alex P.',
+      rating: 5,
+      date: '2 weeks ago',
+      content: 'Exceeded my expectations. The networking opportunities were a huge bonus.',
       color: '#7A9A8B'
     }
   ];
 
-  const events = [
-    {
-      title: `${community.name} Workshop`,
-      date: 'Dec 15, 2025',
-      time: '7:00 PM',
-      attendees: 24
-    },
-    {
-      title: 'Community Meetup',
-      date: 'Dec 20, 2025',
-      time: '6:30 PM',
-      attendees: 38
-    }
-  ];
-
-  const members = [
-    { name: 'Sarah C.', role: 'Designer', initials: 'SC' },
-    { name: 'James L.', role: 'Developer', initials: 'JL' },
-    { name: 'Maya K.', role: 'Product', initials: 'MK' },
-    { name: 'Alex T.', role: 'Writer', initials: 'AT' }
+  // Classmates/Attendees Data
+  const classmates = [
+    { name: 'Sarah Chen', role: 'UX Designer', initials: 'SC', status: 'Enrolled' },
+    { name: 'James Lee', role: 'Product Manager', initials: 'JL', status: 'Enrolled' },
+    { name: 'Maya Kumar', role: 'Developer', initials: 'MK', status: 'Waitlist' },
+    { name: 'Alex Thompson', role: 'Student', initials: 'AT', status: 'Enrolled' }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Cover Image with Gradient */}
+    <div className="min-h-screen font-sans bg-[#F5F0EB]">
+      {/* Cover Header */}
       <div
-        className="relative h-64"
+        className="relative h-72 rounded-b-3xl overflow-hidden shadow-lg"
         style={{
           background: `linear-gradient(135deg, ${community.color} 0%, ${community.color}dd 100%)`
         }}
       >
         <button
           onClick={() => onNavigate('discover')}
-          className="absolute top-12 left-6 p-2 rounded-full"
+          className="absolute top-12 left-6 p-2 rounded-full hover:bg-white/20 transition-colors z-10"
           style={{
-            backgroundColor: 'rgba(255,255,255,0.3)',
+            backgroundColor: 'rgba(255,255,255,0.2)',
             backdropFilter: 'blur(10px)'
           }}
         >
           <ChevronLeft size={24} color="#FFFEF9" />
         </button>
 
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-6">
-          <h1 className="mb-2 text-3xl font-bold font-serif" style={{ color: '#FFFEF9' }}>
-            {community.name}
-          </h1>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <Users size={16} color="#FFFEF9" />
-              <span className="text-sm" style={{ color: '#FFFEF9' }}>{community.members} members</span>
-            </div>
+        <div className="absolute bottom-0 left-0 right-0 px-6 pb-8">
+          <div className="flex items-center gap-2 mb-3">
             <span
-              className="px-3 py-1 rounded-full text-xs font-bold"
-              style={{ backgroundColor: 'rgba(255,255,255,0.9)', color: community.color }}
+              className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+              style={{ backgroundColor: 'rgba(255,255,255,0.25)', color: '#FFFEF9' }}
             >
-              {community.match}% match
+              {community.tags[0]}
+            </span>
+            <span
+              className="px-3 py-1 rounded-full text-xs font-bold bg-white text-gray-800"
+            >
+              ⭐ {community.match}% Match
             </span>
           </div>
+
+          <h1 className="mb-3 text-3xl font-bold font-serif leading-tight" style={{ color: '#FFFEF9' }}>
+            {community.name}
+          </h1>
+
+          <div className="flex items-center gap-6 mb-6 text-white/90 text-sm">
+            <div className="flex items-center gap-2">
+              <Users size={16} />
+              <span>{community.members} signed up</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Calendar size={16} />
+              <span>Starting Dec 15</span>
+            </div>
+          </div>
+
           <button
-            className="px-8 py-3 rounded-full font-semibold shadow-lg active:scale-95 transition-transform"
+            className="w-full py-4 rounded-2xl font-bold shadow-xl active:scale-95 transition-transform text-center"
             style={{
               backgroundColor: '#FFFEF9',
               color: community.color,
             }}
           >
-            Join Community
+            Register Now
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div
-        className="sticky top-0 px-6 pt-4"
-        style={{ backgroundColor: '#F5F0EB' }}
-      >
-        <div className="flex gap-2 mb-4">
+      <div className="sticky top-0 z-20 pt-4 pb-2 px-6" style={{ backgroundColor: '#F5F0EB' }}>
+        <div className="flex justify-between bg-white/50 p-1 rounded-2xl backdrop-blur-sm">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className="px-4 py-2 rounded-full transition-all duration-300"
+              className="flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300"
               style={{
-                backgroundColor: activeTab === tab ? '#FFFEF9' : 'transparent',
+                backgroundColor: activeTab === tab ? '#FFFFFF' : 'transparent',
                 color: activeTab === tab ? '#4A5568' : '#9CA3AF',
-                boxShadow: activeTab === tab ? '0 2px 8px rgba(0,0,0,0.04)' : 'none',
-                fontSize: '14px'
+                boxShadow: activeTab === tab ? '0 2px 8px rgba(0,0,0,0.05)' : 'none'
               }}
             >
               {tab}
@@ -149,150 +147,103 @@ export function CommunityDetail({ onNavigate, community }: CommunityDetailProps)
         </div>
       </div>
 
-      {/* Content */}
-      <div className="px-6 pb-8">
-        {activeTab === 'Feed' && (
-          <div className="space-y-4">
-            {posts.map((post, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-5 rounded-3xl"
-                style={{
-                  backgroundColor: '#FFFEF9',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-                }}
-              >
-                <div className="flex items-start gap-3 mb-3">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{
-                      backgroundColor: post.color + '40',
-                      color: '#4A5568'
-                    }}
-                  >
-                    {post.author.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div className="flex-1">
-                    <p style={{ color: '#4A5568' }}>{post.author}</p>
-                    <p className="text-xs" style={{ color: '#9CA3AF' }}>{post.time}</p>
-                  </div>
-                </div>
-                <p className="mb-4" style={{ color: '#4A5568', fontSize: '14px' }}>
-                  {post.content}
-                </p>
-                <div className="flex items-center gap-6">
-                  <button className="flex items-center gap-2">
-                    <Heart size={20} style={{ color: '#F2C4B3' }} />
-                    <span className="text-sm" style={{ color: '#9CA3AF' }}>{post.likes}</span>
-                  </button>
-                  <button className="flex items-center gap-2">
-                    <MessageCircle size={20} style={{ color: '#7EB8B3' }} />
-                    <span className="text-sm" style={{ color: '#9CA3AF' }}>{post.comments}</span>
-                  </button>
-                  <button>
-                    <Share2 size={20} style={{ color: '#9CA3AF' }} />
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
+      {/* Content Area */}
+      <div className="px-6 pb-24 pt-2">
+        {/* OVERVIEW TAB */}
+        {activeTab === 'Overview' && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="bg-white p-6 rounded-3xl shadow-sm">
+              <h3 className="text-lg font-bold text-[#4A5568] mb-3">About this Course</h3>
+              <p className="text-[#4A5568] leading-relaxed opacity-90">
+                {community.description}. This comprehensive program is designed to guide you through the fundamentals and advanced techniques found in {community.tags.join(', ')}.
+                Perfect for {isTech ? 'aspiring innovators' : 'those seeking balance'}.
+              </p>
+            </div>
 
-        {activeTab === 'Events' && (
-          <div className="space-y-4">
-            {events.map((event, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-5 rounded-3xl"
-                style={{
-                  backgroundColor: '#FFFEF9',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)'
-                }}
-              >
-                <div className="flex items-start gap-4">
-                  <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: '#7EB8B3' + '20' }}
-                  >
-                    <Calendar size={28} style={{ color: '#7EB8B3' }} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="mb-1" style={{ color: '#4A5568' }}>
-                      {event.title}
-                    </h3>
-                    <p className="text-sm mb-2" style={{ color: '#9CA3AF' }}>
-                      {event.date} • {event.time}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm" style={{ color: '#9CA3AF' }}>
-                        {event.attendees} attending
-                      </span>
-                      <button
-                        className="px-4 py-2 rounded-full"
-                        style={{
-                          backgroundColor: '#7EB8B3',
-                          color: '#FFFEF9',
-                          fontSize: '12px'
-                        }}
-                      >
-                        RSVP
-                      </button>
+            <div className="bg-white p-6 rounded-3xl shadow-sm">
+              <h3 className="text-lg font-bold text-[#4A5568] mb-4">What you'll learn</h3>
+              <ul className="space-y-3">
+                {[
+                  isTech ? 'Advanced Problem Solving' : 'Mindfulness Techniques',
+                  isTech ? 'Industry Standard Tools' : 'Stress Reduction',
+                  isTech ? 'Collaborative Project Management' : 'Emotional Intelligence',
+                  'Networking with Peers'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-[#4A5568]">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: community.color + '20', color: community.color }}>
+                      ✓
                     </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         )}
 
-        {activeTab === 'Members' && (
-          <div className="grid grid-cols-2 gap-4">
-            {members.map((member, index) => (
-              <motion.div
+        {/* REVIEWS TAB */}
+        {activeTab === 'Reviews' && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-4"
+          >
+            <div className="flex items-center justify-between mb-2 px-2">
+              <h3 className="font-bold text-[#4A5568] text-lg">Student Feedback</h3>
+              <span className="text-[#7EB8B3] font-bold">4.8/5.0</span>
+            </div>
+            {reviews.map((review, index) => (
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-4 rounded-2xl text-center"
-                style={{
-                  backgroundColor: '#FFFEF9',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.04)'
-                }}
+                className="bg-white p-5 rounded-3xl shadow-sm"
+              >
+                <div className="flex justify-between items-start mb-3">
+                  <div className="font-bold text-[#4A5568]">{review.author}</div>
+                  <span className="text-xs text-gray-400">{review.date}</span>
+                </div>
+                <div className="flex text-yellow-400 text-sm mb-2">
+                  {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+                </div>
+                <p className="text-[#4A5568] text-sm leading-relaxed">"{review.content}"</p>
+              </div>
+            ))}
+          </motion.div>
+        )}
+
+        {/* CLASSMATES TAB */}
+        {activeTab === 'Classmates' && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-4"
+          >
+            <h3 className="font-bold text-[#4A5568] text-lg px-2">Who's Signed Up</h3>
+            {classmates.map((student, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-3xl shadow-sm flex items-center gap-4"
               >
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3"
-                  style={{
-                    background: 'linear-gradient(135deg, #7EB8B3 0%, #F2C4B3 100%)',
-                    color: '#FFFEF9'
-                  }}
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold"
+                  style={{ background: community.color }}
                 >
-                  {member.initials}
+                  {student.initials}
                 </div>
-                <p className="mb-1" style={{ color: '#4A5568', fontSize: '14px' }}>
-                  {member.name}
-                </p>
-                <p className="text-xs mb-3" style={{ color: '#9CA3AF' }}>
-                  {member.role}
-                </p>
-                <button
-                  className="w-full py-2 rounded-full"
-                  style={{
-                    backgroundColor: '#7EB8B3' + '20',
-                    color: '#7EB8B3',
-                    fontSize: '12px'
-                  }}
-                >
-                  Connect
-                </button>
-              </motion.div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-[#4A5568]">{student.name}</h4>
+                  <p className="text-xs text-gray-500">{student.role}</p>
+                </div>
+                <span className={`text-xs px-3 py-1 rounded-full font-medium ${student.status === 'Enrolled' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
+                  }`}>
+                  {student.status}
+                </span>
+              </div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

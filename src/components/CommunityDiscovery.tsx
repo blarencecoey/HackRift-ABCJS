@@ -1,11 +1,6 @@
-// This tool call is actually replacing content in `CommunityDiscovery.tsx` first. 
-// I will need to do this in steps because I cannot edit multiple files in one turn reliably without confusion.
-
-// Step 1: Update CommunityDiscovery.tsx to handle selection.
-
 import { motion } from 'motion/react';
 import { Search, Sparkles, Loader2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Define standard Community Interface to share
 export interface CommunityData {
@@ -21,6 +16,9 @@ export interface CommunityData {
 interface CommunityDiscoveryProps {
   onNavigate: (screen: string) => void;
   onSelectCommunity?: (community: CommunityData) => void;
+  oceanScores?: Record<string, number>;
+  riasecCode?: string;
+  userId?: number;
 }
 
 interface RecommendationItem {
@@ -41,7 +39,7 @@ interface RecommendationResponse {
   query_info: any;
 }
 
-export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityDiscoveryProps) {
+export function CommunityDiscovery({ onNavigate, onSelectCommunity, oceanScores, riasecCode, userId }: CommunityDiscoveryProps) {
   const [activeFilter, setActiveFilter] = useState('Grow');
   const [searchQuery, setSearchQuery] = useState('');
   const [userStage] = useState<'Secondary' | 'Post-Secondary'>('Post-Secondary');
@@ -49,51 +47,33 @@ export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityD
   const [recommendations, setRecommendations] = useState<CommunityData[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
 
-  const filters = ['Grow', 'Connect'];
-  const defaultCommunities: CommunityData[] = [
-    {
-      name: 'Tech Creatives',
-      description: 'For designers, developers & digital creators',
-      members: 234,
-      match: 92,
-      tags: ['Tech', 'Design', 'Creative'],
-      color: '#7EB8B3',
-      featured: true
-    },
-    {
-      name: 'Mindful Makers',
-      description: 'Wellness-focused creators & entrepreneurs',
-      members: 156,
-      match: 88,
-      tags: ['Wellness', 'Mindfulness', 'Community'],
-      color: '#F2C4B3',
-      featured: false
-    }
-  ];
-
-  const handleSearch = async () => {
-    if (!searchQuery.trim()) return;
-
+  // Helper to fetch recommendations
+  const fetchRecommendations = async (query: string, isAutoRequest: boolean = false) => {
     setIsLoading(true);
-    setHasSearched(true);
+    if (!isAutoRequest) setHasSearched(true);
+
+    // Fallback if no query and no profile
+    if (!query.trim()) {
+      setIsLoading(false);
+      return;
+    }
 
     try {
       const API_URL = import.meta.env.VITE_REC_API_URL || 'http://localhost:8000';
+
+      const body: any = {
+        user_query: query,
+        user_stage: userStage,
+        limit: 5
+      };
+
       const response = await fetch(`${API_URL}/recommend`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          user_query: searchQuery,
-          user_stage: userStage,
-          limit: 5
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch recommendations');
-      }
+      if (!response.ok) throw new Error('Failed to fetch recommendations');
 
       const data: RecommendationResponse = await response.json();
 
@@ -103,13 +83,46 @@ export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityD
       ];
 
       combined.sort((a, b) => b.match - a.match);
-
       setRecommendations(combined);
+
     } catch (error) {
       console.error('Error fetching recommendations:', error);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // On Mount: If we have profile data, fetch personalized recommendations
+  useEffect(() => {
+    // Prevent double fetch if we already have recommendations or if user has searched
+    if (recommendations.length > 0) return;
+
+    if (riasecCode && riasecCode !== 'UNK') {
+      // Construct a query based on profile
+      let profileDesc = `Find activities for a student with RIASEC code ${riasecCode}.`;
+
+      if (oceanScores) {
+        const highTraits = Object.entries(oceanScores)
+          .filter(([_, score]) => score > 70)
+          .map(([trait]) => trait)
+          .join(', ');
+        if (highTraits) {
+          profileDesc += ` I have high ${highTraits}.`;
+        }
+      }
+
+      console.log('Fetching personalized recommendations with query:', profileDesc);
+      fetchRecommendations(profileDesc, true);
+    } else {
+      // Fallback to a generic query to get *something* if no profile
+      fetchRecommendations("popular student activities", true);
+    }
+  }, [riasecCode, oceanScores]);
+
+
+  const handleSearch = () => {
+    if (!searchQuery.trim()) return;
+    fetchRecommendations(searchQuery, false);
   };
 
   const mapToCommunity = (item: RecommendationItem, type: string): CommunityData => {
@@ -124,15 +137,17 @@ export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityD
       match: Math.round(item.score * 100),
       tags: [type, meta.category || meta.type || 'General'].filter(Boolean),
       color: colors[colorIndex],
-      featured: item.score > 0.8
+      featured: item.score > 0.85
     };
   };
 
-  const displayItems = hasSearched ? recommendations : defaultCommunities;
+  // Logic to determine what to display
+  // If recommendations exist (from auto-fetch or search), use them.
+  const displayItems = recommendations;
 
   const filteredItems = displayItems.filter(item => {
-    if (activeFilter === 'Grow') return item.tags.includes('Growth') || item.tags.includes('Tech') || item.tags.includes('Design');
-    if (activeFilter === 'Connect') return item.tags.includes('Connect') || item.tags.includes('Wellness') || item.tags.includes('Social');
+    if (activeFilter === 'Grow') return item.tags.some(t => ['Growth', 'Tech', 'Design', 'Coding', 'STEM'].includes(t));
+    if (activeFilter === 'Connect') return item.tags.some(t => ['Connect', 'Wellness', 'Social', 'Arts', 'Community'].includes(t));
     return true;
   });
 
@@ -145,6 +160,8 @@ export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityD
     }
     onNavigate('community-detail');
   };
+
+  const filters = ['Grow', 'Connect'];
 
   return (
     <div className="min-h-screen px-6 pt-6 pb-8">
@@ -202,6 +219,16 @@ export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityD
         </div>
       </motion.div>
 
+      {/* Dynamic Header based on state */}
+      {!hasSearched && recommendations.length > 0 && (
+        <motion.h2
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          className="px-2 mb-4 text-xl font-bold text-[#4A5568] font-serif"
+        >
+          Recommended for {riasecCode && riasecCode !== 'UNK' ? `Profile (${riasecCode})` : 'You'}
+        </motion.h2>
+      )}
+
       {/* Featured Community */}
       {featuredCommunity && (
         <motion.div
@@ -245,42 +272,48 @@ export function CommunityDiscovery({ onNavigate, onSelectCommunity }: CommunityD
 
       {/* Results List */}
       <div className="space-y-4">
-        {listItems.map((community, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-            className="p-5 rounded-3xl cursor-pointer"
-            style={{ backgroundColor: '#FFFEF9', boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)' }}
-            onClick={() => handleCommunityClick(community)}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-2xl flex-shrink-0" style={{ backgroundColor: community.color + '40' }} />
-              <div className="flex-1 min-w-0">
-                <div className="flex items-start justify-between gap-2 mb-1">
-                  <h3 style={{ color: '#4A5568' }} className="truncate">{community.name}</h3>
-                  <span className="px-2 py-1 rounded-full text-xs whitespace-nowrap" style={{ backgroundColor: community.color + '20', color: community.color }}>
-                    {community.match}%
-                  </span>
-                </div>
-                <p className="text-sm mb-3 line-clamp-2" style={{ color: '#9CA3AF' }}>{community.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-2 overflow-hidden">
-                    {community.tags.slice(0, 2).map((tag, i) => (
-                      <span key={i} className="px-2 py-1 rounded-full text-xs whitespace-nowrap" style={{ backgroundColor: '#F5F0EB', color: '#4A5568' }}>
-                        {tag}
-                      </span>
-                    ))}
+        {listItems.length > 0 ? (
+          listItems.map((community, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+              className="p-5 rounded-3xl cursor-pointer"
+              style={{ backgroundColor: '#FFFEF9', boxShadow: '0 4px 20px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+              onClick={() => handleCommunityClick(community)}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 rounded-2xl flex-shrink-0" style={{ backgroundColor: community.color + '40' }} />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 style={{ color: '#4A5568' }} className="truncate">{community.name}</h3>
+                    <span className="px-2 py-1 rounded-full text-xs whitespace-nowrap" style={{ backgroundColor: community.color + '20', color: community.color }}>
+                      {community.match}%
+                    </span>
+                  </div>
+                  <p className="text-sm mb-3 line-clamp-2" style={{ color: '#9CA3AF' }}>{community.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-2 overflow-hidden">
+                      {community.tags.slice(0, 2).map((tag, i) => (
+                        <span key={i} className="px-2 py-1 rounded-full text-xs whitespace-nowrap" style={{ backgroundColor: '#F5F0EB', color: '#4A5568' }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
+            </motion.div>
+          ))
+        ) : (
+          // Only show this when NOT loading, to avoid flashing it
+          !isLoading && (
+            <div className="text-center text-gray-400 py-10">
+              {hasSearched ? "No matches found." : (recommendations.length === 0 ? "Loading tailored suggestions..." : "No recommendations available.")}
             </div>
-          </motion.div>
-        ))}
-        {hasSearched && listItems.length === 0 && (
-          <div className="text-center text-gray-400 py-10">No matches found. Try a different query!</div>
+          )
         )}
       </div>
     </div>

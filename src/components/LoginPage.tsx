@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { User, Lock, ArrowRight, Loader2, Mail, GraduationCap } from 'lucide-react';
+import { User, Lock, ArrowRight, Loader2, GraduationCap } from 'lucide-react';
 
 interface LoginPageProps {
     onLoginSuccess: (userName: string, userId: number, isNewUser: boolean) => void;
@@ -44,7 +44,6 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
             }
 
             // Success
-            // Determine if it was a registration or login based on local state
             const isNewUser = !isLogin;
             onLoginSuccess(data.username, data.user_id, isNewUser);
 
@@ -78,40 +77,40 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                     </p>
                 </div>
 
-                <div
-                    className="bg-[#FFFEF9] rounded-3xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
-                >
+                <div className="bg-[#FFFEF9] rounded-3xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         {/* Username */}
-                        <div className="space-y-1">
-                            <label className="text-sm font-medium text-[#4A5568] ml-1">Username</label>
-                            <div className="relative">
-                                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                <input
-                                    type="text"
-                                    value={username}
-                                    onChange={(e) => setUsername(e.target.value)}
-                                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
-                                    placeholder="Enter your username"
-                                    required
-                                />
-                            </div>
+                        <div className="space-y-2">
+                            <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
+                                <User size={18} color="#7EB8B3" />
+                                <span>Username</span>
+                            </label>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                className="w-full px-4 py-3 rounded-2xl text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                style={{ backgroundColor: '#F5F0EB' }}
+                                placeholder="Enter your username"
+                                required
+                            />
                         </div>
 
                         {/* Password */}
-                        <div className="space-y-1">
-                            <label className="text-sm font-medium text-[#4A5568] ml-1">Password</label>
-                            <div className="relative">
-                                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
-                                    placeholder="Enter your password"
-                                    required
-                                />
-                            </div>
+                        <div className="space-y-2">
+                            <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
+                                <Lock size={18} color="#7EB8B3" />
+                                <span>Password</span>
+                            </label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                className="w-full px-4 py-3 rounded-2xl text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                style={{ backgroundColor: '#F5F0EB' }}
+                                placeholder="Enter your password"
+                                required
+                            />
                         </div>
 
                         {/* Registration Extra Fields */}
@@ -119,27 +118,37 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                             <motion.div
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: 'auto' }}
-                                className="space-y-1 overflow-hidden"
+                                className="space-y-2 overflow-hidden"
                             >
-                                <label className="text-sm font-medium text-[#4A5568] ml-1">Education Level</label>
-                                <div className="grid grid-cols-2 gap-2 mt-1">
+                                <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
+                                    <GraduationCap size={18} color="#7EB8B3" />
+                                    <span>Education Level</span>
+                                </label>
+                                <div
+                                    className="grid grid-cols-2 gap-2 p-1 rounded-2xl"
+                                    style={{ backgroundColor: '#F5F0EB' }}
+                                >
                                     <button
                                         type="button"
                                         onClick={() => setEducationLevel('Secondary')}
-                                        className={`py-3 px-2 rounded-2xl text-sm transition-all ${educationLevel === 'Secondary'
-                                            ? 'bg-[#7EB8B3] text-white shadow-md'
-                                            : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
-                                            }`}
+                                        className="py-2.5 px-2 rounded-xl text-sm font-semibold transition-all duration-200"
+                                        style={{
+                                            backgroundColor: educationLevel === 'Secondary' ? '#7EB8B3' : 'transparent',
+                                            color: educationLevel === 'Secondary' ? '#FFFFFF' : '#9CA3AF',
+                                            boxShadow: educationLevel === 'Secondary' ? '0 2px 4px rgba(0,0,0,0.1)' : 'none'
+                                        }}
                                     >
                                         Secondary
                                     </button>
                                     <button
                                         type="button"
                                         onClick={() => setEducationLevel('Post-Secondary')}
-                                        className={`py-3 px-2 rounded-2xl text-sm transition-all ${educationLevel === 'Post-Secondary'
-                                            ? 'bg-[#7EB8B3] text-white shadow-md'
-                                            : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
-                                            }`}
+                                        className="py-2.5 px-2 rounded-xl text-sm font-semibold transition-all duration-200"
+                                        style={{
+                                            backgroundColor: educationLevel === 'Post-Secondary' ? '#7EB8B3' : 'transparent',
+                                            color: educationLevel === 'Post-Secondary' ? '#FFFFFF' : '#9CA3AF',
+                                            boxShadow: educationLevel === 'Post-Secondary' ? '0 2px 4px rgba(0,0,0,0.1)' : 'none'
+                                        }}
                                     >
                                         Post-Secondary
                                     </button>
@@ -162,14 +171,18 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full bg-[#7EB8B3] text-white py-4 rounded-2xl font-semibold shadow-lg shadow-[#7EB8B3]/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-4"
+                            className="w-full text-white py-4 rounded-2xl font-bold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-6"
+                            style={{
+                                backgroundColor: isLogin ? '#7EB8B3' : '#D4A574',
+                                boxShadow: isLogin ? '0 10px 20px -5px rgba(126, 184, 179, 0.4)' : '0 10px 20px -5px rgba(212, 165, 116, 0.4)'
+                            }}
                         >
                             {isLoading ? (
                                 <Loader2 className="animate-spin" size={20} />
                             ) : (
                                 <>
                                     <span>{isLogin ? 'Sign In' : 'Create Account'}</span>
-                                    <ArrowRight size={18} />
+                                    <ArrowRight size={20} />
                                 </>
                             )}
                         </button>
