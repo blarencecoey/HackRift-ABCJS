@@ -8,6 +8,7 @@ import numpy as np
 import random
 from faker import Faker
 import json
+from datetime import datetime, timedelta
 
 fake = Faker()
 Faker.seed(42)
@@ -333,6 +334,7 @@ def generate_upskilling_data(n_samples: int = 200) -> pd.DataFrame:
             "primary_riasec": template["riasec"],
             "ocean_trait_focus": template["ocean"],
             "description": description,
+            "event_date": (datetime.now() + timedelta(days=random.randint(1, 60))).strftime("%Y-%m-%d %H:%M:%S")
         }
         row["embedding_text"] = create_embedding_text(row, is_course=True)
         data.append(row)
@@ -378,6 +380,7 @@ def generate_upskilling_data(n_samples: int = 200) -> pd.DataFrame:
             "primary_riasec": riasec,
             "ocean_trait_focus": ocean,
             "description": description,
+            "event_date": (datetime.now() + timedelta(days=random.randint(1, 60))).strftime("%Y-%m-%d %H:%M:%S")
         }
         row["embedding_text"] = create_embedding_text(row, is_course=True)
         data.append(row)
@@ -412,6 +415,7 @@ def generate_holistic_data(n_samples: int = 200) -> pd.DataFrame:
             "primary_riasec": template["riasec"],
             "ocean_trait_focus": template["ocean"],
             "description": description,
+            "event_date": (datetime.now() + timedelta(days=random.randint(1, 60))).strftime("%Y-%m-%d %H:%M:%S")
         }
         row["embedding_text"] = create_embedding_text(row, is_course=False)
         data.append(row)
@@ -456,6 +460,7 @@ def generate_holistic_data(n_samples: int = 200) -> pd.DataFrame:
             "primary_riasec": riasec,
             "ocean_trait_focus": ocean,
             "description": description,
+            "event_date": (datetime.now() + timedelta(days=random.randint(1, 60))).strftime("%Y-%m-%d %H:%M:%S")
         }
         row["embedding_text"] = create_embedding_text(row, is_course=False)
         data.append(row)
@@ -500,7 +505,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 60)
     print("HOLISTIC EVENTS (First 5 rows)")
     print("=" * 60)
-    print(holistic_df[["id", "event_name", "type", "intensity", "target_audience", "primary_riasec"]].head())
+    print(holistic_df[["id", "event_name", "type", "event_date", "intensity", "target_audience"]].head())
     
     print("\n" + "=" * 60)
     print("Generation Complete!")

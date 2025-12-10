@@ -57,6 +57,7 @@ def init_db():
             event_type TEXT NOT NULL, -- 'course' or 'event'
             status TEXT DEFAULT 'confirmed',
             booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            event_date TIMESTAMP, -- Date when the event actually happens
             FOREIGN KEY (user_id) REFERENCES users (id)
         )
     """)

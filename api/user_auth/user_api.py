@@ -25,12 +25,14 @@ class BookingRequest(BaseModel):
     user_id: int
     event_id: str
     event_type: str # 'course' or 'event'
+    event_date: Optional[str] = None # 'YYYY-MM-DD HH:mm:ss'
 
 class BookingResponse(BaseModel):
     booking_id: int
     user_id: int
     event_id: str
     event_type: str
+    event_date: str
     status: str
     booking_date: str
 
@@ -164,9 +166,9 @@ def create_booking(booking: BookingRequest):
     
     try:
         cursor.execute("""
-            INSERT INTO bookings (user_id, event_id, event_type, status)
-            VALUES (?, ?, ?, 'confirmed')
-        """, (booking.user_id, booking.event_id, booking.event_type))
+            INSERT INTO bookings (user_id, event_id, event_type, status, event_date)
+            VALUES (?, ?, ?, 'confirmed', ?)
+        """, (booking.user_id, booking.event_id, booking.event_type, booking.event_date))
         
         new_booking_id = cursor.lastrowid
         
@@ -206,7 +208,8 @@ def get_user_bookings(user_id: int):
             event_id=row["event_id"],
             event_type=row["event_type"],
             status=row["status"],
-            booking_date=str(row["booking_date"])
+            booking_date=str(row["booking_date"]),
+            event_date=str(row["event_date"]) if row["event_date"] else None
         ))
     
     return results

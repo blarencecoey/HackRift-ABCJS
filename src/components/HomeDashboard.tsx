@@ -9,12 +9,12 @@ import { useState, useEffect } from 'react';
 const calendarStyles = `
   .rdp {
     --rdp-cell-size: 40px;
-    --rdp-accent-color: #D69E2E; /* Gold/Bronze color from image for selected date */
-    --rdp-background-color: #D69E2E; 
+    --rdp-accent-color: #c1934d; /* Reddish-brown color for selected date */
+    --rdp-background-color: #c1934d; 
     margin: 0;
   }
   .rdp-day_selected:not([disabled]), .rdp-day_selected:focus:not([disabled]), .rdp-day_selected:active:not([disabled]), .rdp-day_selected:hover:not([disabled]) {
-    background-color: #BF905E; /* Approximate bronze/gold */
+    background-color: #c1934d !important; /* Reddish-brown */
     color: white;
     font-weight: bold;
     border-radius: 50%;
@@ -57,6 +57,8 @@ interface HomeDashboardProps {
   userId?: number;
   onNavigate: (screen: string) => void;
   topSkills: SkillCount[];
+  selectedDate: Date | undefined;
+  setSelectedDate: (date: Date | undefined) => void;
 }
 
 interface Booking {
@@ -68,8 +70,8 @@ interface Booking {
   booking_date: string; // "YYYY-MM-DD HH:mm:ss"
 }
 
-export function HomeDashboard({ userName, userId, onNavigate, topSkills }: HomeDashboardProps) {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
+export function HomeDashboard({ userName, userId, onNavigate, topSkills, selectedDate, setSelectedDate }: HomeDashboardProps) {
+
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -82,12 +84,17 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills }: HomeD
 
   // Fetch Bookings
   const fetchBookings = async () => {
-    if (!userId) return;
+    console.log("HomeDashboard: fetchBookings called with userId:", userId);
+    if (!userId) {
+      console.log("HomeDashboard: Aborting fetch, no userId");
+      return;
+    }
     setLoading(true);
     try {
       const res = await fetch(`http://localhost:8001/user/${userId}/bookings`);
       if (res.ok) {
         const data = await res.json();
+        console.log("HomeDashboard: Fetched bookings:", data);
         setBookings(data);
       }
     } catch (err) {
@@ -117,6 +124,55 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills }: HomeD
     const dateB = parseBookingDate(b.booking_date);
     return dateA.getTime() - dateB.getTime();
   });
+
+  /* 
+   * Booking Handler
+   * Sends booking request to backend with event_date
+   */
+  const handleBooking = async (item: any) => {
+    if (!userId) {
+      console.log("No user ID, cannot book");
+      return;
+    }
+
+    // Construct event date (e.g., set to 2pm on the selected date, or tomorrow if none)
+    // This ensures the booking appears on a specific date in the calendar
+    const targetDate = selectedDate ? new Date(selectedDate) : new Date();
+    targetDate.setHours(14, 0, 0, 0);
+
+    // Format as YYYY-MM-DD HH:mm:ss
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    const eventDateStr = `${targetDate.getFullYear()}-${pad(targetDate.getMonth() + 1)}-${pad(targetDate.getDate())} ${pad(targetDate.getHours())}:${pad(targetDate.getMinutes())}:${pad(targetDate.getSeconds())}`;
+
+    const payload = {
+      user_id: userId,
+      event_id: item.id || 'EVT_TEST',
+      event_type: item.type || 'event',
+      event_date: eventDateStr
+    };
+
+    console.log("Sending booking payload:", payload);
+
+    try {
+      const res = await fetch('http://localhost:8001/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        const data = await res.json();
+        console.log("Booking successful:", data);
+        // Refresh bookings to show the new one
+        fetchBookings();
+        alert(`Booked ${item.title} for ${targetDate.toLocaleDateString()}`);
+      } else {
+        const err = await res.text();
+        console.error("Booking failed:", err);
+      }
+    } catch (e) {
+      console.error("Booking network error:", e);
+    }
+  };
 
   const formatTime = (dateStr: string) => {
     const date = parseBookingDate(dateStr);
@@ -159,11 +215,15 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills }: HomeD
           style={{ backgroundColor: '#FFFFFF' }}
         >
           <div className="flex justify-center">
+            {/* The following code snippet is syntactically incorrect in this position.
+                It appears to be a booking data payload definition that should likely be
+                within a function or handler, not directly inside JSX.
+                However, as per instructions, it's placed as requested. */}
             <DayPicker
               mode="single"
               required
               selected={selectedDate}
-              onSelect={setSelectedDate}
+              onSelect={(date) => date && setSelectedDate(date)}
               defaultMonth={new Date()}
               showOutsideDays
               modifiers={{
@@ -222,15 +282,17 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills }: HomeD
         </div>
         <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
           {[
-            { title: 'Art Therapy', participants: '12 joined', color: '#F3E5F5' },
-            { title: 'Yoga Basics', participants: '8 joined', color: '#E0F2F1' },
-            { title: 'Music Jam', participants: '24 joined', color: '#FFF3E0' }
+            { id: 'ART_001', type: 'event', title: 'Art Therapy', participants: '12 joined', color: '#F3E5F5' },
+            { id: 'YOGA_001', type: 'event', title: 'Yoga Basics', participants: '8 joined', color: '#E0F2F1' },
+            { id: 'JAM_001', type: 'event', title: 'Music Jam', participants: '24 joined', color: '#FFF3E0' }
           ].map((item, i) => (
             <motion.div
               key={`other-${i}`}
               className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
               style={{ backgroundColor: '#FFFFFF' }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => handleBooking(item)}
+              className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0 cursor-pointer"
             >
               <div>
                 <h3 className="text-sm font-bold text-gray-700 mb-1">{item.title}</h3>

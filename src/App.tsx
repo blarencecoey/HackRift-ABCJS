@@ -53,6 +53,7 @@ export default function App() {
       const response = await fetch(`http://localhost:8001/user/${userId}`);
       if (response.ok) {
         const data = await response.json();
+        console.log("App: Fetched user data:", data); // Added log
         setUserData({
           userId: data.user_id,
           username: data.username,
@@ -70,10 +71,15 @@ export default function App() {
     setCurrentScreen(screen);
   };
 
-  const handleLoginSuccess = (name: string, userId: number) => {
-    setUserName(name);
+  const handleLoginSuccess = (username: string, userId: number) => {
+    console.log("App: handleLoginSuccess called with", { username, userId });
+    setUserName(username);
+    setUserData(prev => {
+      console.log("App: setting userData with userId", userId);
+      return { ...prev, userId };
+    });
     fetchUserData(userId);  // Fetch complete user data
-    navigateTo('home');
+    setCurrentScreen('home');
   };
 
   // Function to refresh user data (used after assessment completion)
@@ -83,14 +89,23 @@ export default function App() {
     }
   };
 
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date()); // Persist calendar selection
+
   const renderScreen = () => {
     switch (currentScreen) {
       case 'splash':
-        return <SplashScreen onGetStarted={() => navigateTo('home')} />;
+        return <SplashScreen onGetStarted={() => navigateTo('login')} />;
       case 'login':
         return <LoginPage onLoginSuccess={handleLoginSuccess} />;
       case 'home':
-        return <HomeDashboard userName={userName} onNavigate={navigateTo} topSkills={getTopSkills(5)} />;
+        return <HomeDashboard
+          userName={userName}
+          onNavigate={navigateTo}
+          topSkills={getTopSkills(5)}
+          userId={userData.userId ?? undefined}
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />;
       case 'assessment':
         return <PersonalityAssessment
           onNavigate={navigateTo}
@@ -117,7 +132,13 @@ export default function App() {
           riasecCode={userData.riasecCode}
         />;
       default:
-        return <HomeDashboard userName={userName} onNavigate={navigateTo} topSkills={getTopSkills(5)} />;
+        return <HomeDashboard
+          userName={userName}
+          onNavigate={navigateTo}
+          topSkills={getTopSkills(5)}
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />;
     }
   };
 
