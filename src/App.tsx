@@ -95,7 +95,7 @@ export default function App() {
   const renderScreen = () => {
     switch (currentScreen) {
       case 'splash':
-        return <SplashScreen onGetStarted={() => navigateTo('login')} />;
+        return <SplashScreen onGetStarted={() => navigateTo('home')} />;
       case 'login':
         return <LoginPage onLoginSuccess={handleLoginSuccess} />;
       case 'home':
@@ -189,21 +189,7 @@ export default function App() {
                 onClick={() => navigateTo('discover')}
               />
 
-              {/* Center Floating Button Action */}
-              <div
-                className="relative -mt-12 cursor-pointer transition-transform active:scale-95"
-                onClick={() => navigateTo('discover')}
-              >
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center border-4 border-[#F5F0EB]"
-                  style={{
-                    backgroundColor: '#7EB8B3',
-                    boxShadow: '0 8px 24px rgba(126, 184, 179, 0.4)'
-                  }}
-                >
-                  <Users size={28} color="#FFFEF9" strokeWidth={2} />
-                </div>
-              </div>
+
 
               <NavItem
                 icon={TrendingUp}
