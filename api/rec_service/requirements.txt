@@ -1,3 +1,5 @@
+# Install CPU-Only Torch FIRST to prevent large CUDA version
+torch --index-url https://download.pytorch.org/whl/cpu
 fastapi
 uvicorn
 pydantic
@@ -6,5 +8,3 @@ sentence-transformers
 pandas
 numpy
 faker
-# Explicitly use CPU-only PyTorch to save massive space
-torch --index-url https://download.pytorch.org/whl/cpu
