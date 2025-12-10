@@ -10,6 +10,7 @@ import { CommunityDiscovery } from './components/CommunityDiscovery';
 import { CommunityDetail } from './components/CommunityDetail';
 import { MentorMatching } from './components/MentorMatching';
 import { Profile } from './components/Profile';
+import { useUserProfile } from './hooks/useUserProfile';
 
 // Defined NavItem component to fix the rendering error
 const NavItem = ({ icon: Icon, label, active, onClick }: { icon: any, label: string, active: boolean, onClick: () => void }) => (
@@ -27,6 +28,9 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState<string>('splash');
   const [userName, setUserName] = useState('Guest');
 
+  // User profile hook for skills tracking
+  const { completedActivities, addActivity, removeActivity, getTopSkills } = useUserProfile();
+
   const navigateTo = (screen: string) => {
     setCurrentScreen(screen);
   };
@@ -43,7 +47,7 @@ export default function App() {
       case 'login':
         return <LoginPage onLoginSuccess={handleLoginSuccess} />;
       case 'home':
-        return <HomeDashboard userName={userName} onNavigate={navigateTo} />;
+        return <HomeDashboard userName={userName} onNavigate={navigateTo} topSkills={getTopSkills(5)} />;
       case 'assessment':
         return <PersonalityAssessment onNavigate={navigateTo} />;
       case 'results':
@@ -55,9 +59,17 @@ export default function App() {
       case 'mentors':
         return <MentorMatching onNavigate={navigateTo} />;
       case 'profile':
-        return <Profile onNavigate={navigateTo} />;
+        return (
+          <Profile
+            onNavigate={navigateTo}
+            completedActivities={completedActivities}
+            addActivity={addActivity}
+            removeActivity={removeActivity}
+            getTopSkills={getTopSkills}
+          />
+        );
       default:
-        return <HomeDashboard userName={userName} onNavigate={navigateTo} />;
+        return <HomeDashboard userName={userName} onNavigate={navigateTo} topSkills={getTopSkills(5)} />;
     }
   };
 

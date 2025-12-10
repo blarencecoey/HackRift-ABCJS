@@ -1,0 +1,1110 @@
+course,category,institution,type,skills,personality,inclination
+English Language,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Mother Tongue Language,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Higher Mother Tongue Language,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Mathematics,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Thinking, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Additional Mathematics,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Thinking, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Physics,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Mathematical Analysis, Physics, Problem Solving, Scientific Method",Conscientiousness,Investigative
+Chemistry,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+Biology,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Biology, Laboratory Skills, Research, Scientific Method",Conscientiousness,Investigative
+"Science (Physics, Chemistry)",STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Skills, Analytical Thinking, Chemistry, Laboratory Skills, Mathematical Analysis, Observation, Physics, Problem Solving, Research, Scientific Method",Conscientiousness,Investigative
+"Science (Physics, Biology)",STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Thinking, Biology, Laboratory Skills, Mathematical Analysis, Observation, Physics, Problem Solving, Research, Scientific Method",Conscientiousness,Investigative
+"Science (Chemistry, Biology)",STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Skills, Analytical Thinking, Biology, Chemistry, Laboratory Skills, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Social Studies,Humanities & Social Sciences,Secondary School,Secondary School Subject,"Adaptability, Critical Thinking, Learning",Extraversion,Social
+History,Humanities & Social Sciences,Secondary School,Secondary School Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Geography,Humanities & Social Sciences,Secondary School,Secondary School Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Literature in English,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Literature in Chinese,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Literature in Malay,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Literature in Tamil,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Principles of Accounts,Humanities & Social Sciences,Secondary School,Secondary School Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Art,"Arts, Design & Visual Arts",Secondary School,Secondary School Subject,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Music,Performing Arts & Music,Secondary School,Secondary School Subject,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Higher Music,Performing Arts & Music,Secondary School,Secondary School Subject,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Higher Art,"Arts, Design & Visual Arts",Secondary School,Secondary School Subject,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Design & Technology,"Arts, Design & Visual Arts",Secondary School,Secondary School Subject,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Food & Nutrition,"Food, Nutrition & Culinary Arts",Secondary School,Secondary School Subject,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Nutrition & Food Science,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Thinking, Attention to Detail, Creativity, Culinary Skills, Observation, Research, Scientific Method, Time Management",Conscientiousness,Investigative
+Computing,Computing & IT,Secondary School,Secondary School Subject,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+Computer Studies,Computing & IT,Secondary School,Secondary School Subject,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Exercise & Sports Science,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Analytical Thinking, Coordination, Discipline, Observation, Physical Fitness, Research, Scientific Method, Teamwork",Conscientiousness,Investigative
+Drama,Performing Arts & Music,Secondary School,Secondary School Subject,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Electronics,Engineering & Technology,Secondary School,Secondary School Subject,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Biotechnology,STEM - Science & Mathematics,Secondary School,Secondary School Subject,"Biology, Laboratory Skills, Research, Scientific Method",Conscientiousness,Investigative
+Smart Electrical Technology,Engineering & Technology,Secondary School,Secondary School Subject,"Artistic Expression, Creativity, Engineering Design, Mathematical Skills, Observation, Problem Solving, Technical Drawing, Visual Arts",Openness,Artistic
+Mobile Robotics,Engineering & Technology,Secondary School,Secondary School Subject,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+French,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+German,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Japanese,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Spanish,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Malay Special Programme,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Chinese Special Programme,Languages & Literature,Secondary School,Secondary School Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+General Paper,General/Core Subjects,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Project Work,General/Core Subjects,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Mother Tongue Language,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Knowledge & Inquiry,General/Core Subjects,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Chinese Language & Literature,Languages & Literature,Post secondary,JC Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Malay Language & Literature,Languages & Literature,Post secondary,JC Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Tamil Language & Literature,Languages & Literature,Post secondary,JC Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+English Language & Linguistics,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+French,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+German,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Japanese,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Mathematics,STEM - Science & Mathematics,Post secondary,JC Subject,"Analytical Thinking, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Further Mathematics (H2 only),STEM - Science & Mathematics,Post secondary,JC Subject,"Analytical Thinking, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Physics,STEM - Science & Mathematics,Post secondary,JC Subject,"Mathematical Analysis, Physics, Problem Solving, Scientific Method",Conscientiousness,Investigative
+Chemistry,STEM - Science & Mathematics,Post secondary,JC Subject,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+Biology,STEM - Science & Mathematics,Post secondary,JC Subject,"Biology, Laboratory Skills, Research, Scientific Method",Conscientiousness,Investigative
+Computing,Computing & IT,Post secondary,JC Subject,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+Economics,"Business, Finance & Management",Post secondary,JC Subject,"Critical Thinking, Data Interpretation, Economic Analysis, Research",Extraversion,Enterprising
+Geography,Humanities & Social Sciences,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+History,Humanities & Social Sciences,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Literature in English,Languages & Literature,Post secondary,JC Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Art,"Arts, Design & Visual Arts",Post secondary,JC Subject,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Music,Performing Arts & Music,Post secondary,JC Subject,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Theatre Studies & Drama,Performing Arts & Music,Post secondary,JC Subject,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+China Studies in English,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+China Studies in Chinese,Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Translation (Chinese),Languages & Literature,Post secondary,JC Subject,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Principles of Accounting,"Business, Finance & Management",Post secondary,JC Subject,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Management of Business,"Business, Finance & Management",Post secondary,JC Subject,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+H3 Physics,STEM - Science & Mathematics,Post secondary,JC Subject,"Mathematical Analysis, Physics, Problem Solving, Scientific Method",Conscientiousness,Investigative
+H3 Chemistry,STEM - Science & Mathematics,Post secondary,JC Subject,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+H3 Biology,STEM - Science & Mathematics,Post secondary,JC Subject,"Biology, Laboratory Skills, Research, Scientific Method",Conscientiousness,Investigative
+H3 Mathematics,STEM - Science & Mathematics,Post secondary,JC Subject,"Analytical Thinking, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+H3 Economics,"Business, Finance & Management",Post secondary,JC Subject,"Critical Thinking, Data Interpretation, Economic Analysis, Research",Extraversion,Enterprising
+H3 Geography,Humanities & Social Sciences,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+H3 History,Humanities & Social Sciences,Post secondary,JC Subject,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+H3 Literature in English,Languages & Literature,Post secondary,JC Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+H3 Art,"Arts, Design & Visual Arts",Post secondary,JC Subject,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+H3 Chinese Language & Literature,Languages & Literature,Post secondary,JC Subject,"Communication, Critical Thinking, Cultural Awareness, Language Proficiency, Literary Analysis, Writing",Openness,Artistic
+Basketball,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Extraversion,Social
+Football,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Extraversion,Social
+Netball,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Volleyball,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Extraversion,Social
+Floorball,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Rugby,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Extraversion,Social
+Hockey,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Extraversion,Social
+Softball,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Water Polo,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Sepak Takraw,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Handball,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Touch Football,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Extraversion,Social
+Badminton,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Table Tennis,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Tennis,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Squash,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Bowling,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Golf,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Track & Field,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Cross Country,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Swimming,Sports & Physical Education,Post secondary,CCA,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Shooting (Air Pistol),Sports & Physical Education,Post secondary,CCA,"AI/ML, Data Analysis, Mathematical Modeling, Research",Agreeableness,Social
+Shooting (Air Rifle),Sports & Physical Education,Post secondary,CCA,"AI/ML, Data Analysis, Mathematical Modeling, Research",Agreeableness,Social
+Fencing,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Judo,Sports & Physical Education,Post secondary,CCA,"Discipline, Martial Arts, Physical Fitness, Self-Control",Agreeableness,Social
+Taekwondo,Sports & Physical Education,Post secondary,CCA,"Discipline, Martial Arts, Physical Fitness, Self-Control",Agreeableness,Social
+Wushu,Sports & Physical Education,Post secondary,CCA,"Discipline, Martial Arts, Physical Fitness, Self-Control",Agreeableness,Social
+Karate,Sports & Physical Education,Post secondary,CCA,"Discipline, Martial Arts, Physical Fitness, Self-Control",Agreeableness,Social
+Silat,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Archery,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Sailing,Sports & Physical Education,Post secondary,CCA,"AI/ML, Data Analysis, Mathematical Modeling, Research",Agreeableness,Social
+Canoeing,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Kayaking,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Gymnastics (Artistic),Sports & Physical Education,Post secondary,CCA,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Gymnastics (Rhythmic),Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Trampoline,Sports & Physical Education,Post secondary,CCA,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+National Cadet Corps (NCC) - Land,Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+National Cadet Corps (NCC) - Sea,Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+National Cadet Corps (NCC) - Air,Uniformed Groups,Post secondary,CCA,"AI/ML, Data Analysis, Discipline, Leadership, Mathematical Modeling, Physical Fitness, Research, Teamwork",Conscientiousness,Social
+National Police Cadet Corps (NPCC),Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+National Civil Defence Cadet Corps (NCDCC),Uniformed Groups,Post secondary,CCA,"Discipline, Engineering Design, Leadership, Mathematical Skills, Physical Fitness, Problem Solving, Teamwork, Technical Drawing",Conscientiousness,Social
+Singapore Red Cross Youth,Uniformed Groups,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Conscientiousness,Social
+St John Brigade,Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+Boys' Brigade,Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+Girls' Brigade,Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+Girl Guides,Uniformed Groups,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Conscientiousness,Social
+Scouts,Uniformed Groups,Post secondary,CCA,"Discipline, Leadership, Physical Fitness, Teamwork",Conscientiousness,Social
+Symphonic Band,Performing Arts & Music,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Military Band,Performing Arts & Music,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Concert Band,Performing Arts & Music,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Chinese Orchestra,Performing Arts & Music,Post secondary,CCA,"Communication, Coordination, Cultural Awareness, Discipline, Language Proficiency, Musical Skills, Performance, Writing",Openness,Artistic
+String Ensemble,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Choir,Performing Arts & Music,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Angklung Ensemble,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Kulintang Ensemble,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Guzheng Ensemble,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Harmonica Band,Performing Arts & Music,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Guitar Ensemble,Performing Arts & Music,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Gamelan Ensemble,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Modern Dance,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Street Dance,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Chinese Dance,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Communication, Cultural Awareness, Dance, Language Proficiency, Performance, Physical Coordination, Writing",Openness,Artistic
+Malay Dance,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Communication, Cultural Awareness, Dance, Language Proficiency, Performance, Physical Coordination, Writing",Openness,Artistic
+Indian Dance,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+International Dance,Performing Arts & Music,Post secondary,CCA,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+English Drama,Performing Arts & Music,Post secondary,CCA,"Acting, Communication, Creativity, Cultural Awareness, Language Proficiency, Performance, Public Speaking, Writing",Openness,Artistic
+Chinese Drama,Performing Arts & Music,Post secondary,CCA,"Acting, Communication, Creativity, Cultural Awareness, Language Proficiency, Performance, Public Speaking, Writing",Openness,Artistic
+Malay Drama,Performing Arts & Music,Post secondary,CCA,"Acting, Communication, Creativity, Cultural Awareness, Language Proficiency, Performance, Public Speaking, Writing",Openness,Artistic
+Tamil Drama,Performing Arts & Music,Post secondary,CCA,"Acting, Communication, Creativity, Cultural Awareness, Language Proficiency, Performance, Public Speaking, Writing",Openness,Artistic
+Debate & Oratory,Clubs & Societies,Post secondary,CCA,"Argumentation, Critical Thinking, Public Speaking, Research",Extraversion,Social
+Scrabble,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Chess (International),Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Chess (Chinese),Clubs & Societies,Post secondary,CCA,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Social
+Infocomm Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Robotics Club,Clubs & Societies,Post secondary,CCA,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Openness,Realistic
+Astronomy Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Mathematics Society,Clubs & Societies,Post secondary,CCA,"Analytical Thinking, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Science Club,Clubs & Societies,Post secondary,CCA,"Analytical Thinking, Observation, Research, Scientific Method",Openness,Investigative
+Photography Club,Clubs & Societies,Post secondary,CCA,"Creativity, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Videography Club,Clubs & Societies,Post secondary,CCA,"Animation, Creativity, Photography, Storytelling, Technical Skills, Video Editing, Visual Composition",Openness,Social
+AVA Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Journalism Club,Clubs & Societies,Post secondary,CCA,"Communication, Media Production, Research, Writing",Openness,Social
+Library Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Green Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Environment Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Outdoor Adventure Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Interact Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Community Service Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Student Council,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Prefectorial Board,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Art Club,Clubs & Societies,Post secondary,CCA,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Music Club,Clubs & Societies,Post secondary,CCA,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Literary Club,Clubs & Societies,Post secondary,CCA,"Communication, Critical Thinking, Literary Analysis, Writing",Openness,Artistic
+Entrepreneurship Club,Clubs & Societies,Post secondary,CCA,"Business Management, Decision Making, Leadership, Strategic Planning",Openness,Enterprising
+Innovation Club,Clubs & Societies,Post secondary,CCA,"Adaptability, Critical Thinking, Learning",Openness,Social
+Applied Chemistry,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Algorithm Design, Analytical Skills, Chemistry, Laboratory Skills, Logical Thinking, Problem Solving, Programming, Scientific Method",Conscientiousness,Investigative
+Biologics & Process Technology,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Problem Solving, Research",Conscientiousness,Investigative
+Biomedical Science with Analytics,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Biology, Communication, Critical Thinking, Data Analysis, Data Visualization, Empathy, Laboratory Skills, Medical Knowledge, Observation, Patient Care, Research, Scientific Method, Statistical Analysis",Conscientiousness,Investigative
+Chemical & Pharmaceutical Technology,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+Common Science Programme,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Food Science & Nutrition,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Attention to Detail, Creativity, Culinary Skills, Observation, Research, Scientific Method, Time Management",Conscientiousness,Investigative
+Pharmaceutical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Skills, Analytical Thinking, Chemistry, Laboratory Skills, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Architecture,Built Environment & Architecture,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Conscientiousness,Investigative
+Accountancy & Finance,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Banking & Finance,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Business Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Common Business Programme,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Food & Beverage Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Attention to Detail, Business Management, Creativity, Culinary Skills, Decision Making, Leadership, Strategic Planning, Time Management",Extraversion,Enterprising
+Hospitality & Tourism Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Social
+Media & Communication Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Decision Making, Leadership, Media Production, Research, Strategic Planning, Writing",Extraversion,Artistic
+Sport & Wellness Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Coordination, Decision Making, Discipline, Leadership, Physical Fitness, Strategic Planning, Teamwork",Extraversion,Enterprising
+Business & Financial Technology,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Advanced & Digital Manufacturing,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Realistic
+Aerospace Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+AI & Data Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"AI/ML, Critical Thinking, Data Analysis, Data Visualization, Engineering Design, Mathematical Modeling, Mathematical Skills, Problem Solving, Research, Statistical Analysis, Technical Drawing",Conscientiousness,Investigative
+Biomedical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Biology, Communication, Empathy, Engineering Design, Laboratory Skills, Mathematical Skills, Medical Knowledge, Patient Care, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Cloud Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Network Management, Problem Solving, Systems Administration, Technical Drawing, Technical Support, Troubleshooting",Conscientiousness,Realistic
+Common Business & Technology Programme,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Common Engineering Programme,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electronic & Computer Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Robotics & Mechatronics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+Sustainability in Engineering with Business,Engineering & Technology,Post secondary,Polytechnic Diploma,"AI/ML, Business Management, Data Analysis, Decision Making, Engineering Design, Leadership, Mathematical Modeling, Mathematical Skills, Problem Solving, Research, Strategic Planning, Technical Drawing",Conscientiousness,Enterprising
+Nursing,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Oral Health Therapy,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Assessment, Communication, Empathy, Medical Knowledge, Patient Care, Therapeutic Skills",Agreeableness,Social
+Social Work,Humanities & Social Sciences,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Extraversion,Social
+Applied AI & Analytics,Computing & IT,Post secondary,Polytechnic Diploma,"AI/ML, Algorithm Design, Critical Thinking, Data Analysis, Data Visualization, Logical Thinking, Mathematical Modeling, Problem Solving, Programming, Research, Statistical Analysis",Conscientiousness,Investigative
+Common ICT Programme,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Cybersecurity & Digital Forensics,Computing & IT,Post secondary,Polytechnic Diploma,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Conscientiousness,Investigative
+Game Development & Technology,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Information Technology,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+"Animation, Games & Visual Effects","Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Animation, Storytelling, Technical Skills, Video Editing",Openness,Artistic
+Common Design & Media Programme,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication, Writing",Openness,Artistic
+Communication & Motion Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication, Writing",Openness,Artistic
+Experiential Product & Interior Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Client Management, Creativity, Design, Design Thinking, Software Proficiency, Spatial Reasoning, Visual Communication",Openness,Artistic
+Biomedical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Biology, Communication, Empathy, Laboratory Skills, Medical Knowledge, Observation, Patient Care, Research, Scientific Method",Conscientiousness,Investigative
+Common Science Programme,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Pharmaceutical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Skills, Analytical Thinking, Chemistry, Laboratory Skills, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Chemical & Biomolecular Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Analytical Skills, Chemistry, Engineering Design, Laboratory Skills, Mathematical Skills, Problem Solving, Scientific Method, Technical Drawing",Conscientiousness,Realistic
+Environmental Science & Sustainability,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"AI/ML, Analytical Thinking, Data Analysis, Mathematical Modeling, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Landscape Design & Horticulture,Engineering & Technology,Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Hotel & Leisure Facilities Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Enterprising
+Accountancy,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Arts Business Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Artistic Expression, Business Management, Creativity, Decision Making, Leadership, Observation, Strategic Planning, Visual Arts",Openness,Artistic
+Banking & Finance,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Business Studies,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Common Business Programme,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+International Trade & Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Real Estate Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Tourism & Resort Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Enterprising
+Aerospace Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Biomedical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Biology, Communication, Empathy, Engineering Design, Laboratory Skills, Mathematical Skills, Medical Knowledge, Patient Care, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Common Engineering Programme,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electrical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electronic & Computer Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Engineering Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Engineering Design, Mathematical Skills, Observation, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Mechanical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Mechatronics & Robotics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+Nursing,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Optometry,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Chinese Studies,Languages & Literature,Post secondary,Polytechnic Diploma,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Psychology & Community Development,Humanities & Social Sciences,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Early Childhood Development & Education,Education,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Tamil Studies with Early Education,Languages & Literature,Post secondary,Polytechnic Diploma,"Communication, Cultural Awareness, Language Proficiency, Writing",Agreeableness,Social
+Common ICT Programme,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Computing with Law,Computing & IT,Post secondary,Polytechnic Diploma,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Enterprising
+Cybersecurity & Digital Forensics,Computing & IT,Post secondary,Polytechnic Diploma,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Conscientiousness,Investigative
+Data Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+Information Technology,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Offshore & Sustainable Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"AI/ML, Data Analysis, Engineering Design, Mathematical Modeling, Mathematical Skills, Problem Solving, Research, Technical Drawing",Conscientiousness,Realistic
+Chinese Media & Communication,Media & Communication,Post secondary,Polytechnic Diploma,"Communication, Cultural Awareness, Language Proficiency, Media Production, Research, Writing",Openness,Artistic
+Common Media Programme,Media & Communication,Post secondary,Polytechnic Diploma,"Communication, Media Production, Research, Writing",Openness,Artistic
+Mass Communication,Media & Communication,Post secondary,Polytechnic Diploma,"Communication, Media Production, Research, Writing",Openness,Artistic
+Media Post-Production,Media & Communication,Post secondary,Polytechnic Diploma,"Communication, Media Production, Research, Writing",Openness,Artistic
+"Film, Sound & Video",Media & Communication,Post secondary,Polytechnic Diploma,"Animation, Storytelling, Technical Skills, Video Editing",Openness,Artistic
+Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Applied Chemistry,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Algorithm Design, Analytical Skills, Chemistry, Laboratory Skills, Logical Thinking, Problem Solving, Programming, Scientific Method",Conscientiousness,Investigative
+Biomedical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Biology, Communication, Empathy, Laboratory Skills, Medical Knowledge, Observation, Patient Care, Research, Scientific Method",Conscientiousness,Investigative
+Chemical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Analytical Skills, Chemistry, Engineering Design, Laboratory Skills, Mathematical Skills, Problem Solving, Scientific Method, Technical Drawing",Conscientiousness,Realistic
+Common Science Programme,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Food Science & Technology,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Attention to Detail, Creativity, Culinary Skills, Observation, Research, Scientific Method, Time Management",Conscientiousness,Investigative
+Perfumery & Cosmetic Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Architecture,Built Environment & Architecture,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Conscientiousness,Investigative
+Civil Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Facilities Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Integrated Events & Project Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Landscape Architecture,Built Environment & Architecture,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Conscientiousness,Investigative
+Accountancy,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Banking & Finance,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Business Administration,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Common Business Programme,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Human Resource Management with Psychology,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Agreeableness,Social
+Aeronautical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Aerospace Electronics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Common Engineering Programme,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Computer Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electrical & Electronic Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Engineering with Business,Engineering & Technology,Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Engineering Design, Leadership, Mathematical Skills, Problem Solving, Strategic Planning, Technical Drawing",Conscientiousness,Enterprising
+Mechanical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Mechatronics & Robotics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+Optometry,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Applied AI Analytics,Computing & IT,Post secondary,Polytechnic Diploma,"AI/ML, Algorithm Design, Critical Thinking, Data Analysis, Data Visualization, Logical Thinking, Mathematical Modeling, Problem Solving, Programming, Research, Statistical Analysis",Conscientiousness,Investigative
+Common ICT Programme,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Cybersecurity & Digital Forensics,Computing & IT,Post secondary,Polytechnic Diploma,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Conscientiousness,Investigative
+Information Technology,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Marine Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Maritime Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Interior Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Client Management, Creativity, Design, Design Thinking, Software Proficiency, Spatial Reasoning, Visual Communication",Openness,Artistic
+"Media, Arts & Design","Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Artistic Expression, Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Observation, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Arts, Visual Communication, Writing",Openness,Artistic
+Biomedical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Biology, Communication, Empathy, Laboratory Skills, Medical Knowledge, Observation, Patient Care, Research, Scientific Method",Conscientiousness,Investigative
+Biotechnology,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Biology, Laboratory Skills, Research, Scientific Method",Conscientiousness,Investigative
+Applied Chemistry,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Algorithm Design, Analytical Skills, Chemistry, Laboratory Skills, Logical Thinking, Problem Solving, Programming, Scientific Method",Conscientiousness,Investigative
+Pharmaceutical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Skills, Analytical Thinking, Chemistry, Laboratory Skills, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Common Science Programme,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Environmental & Marine Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Biological Sciences,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Supply Chain Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"AI/ML, Business Management, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Research, Strategic Planning",Extraversion,Enterprising
+Aviation Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Aerospace Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Common Engineering Programme,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electrical & Electronic Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Engineering System & Management,Engineering & Technology,Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Engineering Design, Leadership, Mathematical Skills, Problem Solving, Strategic Planning, Technical Drawing",Conscientiousness,Enterprising
+Engineering Design with Business,Engineering & Technology,Post secondary,Polytechnic Diploma,"Attention to Detail, Business Management, CAD Design, Creativity, Decision Making, Design Thinking, Engineering Design, Leadership, Mathematical Skills, Problem Solving, Software Proficiency, Spatial Reasoning, Strategic Planning, Technical Drawing, Visual Communication",Openness,Artistic
+Sustainable Built Environment,Built Environment & Architecture,Post secondary,Polytechnic Diploma,"AI/ML, Data Analysis, Mathematical Modeling, Research",Openness,Investigative
+Mobility & Robotic Systems,General/Core Subjects,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Business Process & Engineering Management,Engineering & Technology,Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Engineering Design, Leadership, Mathematical Skills, Problem Solving, Strategic Planning, Technical Drawing",Conscientiousness,Enterprising
+Customer Experience Management with Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Hotel & Hospitality Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Social
+Restaurant & Culinary Operations,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Attention to Detail, Communication, Creativity, Culinary Skills, Customer Service, Organization, Team Management, Time Management",Extraversion,Enterprising
+Tourism Management with Technology,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Enterprising
+Events & Project Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Hospitality & Tourism Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Social
+Hotel & Leisure Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Enterprising
+Business Information Systems,Computing & IT,Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Conscientiousness,Enterprising
+Financial Technology,General/Core Subjects,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Digital Design & Development,Computing & IT,Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Infocomm Security Management,Computing & IT,Post secondary,Polytechnic Diploma,"Business Management, Cybersecurity, Decision Making, Leadership, Problem Solving, Risk Assessment, Strategic Planning, Technical Analysis",Conscientiousness,Enterprising
+Common ICT Programme,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Applied AI & Analytics,Computing & IT,Post secondary,Polytechnic Diploma,"AI/ML, Algorithm Design, Critical Thinking, Data Analysis, Data Visualization, Logical Thinking, Mathematical Modeling, Problem Solving, Programming, Research, Statistical Analysis",Conscientiousness,Investigative
+Information Technology,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Cybersecurity & Digital Forensics,Computing & IT,Post secondary,Polytechnic Diploma,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Conscientiousness,Investigative
+Enterprise Cloud Computing & Management,Computing & IT,Post secondary,Polytechnic Diploma,"Algorithm Design, Business Management, Decision Making, Leadership, Logical Thinking, Network Management, Problem Solving, Programming, Strategic Planning, Systems Administration, Technical Support, Troubleshooting",Conscientiousness,Enterprising
+Outdoor & Adventure Learning,General/Core Subjects,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Health Management & Promotion,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Decision Making, Empathy, Leadership, Medical Knowledge, Patient Care, Strategic Planning",Extraversion,Enterprising
+Health Services Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Decision Making, Empathy, Leadership, Medical Knowledge, Patient Care, Strategic Planning",Extraversion,Enterprising
+Sport Coaching,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Sports & Health,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Communication, Coordination, Discipline, Empathy, Medical Knowledge, Patient Care, Physical Fitness, Teamwork",Agreeableness,Social
+Exercise & Sports Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Coordination, Discipline, Observation, Physical Fitness, Research, Scientific Method, Teamwork",Conscientiousness,Investigative
+Integrated Community Care,Healthcare & Medical Sciences,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Consumer Behaviour & Research,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Acumen, Communication, Strategic Thinking",Extraversion,Investigative
+Human Resource Management with Psychology,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Agreeableness,Social
+Common Business Programme,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Consumer Insights & Psychology,Humanities & Social Sciences,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Sonic Arts,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Arts & Theatre Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Acting, Artistic Expression, Business Management, Creativity, Decision Making, Leadership, Observation, Performance, Public Speaking, Strategic Planning, Visual Arts",Openness,Artistic
+Design for Games & Gamification,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Digital Content Creation,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Arts & Entertainment Production Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"AI/ML, Artistic Expression, Business Management, Creativity, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Observation, Research, Strategic Planning, Visual Arts",Openness,Artistic
+"Common Arts, Media & Design Programme","Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Artistic Expression, Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Observation, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Arts, Visual Communication, Writing",Openness,Artistic
+Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Outdoor Education,Sports & Physical Education,Post secondary,Polytechnic Diploma,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Common Business Programme,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Common Design Programme,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Common Engineering Programme,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Common ICT Programme,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Common Science Programme,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Accounting & Finance,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Aerospace Electronics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Aerospace Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Applied Artificial Intelligence,Computing & IT,Post secondary,Polytechnic Diploma,"AI/ML, Algorithm Design, Artistic Expression, Creativity, Data Analysis, Logical Thinking, Mathematical Modeling, Observation, Problem Solving, Programming, Research, Visual Arts",Openness,Artistic
+Architecture & Sustainable Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"AI/ML, Attention to Detail, CAD Design, Creativity, Data Analysis, Design Thinking, Mathematical Modeling, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Applied Chemistry,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Algorithm Design, Analytical Skills, Chemistry, Laboratory Skills, Logical Thinking, Problem Solving, Programming, Scientific Method",Conscientiousness,Investigative
+Applied Food Science & Nutrition,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Algorithm Design, Analytical Thinking, Attention to Detail, Creativity, Culinary Skills, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method, Time Management",Conscientiousness,Investigative
+Big Data & Analytics,Computing & IT,Post secondary,Polytechnic Diploma,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+Biomedical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Biology, Communication, Empathy, Engineering Design, Laboratory Skills, Mathematical Skills, Medical Knowledge, Patient Care, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Biomedical Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Biology, Communication, Empathy, Laboratory Skills, Medical Knowledge, Observation, Patient Care, Research, Scientific Method",Conscientiousness,Investigative
+Biotechnology,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Biology, Laboratory Skills, Research, Scientific Method",Conscientiousness,Investigative
+Chemical Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Analytical Skills, Chemistry, Engineering Design, Laboratory Skills, Mathematical Skills, Problem Solving, Scientific Method, Technical Drawing",Conscientiousness,Realistic
+Computer Engineering,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electronics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Information Technology,Computing & IT,Post secondary,Polytechnic Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Life Sciences,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Biology, Laboratory Skills, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Mechatronics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Automation, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+Microelectronics,Engineering & Technology,Post secondary,Polytechnic Diploma,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Business,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Culinary & Catering Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Attention to Detail, Business Management, Creativity, Culinary Skills, Decision Making, Leadership, Strategic Planning, Time Management",Extraversion,Enterprising
+Early Childhood Development & Education,Education,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Hotel & Hospitality Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Social
+Law & Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Conscientiousness,Enterprising
+Leisure & Resort Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Retail Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"AI/ML, Business Management, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Research, Strategic Planning",Extraversion,Enterprising
+Interactive Media Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication, Writing",Openness,Artistic
+Moving Images,Media & Communication,Post secondary,Polytechnic Diploma,"Adaptability, Critical Thinking, Learning",Openness,Artistic
+Product & Industrial Design,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Creativity, Design Thinking, Software Proficiency, Visual Communication",Openness,Artistic
+Visual Communication,"Arts, Design & Visual Arts",Post secondary,Polytechnic Diploma,"Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Visual Communication, Writing",Openness,Artistic
+Environmental & Marine Science,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Veterinary Bioscience,STEM - Science & Mathematics,Post secondary,Polytechnic Diploma,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Integrated Facility Management,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Real Estate,"Business, Finance & Management",Post secondary,Polytechnic Diploma,"Business Acumen, Communication, Strategic Thinking",Extraversion,Enterprising
+Accountancy,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Airport Operations,General/Core Subjects,Post secondary,ITE Higher Nitec,"AI/ML, Data Analysis, Mathematical Modeling, Research",Openness,Conventional
+Community Engagement & Development,General/Core Subjects,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Culinary Arts & Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Artistic Expression, Attention to Detail, Business Management, Creativity, Culinary Skills, Decision Making, Leadership, Observation, Strategic Planning, Time Management, Visual Arts",Openness,Artistic
+Customer Experience Management (Aviation Services),"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Customer Experience Management (Cabin Services),"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Customer Experience Management (Lifestyle & Consumer),"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+E-Commerce & Retail,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"AI/ML, Data Analysis, Mathematical Modeling, Research",Extraversion,Enterprising
+Event Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Fitness Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Hotel & Restaurant Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Enterprising
+Human Resource Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Social
+Lifestyle & Recreation Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Logistics & Supply Chain Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"AI/ML, Business Management, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Research, Strategic Planning",Extraversion,Enterprising
+Patient Management & Services,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Communication, Decision Making, Empathy, Leadership, Medical Knowledge, Patient Care, Strategic Planning",Agreeableness,Enterprising
+Security Operations,Security & Safety,Post secondary,ITE Higher Nitec,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Openness,Conventional
+Tourism Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Communication, Customer Service, Decision Making, Leadership, Organization, Strategic Planning, Team Management",Extraversion,Enterprising
+Sport Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Coordination, Decision Making, Discipline, Leadership, Physical Fitness, Strategic Planning, Teamwork",Extraversion,Enterprising
+Beauty & Wellness Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Hairdressing & Salon Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"AI/ML, Business Management, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Research, Strategic Planning",Extraversion,Enterprising
+Floristry,Beauty & Wellness,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Agriculture & Aquaculture Technology,General/Core Subjects,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Openness,Realistic
+Aircraft Cabin Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"AI/ML, Data Analysis, Engineering Design, Mathematical Modeling, Mathematical Skills, Problem Solving, Research, Technical Drawing",Conscientiousness,Realistic
+Aircraft Engine Maintenance,Engineering & Technology,Post secondary,ITE Higher Nitec,"AI/ML, Data Analysis, Mathematical Modeling, Research",Conscientiousness,Realistic
+Aircraft Maintenance Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"AI/ML, Data Analysis, Engineering Design, Mathematical Modeling, Mathematical Skills, Problem Solving, Research, Technical Drawing",Conscientiousness,Realistic
+Arboriculture & Horticulture,Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Architectural BIM & Design,"Arts, Design & Visual Arts",Post secondary,ITE Higher Nitec,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Architectural Technology,Built Environment & Architecture,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Automation Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Automation, Engineering Design, Mathematical Skills, Problem Solving, Programming, Robotics, Systems Integration, Technical Drawing",Conscientiousness,Realistic
+Automotive Technology,Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Bio-Chemical Technology,STEM - Science & Mathematics,Post secondary,ITE Higher Nitec,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+Chemical Process Technology,STEM - Science & Mathematics,Post secondary,ITE Higher Nitec,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+Civil & Structural Engineering Design,Engineering & Technology,Post secondary,ITE Higher Nitec,"Attention to Detail, CAD Design, Creativity, Design Thinking, Engineering Design, Mathematical Skills, Problem Solving, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Electrical Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Facilities Management & Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Engineering Design, Leadership, Mathematical Skills, Problem Solving, Strategic Planning, Technical Drawing",Conscientiousness,Enterprising
+Integrated Mechanical & Electrical Design,Engineering & Technology,Post secondary,ITE Higher Nitec,"Attention to Detail, CAD Design, Creativity, Design Thinking, Engineering Design, Mathematical Skills, Problem Solving, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Land Transport Engineering (Rail),Engineering & Technology,Post secondary,ITE Higher Nitec,"AI/ML, Coordination, Data Analysis, Discipline, Engineering Design, Mathematical Modeling, Mathematical Skills, Physical Fitness, Problem Solving, Research, Teamwork, Technical Drawing",Conscientiousness,Realistic
+Land Transport Engineering (Operations Management),Engineering & Technology,Post secondary,ITE Higher Nitec,"Business Management, Coordination, Decision Making, Discipline, Engineering Design, Leadership, Mathematical Skills, Physical Fitness, Problem Solving, Strategic Planning, Teamwork, Technical Drawing",Conscientiousness,Enterprising
+Land Transport Engineering (Vehicle),Engineering & Technology,Post secondary,ITE Higher Nitec,"Coordination, Discipline, Engineering Design, Mathematical Skills, Physical Fitness, Problem Solving, Teamwork, Technical Drawing",Conscientiousness,Realistic
+Marine & Offshore Engineering (Engineering Design),Engineering & Technology,Post secondary,ITE Higher Nitec,"Attention to Detail, CAD Design, Creativity, Design Thinking, Engineering Design, Mathematical Skills, Problem Solving, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Marine & Offshore Engineering (Production),Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Mechanical & Electrical Services Supervision,Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Mechanical Systems Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Microelectronics (Equipment),Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Microelectronics (Process),Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Port Automation Technology,Engineering & Technology,Post secondary,ITE Higher Nitec,"Automation, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+Security Systems Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Cybersecurity, Engineering Design, Mathematical Skills, Problem Solving, Risk Assessment, Technical Analysis, Technical Drawing",Conscientiousness,Realistic
+Vertical Transportation,Engineering & Technology,Post secondary,ITE Higher Nitec,"Coordination, Discipline, Physical Fitness, Teamwork",Conscientiousness,Realistic
+Applied Food Science,STEM - Science & Mathematics,Post secondary,ITE Higher Nitec,"Algorithm Design, Analytical Thinking, Attention to Detail, Creativity, Culinary Skills, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method, Time Management",Conscientiousness,Investigative
+Landscape Management & Design,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Attention to Detail, Business Management, CAD Design, Creativity, Decision Making, Design Thinking, Leadership, Software Proficiency, Spatial Reasoning, Strategic Planning, Technical Drawing, Visual Communication",Openness,Artistic
+AI & Data Intelligence (AI),Computing & IT,Post secondary,ITE Higher Nitec,"AI/ML, Critical Thinking, Data Analysis, Data Visualization, Mathematical Modeling, Research, Statistical Analysis",Conscientiousness,Investigative
+AI & Data Intelligence (Data Engineering),Engineering & Technology,Post secondary,ITE Higher Nitec,"AI/ML, Critical Thinking, Data Analysis, Data Visualization, Engineering Design, Mathematical Modeling, Mathematical Skills, Problem Solving, Research, Statistical Analysis, Technical Drawing",Conscientiousness,Investigative
+Cloud Management & Operations (Cloud Operations),Computing & IT,Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Network Management, Strategic Planning, Systems Administration, Technical Support, Troubleshooting",Conscientiousness,Enterprising
+Cloud Management & Operations (Infrastructure Support),Computing & IT,Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Network Management, Strategic Planning, Systems Administration, Technical Support, Troubleshooting",Conscientiousness,Enterprising
+Cyber Security & Forensics,Security & Safety,Post secondary,ITE Higher Nitec,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Openness,Investigative
+Data Centre Infrastructure & Operation,Computing & IT,Post secondary,ITE Higher Nitec,"Critical Thinking, Data Analysis, Data Visualization, Network Management, Statistical Analysis, Systems Administration, Technical Support, Troubleshooting",Conscientiousness,Investigative
+Electronics & Computer Engineering (Applied Electronics & AI),Engineering & Technology,Post secondary,ITE Higher Nitec,"AI/ML, Algorithm Design, Data Analysis, Engineering Design, Logical Thinking, Mathematical Modeling, Mathematical Skills, Problem Solving, Programming, Research, Technical Drawing",Conscientiousness,Realistic
+IT System Integration,Computing & IT,Post secondary,ITE Higher Nitec,"Network Management, Systems Administration, Technical Support, Troubleshooting",Conscientiousness,Investigative
+Electronics Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Data Engineering,Engineering & Technology,Post secondary,ITE Higher Nitec,"Critical Thinking, Data Analysis, Data Visualization, Engineering Design, Mathematical Skills, Problem Solving, Statistical Analysis, Technical Drawing",Conscientiousness,Investigative
+Immersive Applications & Game,Computing & IT,Post secondary,ITE Higher Nitec,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+IT Applications Development,Computing & IT,Post secondary,ITE Higher Nitec,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+IT Systems & Networks,Computing & IT,Post secondary,ITE Higher Nitec,"Network Management, Systems Administration, Technical Support, Troubleshooting",Conscientiousness,Investigative
+Drone Technology,Computing & IT,Post secondary,ITE Higher Nitec,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Media Communication & Digital Marketing,Computing & IT,Post secondary,ITE Higher Nitec,"Communication, Creative Thinking, Digital Marketing, Marketing, Media Production, Research, Writing",Extraversion,Artistic
+Communication Design,"Arts, Design & Visual Arts",Post secondary,ITE Higher Nitec,"Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication, Writing",Openness,Artistic
+Film & Video Production,Media & Communication,Post secondary,ITE Higher Nitec,"Animation, Storytelling, Technical Skills, Video Editing",Openness,Artistic
+Interior & Product Design,"Arts, Design & Visual Arts",Post secondary,ITE Higher Nitec,"Client Management, Creativity, Design, Design Thinking, Software Proficiency, Spatial Reasoning, Visual Communication",Openness,Artistic
+Technical Theatre & Production,Performing Arts & Music,Post secondary,ITE Higher Nitec,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Visual Merchandising,"Arts, Design & Visual Arts",Post secondary,ITE Higher Nitec,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Motion Graphics,"Arts, Design & Visual Arts",Post secondary,ITE Higher Nitec,"Animation, Creativity, Design Thinking, Software Proficiency, Storytelling, Technical Skills, Video Editing, Visual Communication",Openness,Artistic
+Fashion Apparel Production,Computing & IT,Post secondary,ITE Higher Nitec,"Algorithm Design, Creativity, Fashion Design, Logical Thinking, Problem Solving, Programming, Technical Skills, Trend Analysis",Openness,Artistic
+Community Care Integration & Management,"Business, Finance & Management",Post secondary,ITE Higher Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Agreeableness,Social
+Nursing (in-service),Healthcare & Medical Sciences,Post secondary,ITE Higher Nitec,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Opticianry,Healthcare & Medical Sciences,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Paramedicine,Healthcare & Medical Sciences,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Rehabilitation Care,Healthcare & Medical Sciences,Post secondary,ITE Higher Nitec,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Nitec in Business Services,"Business, Finance & Management",Post secondary,ITE Nitec,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Nitec in Hospitality Operations,"Business, Finance & Management",Post secondary,ITE Nitec,"Communication, Customer Service, Organization, Team Management",Extraversion,Social
+Nitec in Retail Services,"Business, Finance & Management",Post secondary,ITE Nitec,"AI/ML, Data Analysis, Mathematical Modeling, Research",Extraversion,Enterprising
+Nitec in Network Systems & Security,Computing & IT,Post secondary,ITE Nitec,"Cybersecurity, Network Management, Problem Solving, Risk Assessment, Systems Administration, Technical Analysis, Technical Support, Troubleshooting",Conscientiousness,Investigative
+Nitec in Electronics,Engineering & Technology,Post secondary,ITE Nitec,"Engineering Skills, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Nitec in Mechanical Engineering,Engineering & Technology,Post secondary,ITE Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Nitec in Aerospace Machining & Assembly,Engineering & Technology,Post secondary,ITE Nitec,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Nitec in Culinary Arts,"Arts, Design & Visual Arts",Post secondary,ITE Nitec,"Artistic Expression, Attention to Detail, Creativity, Culinary Skills, Observation, Time Management, Visual Arts",Openness,Artistic
+Nitec in Pastry & Baking,"Food, Nutrition & Culinary Arts",Post secondary,ITE Nitec,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Nitec in Visual Merchandising,"Arts, Design & Visual Arts",Post secondary,ITE Nitec,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Nitec in Healthcare Services,Healthcare & Medical Sciences,Post secondary,ITE Nitec,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Work-Study Diploma in Business,"Business, Finance & Management",Post secondary,ITE Work-Study Diploma,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Work-Study Diploma in Engineering,Engineering & Technology,Post secondary,ITE Work-Study Diploma,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Work-Study Diploma in Information Technology,Computing & IT,Post secondary,ITE Work-Study Diploma,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Work-Study Diploma in Design,"Arts, Design & Visual Arts",Post secondary,ITE Work-Study Diploma,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Work-Study Diploma in Healthcare,Healthcare & Medical Sciences,Post secondary,ITE Work-Study Diploma,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Architecture,Built Environment & Architecture,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Conscientiousness,Investigative
+Business Administration,"Business, Finance & Management",Post secondary,University Degree,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Accounting,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Business Analytics,Computing & IT,Post secondary,University Degree,"Business Management, Critical Thinking, Data Analysis, Data Visualization, Decision Making, Leadership, Statistical Analysis, Strategic Planning",Conscientiousness,Investigative
+Computer Science,STEM - Science & Mathematics,Post secondary,University Degree,"Algorithm Design, Analytical Thinking, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method",Conscientiousness,Investigative
+Information Systems,Computing & IT,Post secondary,University Degree,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Computer Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Dentistry,Healthcare & Medical Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Economics,"Business, Finance & Management",Post secondary,University Degree,"Critical Thinking, Data Interpretation, Economic Analysis, Research",Extraversion,Enterprising
+Engineering Science,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Engineering Design, Mathematical Skills, Observation, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Biomedical Engineering,Engineering & Technology,Post secondary,University Degree,"Biology, Communication, Empathy, Engineering Design, Laboratory Skills, Mathematical Skills, Medical Knowledge, Patient Care, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Chemical Engineering,Engineering & Technology,Post secondary,University Degree,"Analytical Skills, Chemistry, Engineering Design, Laboratory Skills, Mathematical Skills, Problem Solving, Scientific Method, Technical Drawing",Conscientiousness,Realistic
+Civil Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Electrical Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Environmental Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Investigative
+Industrial & Systems Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Materials Science & Engineering,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Engineering Design, Mathematical Skills, Observation, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Mechanical Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+English Language,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Chinese Studies,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Japanese Studies,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Malay Studies,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+South Asian Studies,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Southeast Asian Studies,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+History,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Philosophy,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Openness,Social
+Theatre Studies,Performing Arts & Music,Post secondary,University Degree,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Law,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Conscientiousness,Social
+Medicine,Healthcare & Medical Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Nursing,Healthcare & Medical Sciences,Post secondary,University Degree,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Pharmacy,Healthcare & Medical Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Music,Performing Arts & Music,Post secondary,University Degree,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Data Science & Analytics,STEM - Science & Mathematics,Post secondary,University Degree,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+Environmental Studies,Sustainability & Environment,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Food Science & Technology,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Attention to Detail, Creativity, Culinary Skills, Observation, Research, Scientific Method, Time Management",Conscientiousness,Investigative
+Quantitative Finance,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Real Estate,"Business, Finance & Management",Post secondary,University Degree,"Business Acumen, Communication, Strategic Thinking",Extraversion,Enterprising
+Social Work,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Extraversion,Social
+Psychology,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Sociology,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Accountancy,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Business,"Business, Finance & Management",Post secondary,University Degree,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Aerospace Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Bioengineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Chemical & Biomolecular Engineering,Engineering & Technology,Post secondary,University Degree,"Analytical Skills, Chemistry, Engineering Design, Laboratory Skills, Mathematical Skills, Problem Solving, Scientific Method, Technical Drawing",Conscientiousness,Realistic
+Civil Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Computer Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Computer Science,STEM - Science & Mathematics,Post secondary,University Degree,"Algorithm Design, Analytical Thinking, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method",Conscientiousness,Investigative
+Data Science & Artificial Intelligence,STEM - Science & Mathematics,Post secondary,University Degree,"AI/ML, Artistic Expression, Creativity, Critical Thinking, Data Analysis, Data Visualization, Mathematical Modeling, Observation, Research, Statistical Analysis, Visual Arts",Openness,Artistic
+Electrical & Electronic Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Environmental Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Investigative
+Information Engineering & Media,Engineering & Technology,Post secondary,University Degree,"Communication, Engineering Design, Mathematical Skills, Media Production, Problem Solving, Research, Technical Drawing, Writing",Conscientiousness,Artistic
+Materials Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Mechanical Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Maritime Studies,Maritime Studies,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Openness,Realistic
+"Art, Design & Media","Arts, Design & Visual Arts",Post secondary,University Degree,"Artistic Expression, Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Observation, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Arts, Visual Communication, Writing",Openness,Artistic
+Communication Studies,Media & Communication,Post secondary,University Degree,"Communication, Media Production, Research, Writing",Openness,Artistic
+Economics,"Business, Finance & Management",Post secondary,University Degree,"Critical Thinking, Data Interpretation, Economic Analysis, Research",Extraversion,Enterprising
+English,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+History,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Linguistics & Multilingual Studies,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Skills",Openness,Artistic
+Philosophy,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Openness,Social
+Psychology,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Public Policy & Global Affairs,Humanities & Social Sciences,Post secondary,University Degree,"AI/ML, Data Analysis, Mathematical Modeling, Research",Agreeableness,Social
+Sociology,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Chinese,Languages & Literature,Post secondary,University Degree,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Biological Sciences,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Chemistry & Biological Chemistry,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Skills, Chemistry, Laboratory Skills, Scientific Method",Conscientiousness,Investigative
+Mathematical Sciences,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Mathematical Reasoning, Observation, Problem Solving, Quantitative Analysis, Research, Scientific Method",Conscientiousness,Investigative
+Physics & Applied Physics,STEM - Science & Mathematics,Post secondary,University Degree,"Algorithm Design, Logical Thinking, Mathematical Analysis, Physics, Problem Solving, Programming, Scientific Method",Conscientiousness,Investigative
+Education,Education,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Sports Science & Management,STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Business Management, Coordination, Decision Making, Discipline, Leadership, Observation, Physical Fitness, Research, Scientific Method, Strategic Planning, Teamwork",Conscientiousness,Investigative
+Medicine,Healthcare & Medical Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Accountancy,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Business Management,"Business, Finance & Management",Post secondary,University Degree,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Economics,"Business, Finance & Management",Post secondary,University Degree,"Critical Thinking, Data Interpretation, Economic Analysis, Research",Extraversion,Enterprising
+Finance,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Information Systems Management,Computing & IT,Post secondary,University Degree,"Business Management, Decision Making, Leadership, Strategic Planning",Conscientiousness,Enterprising
+Computer Science,STEM - Science & Mathematics,Post secondary,University Degree,"Algorithm Design, Analytical Thinking, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method",Conscientiousness,Investigative
+Computing & Law,Computing & IT,Post secondary,University Degree,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Enterprising
+Social Sciences (Political Science),STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Social Sciences (Psychology),STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Social
+Social Sciences (Sociology),STEM - Science & Mathematics,Post secondary,University Degree,"Analytical Thinking, Observation, Research, Scientific Method",Conscientiousness,Investigative
+Law,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Conscientiousness,Social
+Communications,Media & Communication,Post secondary,University Degree,"Communication, Media Production, Research, Writing",Openness,Artistic
+Corporate Communication,Media & Communication,Post secondary,University Degree,"Communication, Media Production, Research, Writing",Openness,Artistic
+Sustainable & Green Finance,"Business, Finance & Management",Post secondary,University Degree,"AI/ML, Accounting, Attention to Detail, Data Analysis, Financial Analysis, Mathematical Modeling, Numerical Skills, Research",Conscientiousness,Enterprising
+Architecture & Sustainable Design,"Arts, Design & Visual Arts",Post secondary,University Degree,"AI/ML, Attention to Detail, CAD Design, Creativity, Data Analysis, Design Thinking, Mathematical Modeling, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Engineering Product Development,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Engineering Systems & Design,Engineering & Technology,Post secondary,University Degree,"Attention to Detail, CAD Design, Creativity, Design Thinking, Engineering Design, Mathematical Skills, Problem Solving, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Information Systems Technology & Design,Computing & IT,Post secondary,University Degree,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Computer Science & Design,STEM - Science & Mathematics,Post secondary,University Degree,"Algorithm Design, Analytical Thinking, Attention to Detail, CAD Design, Creativity, Design Thinking, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Design & Artificial Intelligence,Computing & IT,Post secondary,University Degree,"AI/ML, Artistic Expression, Attention to Detail, CAD Design, Creativity, Data Analysis, Design Thinking, Mathematical Modeling, Observation, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Arts, Visual Communication",Openness,Artistic
+Accountancy,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Aerospace Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Chemical Engineering,Engineering & Technology,Post secondary,University Degree,"Analytical Skills, Chemistry, Engineering Design, Laboratory Skills, Mathematical Skills, Problem Solving, Scientific Method, Technical Drawing",Conscientiousness,Realistic
+Civil Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Computer Science,STEM - Science & Mathematics,Post secondary,University Degree,"Algorithm Design, Analytical Thinking, Logical Thinking, Observation, Problem Solving, Programming, Research, Scientific Method",Conscientiousness,Investigative
+Electrical & Electronic Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Food Technology,"Food, Nutrition & Culinary Arts",Post secondary,University Degree,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Infocomm Security,Computing & IT,Post secondary,University Degree,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Conscientiousness,Investigative
+Maritime Studies,Maritime Studies,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Openness,Realistic
+Mechanical Engineering,Engineering & Technology,Post secondary,University Degree,"Engineering Design, Mathematical Skills, Problem Solving, Technical Drawing",Conscientiousness,Realistic
+Nursing,Healthcare & Medical Sciences,Post secondary,University Degree,"Communication, Empathy, Medical Knowledge, Patient Care",Agreeableness,Social
+Occupational Therapy,Healthcare & Medical Sciences,Post secondary,University Degree,"Assessment, Communication, Patient Care, Therapeutic Skills",Agreeableness,Social
+Physiotherapy,Healthcare & Medical Sciences,Post secondary,University Degree,"Assessment, Communication, Patient Care, Therapeutic Skills",Agreeableness,Social
+Radiography,Healthcare & Medical Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Accountancy,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Extraversion,Enterprising
+Business Analytics,Computing & IT,Post secondary,University Degree,"Business Management, Critical Thinking, Data Analysis, Data Visualization, Decision Making, Leadership, Statistical Analysis, Strategic Planning",Conscientiousness,Investigative
+Finance,"Business, Finance & Management",Post secondary,University Degree,"Accounting, Attention to Detail, Financial Analysis, Numerical Skills",Conscientiousness,Enterprising
+Human Resource Management,"Business, Finance & Management",Post secondary,University Degree,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Social
+Marketing,"Business, Finance & Management",Post secondary,University Degree,"Communication, Creative Thinking, Digital Marketing, Marketing",Extraversion,Enterprising
+Supply Chain Management,"Business, Finance & Management",Post secondary,University Degree,"AI/ML, Business Management, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Research, Strategic Planning",Extraversion,Enterprising
+Early Childhood Education,Education,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Social Work,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Extraversion,Social
+Counselling,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Psychology,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Agreeableness,Social
+Criminology & Security,Humanities & Social Sciences,Post secondary,University Degree,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Agreeableness,Social
+Law,Humanities & Social Sciences,Post secondary,University Degree,"Adaptability, Critical Thinking, Learning",Conscientiousness,Social
+Mass Communication,Media & Communication,Post secondary,University Degree,"Communication, Media Production, Research, Writing",Openness,Artistic
+Fine Arts,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Design Communication,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication, Writing",Openness,Artistic
+Interior Design,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Client Management, Creativity, Design, Design Thinking, Software Proficiency, Spatial Reasoning, Visual Communication",Openness,Artistic
+Product Design,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Client Management, Creativity, Design, Design Thinking, Software Proficiency, Spatial Reasoning, Visual Communication",Openness,Artistic
+Fashion Design & Textiles,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Creativity, Design Thinking, Fashion Design, Software Proficiency, Technical Skills, Trend Analysis, Visual Communication",Openness,Artistic
+Animation Art,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Animation, Artistic Expression, Creativity, Observation, Storytelling, Technical Skills, Video Editing, Visual Arts",Openness,Artistic
+Film,Media & Communication,Post secondary,Arts Degree,"Animation, Storytelling, Technical Skills, Video Editing",Openness,Artistic
+Acting,Performing Arts & Music,Post secondary,Arts Degree,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Music,Performing Arts & Music,Post secondary,Arts Degree,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Dance,Performing Arts & Music,Post secondary,Arts Degree,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Musical Theatre,Performing Arts & Music,Post secondary,Arts Degree,"Acting, Coordination, Creativity, Discipline, Musical Skills, Performance, Public Speaking",Openness,Artistic
+Arts Management,"Business, Finance & Management",Post secondary,Arts Degree,"Artistic Expression, Business Management, Creativity, Decision Making, Leadership, Observation, Strategic Planning, Visual Arts",Openness,Artistic
+Fashion Media & Industries,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Communication, Creativity, Fashion Design, Media Production, Research, Technical Skills, Trend Analysis, Writing",Openness,Artistic
+3D Design,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Design & Media,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Attention to Detail, CAD Design, Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication, Writing",Openness,Artistic
+Fashion Studies,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Creativity, Fashion Design, Technical Skills, Trend Analysis",Openness,Artistic
+Fine Art,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Interior Design,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Client Management, Creativity, Design, Design Thinking, Software Proficiency, Spatial Reasoning, Visual Communication",Openness,Artistic
+Visual Communication,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Communication, Creativity, Design Thinking, Media Production, Research, Software Proficiency, Visual Communication, Writing",Openness,Artistic
+Dance,Performing Arts & Music,Post secondary,Arts Degree,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Drama,Performing Arts & Music,Post secondary,Arts Degree,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Music,Performing Arts & Music,Post secondary,Arts Degree,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Visual Arts,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Design,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Media Arts,"Arts, Design & Visual Arts",Post secondary,Arts Degree,"Artistic Expression, Communication, Creativity, Media Production, Observation, Research, Visual Arts, Writing",Openness,Artistic
+Music,Performing Arts & Music,Post secondary,Arts Degree,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Theatre & Performance,Performing Arts & Music,Post secondary,Arts Degree,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Arts Management,"Business, Finance & Management",Post secondary,Arts Degree,"Artistic Expression, Business Management, Creativity, Decision Making, Leadership, Observation, Strategic Planning, Visual Arts",Openness,Artistic
+Visual Arts (IB with Arts Specialism),"Arts, Design & Visual Arts",Post secondary,IB with Arts Specialism,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Dance (IB with Arts Specialism),"Arts, Design & Visual Arts",Post secondary,IB with Arts Specialism,"Artistic Expression, Creativity, Dance, Observation, Performance, Physical Coordination, Visual Arts",Openness,Artistic
+Music (IB with Arts Specialism),"Arts, Design & Visual Arts",Post secondary,IB with Arts Specialism,"Artistic Expression, Coordination, Creativity, Discipline, Musical Skills, Observation, Performance, Visual Arts",Openness,Artistic
+Theatre (IB with Arts Specialism),"Arts, Design & Visual Arts",Post secondary,IB with Arts Specialism,"Acting, Artistic Expression, Creativity, Observation, Performance, Public Speaking, Visual Arts",Openness,Artistic
+Film (IB with Arts Specialism),"Arts, Design & Visual Arts",Post secondary,IB with Arts Specialism,"Animation, Artistic Expression, Creativity, Observation, Storytelling, Technical Skills, Video Editing, Visual Arts",Openness,Artistic
+Literary Arts (IB with Arts Specialism),"Arts, Design & Visual Arts",Post secondary,IB with Arts Specialism,"Artistic Expression, Communication, Creativity, Critical Thinking, Literary Analysis, Observation, Visual Arts, Writing",Openness,Artistic
+Singapore Science & Engineering Fair (SSEF),Competitions & Events,Post secondary,Competition,"AI/ML, Analytical Thinking, Competition Skills, Data Analysis, Engineering Design, Excellence, Mathematical Modeling, Mathematical Skills, Observation, Performance Under Pressure, Problem Solving, Research, Scientific Method, Technical Drawing",Conscientiousness,Investigative
+Singapore Mathematical Olympiad (SMO),Competitions & Events,Post secondary,Competition,"Analytical Thinking, Competition Skills, Excellence, Mathematical Reasoning, Performance Under Pressure, Problem Solving, Quantitative Analysis",Openness,Investigative
+National Science Challenge,Competitions & Events,Post secondary,Competition,"Analytical Thinking, Competition Skills, Excellence, Observation, Performance Under Pressure, Research, Scientific Method",Openness,Investigative
+National Math Competition,Competitions & Events,Post secondary,Competition,"Analytical Thinking, Competition Skills, Excellence, Mathematical Reasoning, Performance Under Pressure, Problem Solving, Quantitative Analysis",Openness,Investigative
+Singapore Chemistry Olympiad,Competitions & Events,Post secondary,Competition,"Analytical Skills, Chemistry, Competition Skills, Excellence, Laboratory Skills, Performance Under Pressure, Scientific Method",Conscientiousness,Investigative
+Singapore Physics Olympiad,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Mathematical Analysis, Performance Under Pressure, Physics, Problem Solving, Scientific Method",Conscientiousness,Investigative
+Singapore Biology Olympiad,Competitions & Events,Post secondary,Competition,"Biology, Competition Skills, Excellence, Laboratory Skills, Performance Under Pressure, Research, Scientific Method",Openness,Investigative
+Singapore Junior Physics Olympiad,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Mathematical Analysis, Performance Under Pressure, Physics, Problem Solving, Scientific Method",Conscientiousness,Investigative
+Singapore Junior Chemistry Olympiad,Competitions & Events,Post secondary,Competition,"Analytical Skills, Chemistry, Competition Skills, Excellence, Laboratory Skills, Performance Under Pressure, Scientific Method",Conscientiousness,Investigative
+Elementz Science Project Competition,Competitions & Events,Post secondary,Competition,"Analytical Thinking, Competition Skills, Excellence, Observation, Performance Under Pressure, Research, Scientific Method",Openness,Investigative
+Current Affairs Quiz,Competitions & Events,Post secondary,Competition,"AI/ML, Competition Skills, Data Analysis, Excellence, Mathematical Modeling, Performance Under Pressure, Research",Openness,Investigative
+Model United Nations Conferences,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+Plain English Speaking Award (PESA),Competitions & Events,Post secondary,Competition,"AI/ML, Communication, Competition Skills, Cultural Awareness, Data Analysis, Excellence, Language Proficiency, Mathematical Modeling, Performance Under Pressure, Research, Writing",Openness,Investigative
+UNSW International Competitions & Assessments for Schools,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+National Public Speaking Competition,Competitions & Events,Post secondary,Competition,"Communication, Competition Skills, Confidence, Excellence, Interpersonal Skills, Leadership, Performance Under Pressure",Extraversion,Investigative
+Create Your Own Newspaper Competition,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+Singapore Youth Festival (SYF) Arts Presentation,Competitions & Events,Post secondary,Competition,"Artistic Expression, Competition Skills, Creativity, Excellence, Observation, Performance Under Pressure, Visual Arts",Openness,Artistic
+Singapore Youth Festival (SYF) Art Exhibition,Competitions & Events,Post secondary,Competition,"Artistic Expression, Competition Skills, Creativity, Excellence, Observation, Performance Under Pressure, Visual Arts",Openness,Artistic
+UOB Painting of the Year (Junior),Competitions & Events,Post secondary,Competition,"AI/ML, Artistic Expression, Competition Skills, Creativity, Data Analysis, Excellence, Mathematical Modeling, Observation, Performance Under Pressure, Research, Visual Arts",Openness,Investigative
+24-Hour Playwriting Competition,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Artistic
+Singapore Art Competition,Competitions & Events,Post secondary,Competition,"Artistic Expression, Competition Skills, Creativity, Excellence, Observation, Performance Under Pressure, Visual Arts",Openness,Artistic
+Live On Design Competition,Competitions & Events,Post secondary,Competition,"Attention to Detail, CAD Design, Competition Skills, Creativity, Design Thinking, Excellence, Performance Under Pressure, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+National School Games - Track & Field,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+National School Games - Swimming,Competitions & Events,Post secondary,Competition,"Competition Skills, Coordination, Discipline, Excellence, Performance Under Pressure, Physical Fitness, Teamwork",Openness,Investigative
+National School Games - Basketball,Competitions & Events,Post secondary,Competition,"Competition Skills, Coordination, Discipline, Excellence, Performance Under Pressure, Physical Fitness, Teamwork",Extraversion,Investigative
+National School Games - Football,Competitions & Events,Post secondary,Competition,"Competition Skills, Coordination, Discipline, Excellence, Performance Under Pressure, Physical Fitness, Teamwork",Extraversion,Investigative
+National School Games - Badminton,Competitions & Events,Post secondary,Competition,"Competition Skills, Coordination, Discipline, Excellence, Performance Under Pressure, Physical Fitness, Teamwork",Openness,Investigative
+National School Games - Table Tennis,Competitions & Events,Post secondary,Competition,"Competition Skills, Coordination, Discipline, Excellence, Performance Under Pressure, Physical Fitness, Teamwork",Openness,Investigative
+National School Games - Various Sports,Competitions & Events,Post secondary,Competition,"Competition Skills, Coordination, Discipline, Excellence, Performance Under Pressure, Physical Fitness, Teamwork",Openness,Realistic
+National Robotics Competition (NRC),Competitions & Events,Post secondary,Competition,"Automation, Competition Skills, Engineering, Excellence, Performance Under Pressure, Problem Solving, Programming, Robotics, Systems Integration",Openness,Realistic
+First Lego League (FLL),Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+IDE Series Robotics Competition,Competitions & Events,Post secondary,Competition,"Automation, Competition Skills, Engineering, Excellence, Performance Under Pressure, Problem Solving, Programming, Robotics, Systems Integration",Openness,Realistic
+Splash Awards (App Design),Competitions & Events,Post secondary,Competition,"Algorithm Design, Attention to Detail, CAD Design, Competition Skills, Creativity, Design Thinking, Excellence, Logical Thinking, Performance Under Pressure, Problem Solving, Programming, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+National Software Competition,Competitions & Events,Post secondary,Competition,"Algorithm Design, Competition Skills, Excellence, Logical Thinking, Performance Under Pressure, Problem Solving, Programming",Openness,Investigative
+Hackathons (GovTech Stack the Flags),Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+Singapore Youth AI Competition,Competitions & Events,Post secondary,Competition,"AI/ML, Competition Skills, Data Analysis, Excellence, Mathematical Modeling, Performance Under Pressure, Research",Openness,Investigative
+Singapore Youth Entrepreneurship Competition,Competitions & Events,Post secondary,Competition,"Business Management, Competition Skills, Decision Making, Excellence, Leadership, Performance Under Pressure, Strategic Planning",Openness,Enterprising
+Singapore Futures Youth Competition,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+Make The Change Youth Competition,Competitions & Events,Post secondary,Competition,"Competition Skills, Excellence, Performance Under Pressure",Openness,Investigative
+SQL for Data Analysis,Computing & IT,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+Python for Data Science,Computing & IT,Post secondary,SkillsFuture Course,"Algorithm Design, Critical Thinking, Data Analysis, Data Visualization, Logical Thinking, Problem Solving, Programming, Statistical Analysis",Conscientiousness,Investigative
+Tableau Fundamentals,Computing & IT,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+PowerBI Data Visualization,Computing & IT,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Openness,Artistic
+Big Data Analytics,Computing & IT,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+Data Management & Analysis,Computing & IT,Post secondary,SkillsFuture Course,"Business Management, Critical Thinking, Data Analysis, Data Visualization, Decision Making, Leadership, Statistical Analysis, Strategic Planning",Conscientiousness,Investigative
+Data Visualisation Practicum,Computing & IT,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Openness,Artistic
+Data Analytics for Workplace,Computing & IT,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Conscientiousness,Investigative
+Blockchain Fundamentals,"Business, Finance & Management",Post secondary,SkillsFuture Course,"AI/ML, Data Analysis, Mathematical Modeling, Research",Extraversion,Enterprising
+Cryptocurrency Trading,"Business, Finance & Management",Post secondary,SkillsFuture Course,"Business Acumen, Communication, Strategic Thinking",Extraversion,Enterprising
+Wealth Management Basics,"Business, Finance & Management",Post secondary,SkillsFuture Course,"Business Management, Decision Making, Leadership, Strategic Planning",Extraversion,Enterprising
+Financial Planning,"Business, Finance & Management",Post secondary,SkillsFuture Course,"Business Acumen, Communication, Strategic Thinking",Extraversion,Enterprising
+FinTech Applications,"Business, Finance & Management",Post secondary,SkillsFuture Course,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Extraversion,Enterprising
+Investment Analysis,"Business, Finance & Management",Post secondary,SkillsFuture Course,"Business Acumen, Communication, Strategic Thinking",Extraversion,Enterprising
+Digital Marketing (SEO/SEM),Media & Communication,Post secondary,SkillsFuture Course,"Communication, Creative Thinking, Digital Marketing, Marketing",Openness,Artistic
+Social Media Marketing,Media & Communication,Post secondary,SkillsFuture Course,"Communication, Creative Thinking, Digital Marketing, Marketing, Media Production, Research, Writing",Openness,Artistic
+E-Commerce Management,Media & Communication,Post secondary,SkillsFuture Course,"Business Management, Decision Making, Leadership, Strategic Planning",Openness,Artistic
+Content Marketing,Media & Communication,Post secondary,SkillsFuture Course,"Communication, Creative Thinking, Digital Marketing, Marketing",Openness,Artistic
+Google Analytics,Media & Communication,Post secondary,SkillsFuture Course,"Critical Thinking, Data Analysis, Data Visualization, Statistical Analysis",Openness,Artistic
+Email Marketing,Media & Communication,Post secondary,SkillsFuture Course,"AI/ML, Communication, Creative Thinking, Data Analysis, Digital Marketing, Marketing, Mathematical Modeling, Research",Openness,Artistic
+TikTok Shop Marketing,Media & Communication,Post secondary,SkillsFuture Course,"Communication, Creative Thinking, Digital Marketing, Marketing",Openness,Artistic
+Influencer Marketing,Media & Communication,Post secondary,SkillsFuture Course,"Communication, Creative Thinking, Digital Marketing, Marketing",Openness,Artistic
+UI/UX Design,Media & Communication,Post secondary,SkillsFuture Course,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Augmented Reality (AR),Media & Communication,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Artistic
+Virtual Reality (VR),Media & Communication,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Artistic
+Social Media Content Creation,Media & Communication,Post secondary,SkillsFuture Course,"Communication, Media Production, Research, Writing",Openness,Artistic
+Video Editing,Media & Communication,Post secondary,SkillsFuture Course,"Animation, Storytelling, Technical Skills, Video Editing",Openness,Artistic
+Mobile Photography,Media & Communication,Post secondary,SkillsFuture Course,"Creativity, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Mobile Videography,Media & Communication,Post secondary,SkillsFuture Course,"Animation, Creativity, Photography, Storytelling, Technical Skills, Video Editing, Visual Composition",Openness,Artistic
+Graphic Design with Adobe,Media & Communication,Post secondary,SkillsFuture Course,"Creativity, Design Thinking, Software Proficiency, Visual Communication",Openness,Artistic
+Web Design,Media & Communication,Post secondary,SkillsFuture Course,"Algorithm Design, Attention to Detail, CAD Design, Creativity, Design Thinking, Logical Thinking, Problem Solving, Programming, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Ethical Hacking,Security & Safety,Post secondary,SkillsFuture Course,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Openness,Investigative
+Cyber Defense,Security & Safety,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Network Security,Security & Safety,Post secondary,SkillsFuture Course,"Cybersecurity, Network Management, Problem Solving, Risk Assessment, Systems Administration, Technical Analysis, Technical Support, Troubleshooting",Openness,Investigative
+PDPA Compliance,Security & Safety,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Conventional
+Information Security Management,Security & Safety,Post secondary,SkillsFuture Course,"Business Management, Cybersecurity, Decision Making, Leadership, Problem Solving, Risk Assessment, Strategic Planning, Technical Analysis",Openness,Enterprising
+Cybersecurity Awareness,Security & Safety,Post secondary,SkillsFuture Course,"Cybersecurity, Problem Solving, Risk Assessment, Technical Analysis",Openness,Investigative
+Start-up Funding Strategies,Personal Development,Post secondary,SkillsFuture Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Business Model Canvas,Personal Development,Post secondary,SkillsFuture Course,"Business Management, Decision Making, Leadership, Strategic Planning",Openness,Enterprising
+Pitching & Presentation,Personal Development,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Business Plan Development,Personal Development,Post secondary,SkillsFuture Course,"Business Management, Decision Making, Leadership, Strategic Planning",Openness,Enterprising
+Design Thinking for Innovation,Personal Development,Post secondary,SkillsFuture Course,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Lean Start-up Methodology,Personal Development,Post secondary,SkillsFuture Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+3D Printing Technology,Advanced Manufacturing,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Realistic
+Internet of Things (IoT),Advanced Manufacturing,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Realistic
+Industrial Automation,Advanced Manufacturing,Post secondary,SkillsFuture Course,"Automation, Programming, Robotics, Systems Integration",Openness,Realistic
+Smart Manufacturing,Advanced Manufacturing,Post secondary,SkillsFuture Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Robotics Process Automation,Advanced Manufacturing,Post secondary,SkillsFuture Course,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Openness,Realistic
+CAD/CAM Design,Advanced Manufacturing,Post secondary,SkillsFuture Course,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Sustainable Energy Management,Sustainability & Environment,Post secondary,SkillsFuture Course,"AI/ML, Business Management, Data Analysis, Decision Making, Leadership, Mathematical Modeling, Research, Strategic Planning",Openness,Enterprising
+Green Building Certification,Sustainability & Environment,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Environmental Sustainability,Sustainability & Environment,Post secondary,SkillsFuture Course,"AI/ML, Data Analysis, Mathematical Modeling, Research",Openness,Investigative
+Carbon Footprint Management,Sustainability & Environment,Post secondary,SkillsFuture Course,"Business Management, Decision Making, Leadership, Strategic Planning",Openness,Enterprising
+Circular Economy Principles,Sustainability & Environment,Post secondary,SkillsFuture Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Sustainable Sourcing & Procurement,Sustainability & Environment,Post secondary,SkillsFuture Course,"AI/ML, Data Analysis, Mathematical Modeling, Research",Openness,Investigative
+Piano Lessons,Performing Arts & Music,Post secondary,Enrichment Course,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Violin Lessons,Performing Arts & Music,Post secondary,Enrichment Course,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Guitar Lessons,Performing Arts & Music,Post secondary,Enrichment Course,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Drums Lessons,Performing Arts & Music,Post secondary,Enrichment Course,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Voice Training,Performing Arts & Music,Post secondary,Enrichment Course,"AI/ML, Data Analysis, Mathematical Modeling, Research",Openness,Artistic
+Music Theory (ABRSM),Performing Arts & Music,Post secondary,Enrichment Course,"Coordination, Discipline, Musical Skills, Performance",Openness,Artistic
+Choir Training,Performing Arts & Music,Post secondary,Enrichment Course,"AI/ML, Coordination, Data Analysis, Discipline, Mathematical Modeling, Musical Skills, Performance, Research",Openness,Artistic
+Drawing & Sketching,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Oil Painting,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"AI/ML, Artistic Expression, Creativity, Data Analysis, Mathematical Modeling, Observation, Research, Visual Arts",Openness,Artistic
+Watercolor Painting,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"AI/ML, Artistic Expression, Creativity, Data Analysis, Mathematical Modeling, Observation, Research, Visual Arts",Openness,Artistic
+Acrylic Painting,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"AI/ML, Artistic Expression, Creativity, Data Analysis, Mathematical Modeling, Observation, Research, Visual Arts",Openness,Artistic
+Chinese Calligraphy,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Pottery & Ceramics,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Sculpture,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Digital Art,Computing & IT,Post secondary,Enrichment Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Comic Drawing,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Manga Drawing,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Ballet,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Contemporary Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Hip Hop Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Jazz Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Chinese Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Communication, Cultural Awareness, Dance, Language Proficiency, Performance, Physical Coordination, Writing",Openness,Artistic
+Indian Classical Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+K-Pop Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Ballroom Dance,Performing Arts & Music,Post secondary,Enrichment Course,"Artistic Expression, Dance, Performance, Physical Coordination",Openness,Artistic
+Swimming Lessons,Sports & Physical Education,Post secondary,Enrichment Course,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Tennis Coaching,Sports & Physical Education,Post secondary,Enrichment Course,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Badminton Training,Sports & Physical Education,Post secondary,Enrichment Course,"AI/ML, Coordination, Data Analysis, Discipline, Mathematical Modeling, Physical Fitness, Research, Teamwork",Agreeableness,Social
+Football Training,Sports & Physical Education,Post secondary,Enrichment Course,"AI/ML, Coordination, Data Analysis, Discipline, Mathematical Modeling, Physical Fitness, Research, Teamwork",Extraversion,Social
+Basketball Training,Sports & Physical Education,Post secondary,Enrichment Course,"AI/ML, Coordination, Data Analysis, Discipline, Mathematical Modeling, Physical Fitness, Research, Teamwork",Extraversion,Social
+Martial Arts (Various),Sports & Physical Education,Post secondary,Enrichment Course,"Artistic Expression, Creativity, Discipline, Martial Arts, Observation, Physical Fitness, Self-Control, Visual Arts",Openness,Artistic
+Yoga Classes,Sports & Physical Education,Post secondary,Enrichment Course,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Pilates,Sports & Physical Education,Post secondary,Enrichment Course,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Personal Trainer Certification,Sports & Physical Education,Post secondary,Enrichment Course,"AI/ML, Data Analysis, Mathematical Modeling, Research",Agreeableness,Social
+Sports Coaching Certification,Sports & Physical Education,Post secondary,Enrichment Course,"Coordination, Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Life Saving Certification,Sports & Physical Education,Post secondary,Enrichment Course,"Discipline, Physical Fitness, Teamwork",Agreeableness,Social
+Korean Language (TOPIK Prep),Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Japanese Language (JLPT Prep),Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+French Language (DELF Prep),Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+German Language,Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Spanish Language,Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Sign Language,Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Business English,Languages & Literature,Post secondary,Enrichment Course,"Business Management, Communication, Cultural Awareness, Decision Making, Language Proficiency, Leadership, Strategic Planning, Writing",Openness,Enterprising
+English Communication,Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Media Production, Research, Writing",Extraversion,Artistic
+Chinese Enrichment,Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Malay Language,Languages & Literature,Post secondary,Enrichment Course,"Communication, Cultural Awareness, Language Proficiency, Writing",Openness,Artistic
+Baking Fundamentals,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Sourdough Bread Making,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Pastry Making,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Cake Decorating,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Innovation",Openness,Artistic
+Barista Skills & Latte Art,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Wine Appreciation,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Openness,Artistic
+Cooking (Western),"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Cooking (Asian),"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Cooking (Chinese),"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Communication, Creativity, Culinary Skills, Cultural Awareness, Language Proficiency, Time Management, Writing",Openness,Artistic
+Food Hygiene (WSQ),"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Creativity, Culinary Skills, Time Management",Openness,Artistic
+Food Safety Management,"Food, Nutrition & Culinary Arts",Post secondary,Enrichment Course,"Attention to Detail, Business Management, Creativity, Culinary Skills, Decision Making, Leadership, Strategic Planning, Time Management",Openness,Artistic
+Robotics for Kids,Computing & IT,Post secondary,Enrichment Course,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+Coding for Kids (Scratch),Computing & IT,Post secondary,Enrichment Course,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+Python Programming,Computing & IT,Post secondary,Enrichment Course,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+Web Development,Computing & IT,Post secondary,Enrichment Course,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+App Development,Computing & IT,Post secondary,Enrichment Course,"Algorithm Design, Logical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+Game Design,Computing & IT,Post secondary,Enrichment Course,"Attention to Detail, CAD Design, Creativity, Design Thinking, Software Proficiency, Spatial Reasoning, Technical Drawing, Visual Communication",Openness,Artistic
+Arduino Projects,Computing & IT,Post secondary,Enrichment Course,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+LEGO Robotics,Computing & IT,Post secondary,Enrichment Course,"Automation, Engineering, Problem Solving, Programming, Robotics, Systems Integration",Conscientiousness,Realistic
+3D Printing,Computing & IT,Post secondary,Enrichment Course,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+Drone Flying,Computing & IT,Post secondary,Enrichment Course,"Logical Thinking, Problem Solving, Technical Skills",Conscientiousness,Investigative
+English Tuition (Primary),Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Communication, Conceptual Understanding, Cultural Awareness, Language Proficiency, Problem Solving, Writing",Openness,Investigative
+English Tuition (Secondary),Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Communication, Conceptual Understanding, Cultural Awareness, Language Proficiency, Problem Solving, Writing",Openness,Investigative
+Mathematics Tuition (Primary),Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Analytical Thinking, Conceptual Understanding, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Mathematics Tuition (Secondary),Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Analytical Thinking, Conceptual Understanding, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Science Tuition (Primary),Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Analytical Thinking, Conceptual Understanding, Observation, Problem Solving, Research, Scientific Method",Openness,Investigative
+Science Tuition (Secondary),Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Analytical Thinking, Conceptual Understanding, Observation, Problem Solving, Research, Scientific Method",Openness,Investigative
+Chinese Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Communication, Conceptual Understanding, Cultural Awareness, Language Proficiency, Problem Solving, Writing",Openness,Investigative
+Higher Chinese Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Communication, Conceptual Understanding, Cultural Awareness, Language Proficiency, Problem Solving, Writing",Openness,Investigative
+Physics Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Conceptual Understanding, Mathematical Analysis, Physics, Problem Solving, Scientific Method",Conscientiousness,Investigative
+Chemistry Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Analytical Skills, Chemistry, Conceptual Understanding, Laboratory Skills, Problem Solving, Scientific Method",Conscientiousness,Investigative
+Biology Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Biology, Conceptual Understanding, Laboratory Skills, Problem Solving, Research, Scientific Method",Openness,Investigative
+Additional Mathematics Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Analytical Thinking, Conceptual Understanding, Mathematical Reasoning, Problem Solving, Quantitative Analysis",Conscientiousness,Investigative
+Economics Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Conceptual Understanding, Critical Thinking, Data Interpretation, Economic Analysis, Problem Solving, Research",Openness,Investigative
+Accounting Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Accounting, Attention to Detail, Conceptual Understanding, Financial Analysis, Numerical Skills, Problem Solving",Conscientiousness,Conventional
+A-Level GP Tuition,Academic Tuition,Post secondary,Enrichment Course,"Academic Skills, Conceptual Understanding, Problem Solving",Openness,Investigative
+Speech & Drama,Performing Arts & Music,Post secondary,Enrichment Course,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Public Speaking,Personal Development,Post secondary,Enrichment Course,"Communication, Confidence, Interpersonal Skills, Leadership",Extraversion,Investigative
+Debate Training,Clubs & Societies,Post secondary,Enrichment Course,"AI/ML, Argumentation, Critical Thinking, Data Analysis, Mathematical Modeling, Public Speaking, Research",Extraversion,Social
+Theatre Arts,"Arts, Design & Visual Arts",Post secondary,Enrichment Course,"Acting, Artistic Expression, Creativity, Observation, Performance, Public Speaking, Visual Arts",Openness,Artistic
+Voice Acting,Performing Arts & Music,Post secondary,Enrichment Course,"Acting, Creativity, Performance, Public Speaking",Openness,Artistic
+Musical Theatre,Performing Arts & Music,Post secondary,Enrichment Course,"Acting, Coordination, Creativity, Discipline, Musical Skills, Performance, Public Speaking",Openness,Artistic
+Magic & Illusion,Personal Development,Post secondary,Enrichment Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Leadership Skills,Personal Development,Post secondary,Enrichment Course,"Communication, Confidence, Interpersonal Skills, Leadership",Extraversion,Enterprising
+Communication Skills,Personal Development,Post secondary,Enrichment Course,"Communication, Confidence, Interpersonal Skills, Leadership, Media Production, Research, Writing",Extraversion,Investigative
+Creative Writing,Personal Development,Post secondary,Enrichment Course,"Analytical Skills, Creativity, Critical Thinking, Writing",Openness,Artistic
+Critical Thinking,Personal Development,Post secondary,Enrichment Course,"Analytical Skills, Creativity, Critical Thinking, Writing",Openness,Investigative
+Memory Training,Personal Development,Post secondary,Enrichment Course,"AI/ML, Analytical Skills, Creativity, Critical Thinking, Data Analysis, Mathematical Modeling, Research, Writing",Openness,Investigative
+Speed Reading,Personal Development,Post secondary,Enrichment Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Study Skills Workshop,Personal Development,Post secondary,Enrichment Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Time Management,Personal Development,Post secondary,Enrichment Course,"Business Management, Decision Making, Leadership, Strategic Planning",Openness,Enterprising
+Financial Literacy for Teens,Personal Development,Post secondary,Enrichment Course,"Adaptability, Critical Thinking, Learning",Openness,Investigative
+Hiking,Activity,,,"Adventure, Navigation, Outdoor Skills, Physical Fitness",Openness,Realistic
+Running,Activity,,,"Discipline, Endurance, Goal Setting, Physical Fitness",Openness,Realistic
+Bird Watching,Activity,,,"Nature Knowledge, Observation, Patience, Photography",Openness,Realistic
+Bird Singing,Activity,,,"Nature Knowledge, Observation, Patience, Photography",Openness,Artistic
+Kite Flying,Activity,,,"Observation, Outdoor Skills, Patience",Openness,Realistic
+Stargazing,Activity,,,"Observation, Outdoor Skills, Patience",Openness,Realistic
+Urban Farming,Activity,,,"Attention to Detail, Nurturing, Patience, Plant Care",Openness,Realistic
+Gardening,Activity,,,"Attention to Detail, Nurturing, Patience, Plant Care",Agreeableness,Realistic
+Bonsai Growing,Activity,,,"Attention to Detail, Nurturing, Patience, Plant Care",Openness,Investigative
+Terrariums,Activity,,,"Attention to Detail, Nurturing, Patience, Plant Care",Openness,Realistic
+Ant Keeping,Activity,,,"Animal Care, Ecosystem Management, Observation, Patience",Openness,Realistic
+Aquascaping,Activity,,,"Animal Care, Ecosystem Management, Observation, Patience",Openness,Realistic
+Urban Exploration,Activity,,,"Adventure, Navigation, Outdoor Skills, Physical Fitness",Openness,Realistic
+Geocaching,Activity,,,"Adventure, Navigation, Outdoor Skills, Physical Fitness",Openness,Realistic
+Camping,Activity,,,"Adventure, Navigation, Outdoor Skills, Physical Fitness",Openness,Realistic
+Beach Combing,Activity,,,"Nature Appreciation, Observation, Patience",Openness,Realistic
+Nature Photography,Activity,,,"Nature Knowledge, Observation, Patience, Photography",Openness,Artistic
+Swimming,Activity,,,"Coordination, Endurance, Physical Fitness, Water Safety",Openness,Realistic
+Kayaking,Activity,,,"Balance, Coordination, Physical Fitness, Teamwork",Openness,Realistic
+Dragon Boating,Activity,,,"Balance, Coordination, Physical Fitness, Teamwork",Conscientiousness,Realistic
+Paddleboarding,Activity,,,"Balance, Coordination, Physical Fitness, Teamwork",Openness,Realistic
+Surfing,Activity,,,"Balance, Coordination, Physical Fitness, Risk Management",Openness,Realistic
+Wakeboarding,Activity,,,"Balance, Coordination, Physical Fitness, Risk Management",Openness,Realistic
+Jet Skiing,Activity,,,"Balance, Coordination, Physical Fitness, Risk Management",Openness,Realistic
+Sailing,Activity,,,"Coordination, Navigation, Problem Solving, Weather Reading",Openness,Investigative
+Windsurfing,Activity,,,"Balance, Coordination, Physical Fitness, Risk Management",Openness,Realistic
+Snorkeling,Activity,,,"Observation, Patience, Technical Skills, Water Safety",Openness,Realistic
+Scuba Diving,Activity,,,"Observation, Patience, Technical Skills, Water Safety",Openness,Realistic
+Prawning,Activity,,,"Observation, Outdoor Skills, Patience",Openness,Realistic
+Fishing,Activity,,,"Observation, Outdoor Skills, Patience",Openness,Realistic
+Underwater Photography,Activity,,,"Observation, Patience, Technical Skills, Water Safety",Openness,Artistic
+Cycling,Activity,,,"Agility, Balance, Coordination, Physical Fitness",Openness,Realistic
+Skateboarding,Activity,,,"Agility, Balance, Coordination, Physical Fitness",Openness,Realistic
+Roller Skating,Activity,,,"Agility, Balance, Coordination, Physical Fitness",Openness,Realistic
+Tennis,Activity,,,"Agility, Hand-Eye Coordination, Physical Fitness, Strategy",Openness,Realistic
+Badminton,Activity,,,"Agility, Hand-Eye Coordination, Physical Fitness, Strategy",Openness,Realistic
+Table Tennis,Activity,,,"Agility, Hand-Eye Coordination, Physical Fitness, Strategy",Openness,Realistic
+Squash,Activity,,,"Agility, Hand-Eye Coordination, Physical Fitness, Strategy",Openness,Realistic
+Pickleball,Activity,,,"Agility, Hand-Eye Coordination, Physical Fitness, Strategy",Openness,Realistic
+Basketball,Activity,,,"Coordination, Physical Fitness, Strategy, Teamwork",Extraversion,Realistic
+Football,Activity,,,"Coordination, Physical Fitness, Strategy, Teamwork",Extraversion,Realistic
+Rugby,Activity,,,"Coordination, Physical Fitness, Strategy, Teamwork",Openness,Realistic
+Netball,Activity,,,"Coordination, Physical Fitness, Strategy, Teamwork",Openness,Realistic
+Volleyball,Activity,,,"Coordination, Physical Fitness, Strategy, Teamwork",Extraversion,Realistic
+Frisbee,Activity,,,"Hand-Eye Coordination, Physical Fitness, Teamwork",Openness,Realistic
+Golf,Activity,,,"Focus, Patience, Precision, Strategic Thinking",Conscientiousness,Realistic
+Bowling,Activity,,,"Focus, Hand-Eye Coordination, Precision",Openness,Realistic
+Cricket,Activity,,,"Hand-Eye Coordination, Physical Fitness, Strategy, Teamwork",Openness,Realistic
+Hockey,Activity,,,"Coordination, Physical Fitness, Strategy, Teamwork",Openness,Realistic
+Ice Skating,Activity,,,"Agility, Balance, Coordination, Physical Fitness",Openness,Realistic
+Boxing,Activity,,,"Discipline, Mental Toughness, Physical Fitness, Self-Defense",Openness,Realistic
+Muay Thai,Activity,,,"Discipline, Mental Toughness, Physical Fitness, Self-Defense",Openness,Investigative
+Mixed Martial Arts,Activity,,,"Discipline, Mental Toughness, Physical Fitness, Self-Defense",Openness,Artistic
+Brazilian Jiu-Jitsu,Activity,,,"Discipline, Martial Arts, Physical Fitness, Self-Control",Openness,Realistic
+Karate,Activity,,,"Discipline, Martial Arts, Physical Fitness, Self-Control",Openness,Realistic
+Wushu,Activity,,,"Discipline, Martial Arts, Physical Fitness, Self-Control",Openness,Realistic
+Tai Chi,Activity,,,"Balance, Body Awareness, Mindfulness, Relaxation",Neuroticism,Investigative
+Silat,Activity,,,"Discipline, Martial Arts, Physical Fitness, Self-Control",Openness,Realistic
+Fencing,Activity,,,"Agility, Focus, Quick Reflexes, Strategy",Openness,Realistic
+Archery,Activity,,,"Focus, Hand-Eye Coordination, Patience, Precision",Openness,Realistic
+Axe Throwing,Activity,,,"Focus, Hand-Eye Coordination, Patience, Precision",Openness,Realistic
+Rock Climbing,Activity,,,"Physical Fitness, Problem Solving, Risk Management, Strategy",Openness,Realistic
+Parkour,Activity,,,"Agility, Courage, Physical Fitness, Spatial Awareness",Openness,Realistic
+Indoor Skydiving,Activity,,,"Adventure, Courage, Risk Management, Thrill Seeking",Openness,Realistic
+Bungee Jumping,Activity,,,"Adventure, Courage, Risk Management, Thrill Seeking",Openness,Realistic
+Ziplining,Activity,,,"Adventure, Courage, Risk Management, Thrill Seeking",Openness,Realistic
+Trampoline Parks,Activity,,,"Physical Fitness, Quick Reflexes, Strategy, Teamwork",Openness,Realistic
+Laser Tag,Activity,,,"Physical Fitness, Quick Reflexes, Strategy, Teamwork",Openness,Realistic
+Paintball,Activity,,,"Physical Fitness, Quick Reflexes, Strategy, Teamwork",Openness,Investigative
+Airsoft,Activity,,,"Physical Fitness, Quick Reflexes, Strategy, Teamwork",Openness,Investigative
+Gym Training,Activity,,,"Discipline, Goal Setting, Physical Fitness, Strength",Conscientiousness,Investigative
+CrossFit,Activity,,,"Discipline, Goal Setting, Physical Fitness, Strength",Openness,Realistic
+Calisthenics,Activity,,,"Discipline, Goal Setting, Physical Fitness, Strength",Openness,Realistic
+HIIT,Activity,,,"Discipline, Goal Setting, Physical Fitness, Strength",Openness,Realistic
+Spin Classes,Activity,,,"Coordination, Endurance, Physical Fitness, Rhythm",Openness,Realistic
+Zumba,Activity,,,"Coordination, Endurance, Physical Fitness, Rhythm",Openness,Realistic
+Pilates,Activity,,,"Body Awareness, Core Strength, Flexibility, Precision",Openness,Realistic
+Yoga,Activity,,,"Balance, Body Awareness, Flexibility, Mindfulness",Neuroticism,Realistic
+Meditation,Activity,,,"Mental Clarity, Mindfulness, Self-Awareness, Stress Management",Neuroticism,Realistic
+Qigong,Activity,,,"Balance, Body Awareness, Mindfulness, Relaxation",Conscientiousness,Realistic
+Pole Fitness,Activity,,,"Confidence, Coordination, Flexibility, Strength",Conscientiousness,Realistic
+TRX Training,Activity,,,"Discipline, Goal Setting, Physical Fitness, Strength",Openness,Investigative
+Painting,Activity,,,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Drawing,Activity,,,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Digital Art,Activity,,,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
+Graphic Design,Activity,,,"Creativity, Design Thinking, Software Proficiency, Visual Communication",Openness,Artistic
+Calligraphy,Activity,,,"Artistic Expression, Fine Motor Skills, Patience, Precision",Openness,Artistic
+Graffiti,Activity,,,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Realistic
+Pottery,Activity,,,"Artistic Expression, Creativity, Hand-Eye Coordination, Patience",Openness,Artistic
+Sculpture,Activity,,,"Artistic Expression, Creativity, Hand-Eye Coordination, Patience",Openness,Artistic
+Origami,Activity,,,"Attention to Detail, Patience, Precision, Spatial Reasoning",Openness,Artistic
+Collage,Activity,,,"Artistic Expression, Creativity, Technical Skills",Openness,Realistic
+Resin Art,Activity,,,"Artistic Expression, Creativity, Technical Skills",Openness,Artistic
+Embroidery,Activity,,,"Attention to Detail, Creativity, Fine Motor Skills, Patience",Openness,Realistic
+Knitting,Activity,,,"Attention to Detail, Creativity, Fine Motor Skills, Patience",Openness,Realistic
+Macramé,Activity,,,"Attention to Detail, Creativity, Fine Motor Skills, Patience",Openness,Realistic
+Rug Tufting,Activity,,,"Craftsmanship, Creativity, Manual Dexterity, Patience",Openness,Realistic
+Batik,Activity,,,"Craftsmanship, Creativity, Manual Dexterity, Patience",Openness,Realistic
+Printmaking,Activity,,,"Artistic Expression, Creativity, Technical Skills",Openness,Realistic
+Leather Crafting,Activity,,,"Craftsmanship, Creativity, Manual Dexterity, Patience",Openness,Realistic
+Piano,Activity,,,"Coordination, Discipline, Musical Skills, Practice",Openness,Realistic
+Guitar,Activity,,,"Coordination, Discipline, Musical Skills, Practice",Openness,Realistic
+String Instruments,Activity,,,"Coordination, Discipline, Musical Skills, Practice",Openness,Realistic
+Wind Instruments,Activity,,,"Coordination, Discipline, Musical Skills, Practice",Openness,Realistic
+Drums,Activity,,,"Coordination, Discipline, Musical Skills, Practice",Openness,Realistic
+Singing,Activity,,,"Breath Control, Confidence, Musical Expression, Vocal Skills",Openness,Artistic
+Beatboxing,Activity,,,"Discipline, Mental Toughness, Physical Fitness, Self-Defense",Openness,Artistic
+Music Composition,Activity,,,"Creativity, Musical Knowledge, Software Proficiency, Technical Skills",Openness,Artistic
+Music Production,Activity,,,"Creativity, Musical Knowledge, Software Proficiency, Technical Skills",Openness,Artistic
+DJing,Activity,,,"Crowd Reading, Musical Knowledge, Technical Skills, Timing",Openness,Artistic
+Audio Engineering,Activity,,,"Creativity, Musical Knowledge, Software Proficiency, Technical Skills",Conscientiousness,Realistic
+Jamming,Activity,,,"Collaboration, Improvisation, Listening, Musical Skills",Openness,Realistic
+Ballet,Activity,,,"Artistic Expression, Coordination, Physical Fitness, Rhythm",Openness,Realistic
+Contemporary Dance,Activity,,,"Artistic Expression, Coordination, Physical Fitness, Rhythm",Openness,Artistic
+Jazz Dance,Activity,,,"Artistic Expression, Coordination, Physical Fitness, Rhythm",Openness,Artistic
+Hip Hop,Activity,,,"Coordination, Creativity, Physical Fitness, Rhythm",Openness,Realistic
+Breaking,Activity,,,"Coordination, Creativity, Physical Fitness, Rhythm",Openness,Realistic
+Latin Dance,Activity,,,"Coordination, Cultural Awareness, Partnership, Rhythm",Openness,Artistic
+Ballroom Dance,Activity,,,"Artistic Expression, Coordination, Physical Fitness, Rhythm",Openness,Artistic
+Swing Dance,Activity,,,"Coordination, Cultural Awareness, Partnership, Rhythm",Openness,Artistic
+K-Pop Dance,Activity,,,"Coordination, Creativity, Physical Fitness, Rhythm",Openness,Artistic
+Bollywood Dance,Activity,,,"Coordination, Cultural Awareness, Partnership, Rhythm",Openness,Artistic
+Traditional Dance,Activity,,,"Coordination, Cultural Knowledge, Discipline, Teamwork",Openness,Artistic
+Lion Dance,Activity,,,"Coordination, Cultural Knowledge, Discipline, Teamwork",Openness,Artistic
+Pole Dancing,Activity,,,"Confidence, Coordination, Flexibility, Strength",Openness,Realistic
+Acting,Activity,,,"Confidence, Creativity, Emotional Expression, Performance",Openness,Artistic
+Comedy,Activity,,,"Confidence, Humor, Public Speaking, Timing",Extraversion,Realistic
+Musical Theatre,Activity,,,"Acting, Coordination, Musical Skills, Performance",Openness,Artistic
+Stage Direction,Activity,,,"Communication, Creativity, Leadership, Organization",Openness,Realistic
+Magic,Activity,,,"Dexterity, Entertainment, Performance, Practice",Openness,Realistic
+Juggling,Activity,,,"Dexterity, Entertainment, Performance, Practice",Openness,Realistic
+Circus Arts,Activity,,,"Dexterity, Entertainment, Performance, Practice",Openness,Artistic
+Puppetry,Activity,,,"Creativity, Manual Dexterity, Performance, Storytelling",Openness,Realistic
+Public Speaking,Activity,,,"Articulation, Communication, Confidence, Persuasion",Extraversion,Social
+Debate,Activity,,,"Argumentation, Critical Thinking, Public Speaking, Research",Extraversion,Enterprising
+3D Printing,Activity,,,"Design Thinking, Precision, Problem Solving, Technical Skills",Openness,Realistic
+Laser Cutting,Activity,,,"Design Thinking, Precision, Problem Solving, Technical Skills",Openness,Realistic
+Electronics,Activity,,,"Circuit Design, Problem Solving, Technical Knowledge, Troubleshooting",Conscientiousness,Investigative
+Robotics,Activity,,,"Engineering, Problem Solving, Programming, Systems Integration",Openness,Investigative
+Drones,Activity,,,"Coordination, Photography, Spatial Awareness, Technical Skills",Openness,Realistic
+RC Vehicles,Activity,,,"Attention to Detail, Manual Dexterity, Patience, Technical Skills",Openness,Realistic
+Model Building,Activity,,,"Attention to Detail, Manual Dexterity, Patience, Technical Skills",Conscientiousness,Realistic
+Programming,Activity,,,"Logical Thinking, Patience, Problem Solving, Programming",Conscientiousness,Investigative
+Game Development,Activity,,,"Creativity, Design Thinking, Programming, Technical Skills",Openness,Realistic
+Cybersecurity,Activity,,,"Analytical Thinking, Problem Solving, Security, Technical Knowledge",Conscientiousness,Investigative
+AI & Machine Learning,Activity,,,"Data Analysis, Mathematical Thinking, Problem Solving, Programming",Openness,Investigative
+Animation,Activity,,,"Creativity, Software Proficiency, Storytelling, Technical Skills",Openness,Artistic
+Video Editing,Activity,,,"Attention to Detail, Creativity, Storytelling, Technical Skills",Openness,Realistic
+Video Gaming,Activity,,,"Focus, Hand-Eye Coordination, Problem Solving, Strategy",Openness,Realistic
+Board Gaming,Activity,,,"Critical Thinking, Planning, Social Skills, Strategy",Openness,Realistic
+Tabletop RPGs,Activity,,,"Critical Thinking, Planning, Social Skills, Strategy",Openness,Realistic
+Wargaming,Activity,,,"Critical Thinking, Planning, Social Skills, Strategy",Openness,Realistic
+Card Games,Activity,,,"Critical Thinking, Planning, Social Skills, Strategy",Openness,Realistic
+Chess,Activity,,,"Focus, Patience, Pattern Recognition, Strategic Thinking",Conscientiousness,Investigative
+Go,Activity,,,"Focus, Patience, Pattern Recognition, Strategic Thinking",Conscientiousness,Realistic
+Puzzle Games,Activity,,,"Logic, Patience, Pattern Recognition, Problem Solving",Conscientiousness,Investigative
+Escape Rooms,Activity,,,"Logic, Problem Solving, Teamwork, Time Management",Openness,Realistic
+LAN Gaming,Activity,,,"Focus, Hand-Eye Coordination, Problem Solving, Strategy",Openness,Realistic
+Coin Collecting,Activity,,,"Knowledge, Organization, Patience, Research",Conscientiousness,Conventional
+Stamp Collecting,Activity,,,"Knowledge, Organization, Patience, Research",Conscientiousness,Conventional
+Vinyl Records,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Books,Activity,,,"Appreciation, Knowledge, Organization, Reading",Openness,Realistic
+Action Figures,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Model Kits,Activity,,,"Knowledge, Organization, Patience, Research",Conscientiousness,Realistic
+LEGO,Activity,,,"Knowledge, Organization, Patience, Research",Conscientiousness,Realistic
+Sneakers,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Watches,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Antiques,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Crystals,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Trading Cards,Activity,,,"Knowledge, Organization, Patience, Research",Openness,Realistic
+Reading,Activity,,,"Analysis, Critical Thinking, Knowledge Acquisition, Reading Comprehension",Openness,Realistic
+Book Clubs,Activity,,,"Analysis, Critical Thinking, Knowledge Acquisition, Reading Comprehension",Extraversion,Realistic
+Creative Writing,Activity,,,"Communication, Creativity, Expression, Writing",Openness,Artistic
+Blogging,Activity,,,"Communication, Creativity, Expression, Writing",Openness,Artistic
+Language Learning,Activity,,,"Communication, Cultural Awareness, Language Skills, Persistence",Openness,Realistic
+Philosophy,Activity,,,"Analysis, Critical Thinking, Knowledge, Research",Openness,Investigative
+History,Activity,,,"Analysis, Critical Thinking, Knowledge, Research",Openness,Investigative
+Astronomy,Activity,,,"Analysis, Critical Thinking, Knowledge, Research",Openness,Investigative
+Natural Sciences,Activity,,,"Analysis, Critical Thinking, Knowledge, Research",Openness,Investigative
+Trivia,Activity,,,"General Knowledge, Memory, Quick Thinking, Recall",Openness,Investigative
+Puzzles,Activity,,,"Logic, Patience, Pattern Recognition, Problem Solving",Conscientiousness,Investigative
+Memory Training,Activity,,,"Data Analysis, Mathematical Thinking, Problem Solving, Programming",Conscientiousness,Investigative
+Cooking,Activity,,,"Creativity, Culinary Skills, Precision, Time Management",Openness,Realistic
+Baking,Activity,,,"Creativity, Culinary Skills, Precision, Time Management",Openness,Realistic
+Pastry Making,Activity,,,"Creativity, Culinary Skills, Precision, Time Management",Openness,Realistic
+Cake Decorating,Activity,,,"Artistic Expression, Creativity, Culinary Skills, Precision",Openness,Realistic
+Chocolate Making,Activity,,,"Artistic Expression, Creativity, Culinary Skills, Precision",Openness,Realistic
+Ice Cream Making,Activity,,,"Artistic Expression, Creativity, Culinary Skills, Precision",Openness,Realistic
+Fermentation,Activity,,,"Experimentation, Patience, Precision, Science Knowledge",Openness,Realistic
+Brewing,Activity,,,"Experimentation, Patience, Precision, Science Knowledge",Openness,Realistic
+Mixology,Activity,,,"Creativity, Customer Service, Knowledge, Presentation",Openness,Realistic
+Coffee Making,Activity,,,"Appreciation, Knowledge, Precision, Ritual",Openness,Realistic
+Tea Ceremony,Activity,,,"Appreciation, Knowledge, Precision, Ritual",Openness,Realistic
+Wine Tasting,Activity,,,"Appreciation, Evaluation, Knowledge, Sensory Awareness",Openness,Realistic
+Food Photography,Activity,,,"Creativity, Photography, Styling, Visual Composition",Openness,Artistic
+BBQ,Activity,,,"Creativity, Culinary Skills, Precision, Time Management",Openness,Realistic
+Sushi Making,Activity,,,"Creativity, Culinary Skills, Precision, Time Management",Openness,Realistic
+Molecular Gastronomy,Activity,,,"Analysis, Critical Thinking, Knowledge, Research",Openness,Investigative
+Foraging,Activity,,,"Identification, Nature Knowledge, Observation, Outdoor Skills",Openness,Realistic
+Fashion Design,Activity,,,"Creativity, Design, Technical Skills, Trend Analysis",Openness,Artistic
+Sewing,Activity,,,"Attention to Detail, Creativity, Fine Motor Skills, Patience",Openness,Realistic
+Tailoring,Activity,,,"Data Analysis, Mathematical Thinking, Problem Solving, Programming",Openness,Investigative
+Jewelry Making,Activity,,,"Craftsmanship, Creativity, Design, Fine Motor Skills",Openness,Artistic
+Leatherworking,Activity,,,"Craftsmanship, Manual Dexterity, Patience, Precision",Openness,Realistic
+Fashion Blogging,Activity,,,"Communication, Creativity, Expression, Writing",Openness,Artistic
+Thrift Shopping,Activity,,,"Creativity, Resourcefulness, Style, Sustainability",Openness,Realistic
+Upcycling,Activity,,,"Agility, Balance, Coordination, Physical Fitness",Openness,Realistic
+Makeup Artistry,Activity,,,"Artistic Expression, Creativity, Precision, Technical Skills",Openness,Artistic
+Nail Art,Activity,,,"Data Analysis, Mathematical Thinking, Problem Solving, Programming",Openness,Artistic
+Cosplay,Activity,,,"Attention to Detail, Craftsmanship, Creativity, Performance",Openness,Artistic
+Photography,Activity,,,"Observation, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Portrait Photography,Activity,,,"Data Analysis, Mathematical Thinking, Problem Solving, Programming",Openness,Artistic
+Landscape Photography,Activity,,,"Observation, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Wildlife Photography,Activity,,,"Observation, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Astrophotography,Activity,,,"Observation, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Film Photography,Activity,,,"Observation, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Drone Photography,Activity,,,"Coordination, Photography, Spatial Awareness, Technical Skills",Openness,Artistic
+Videography,Activity,,,"Creativity, Storytelling, Technical Skills, Videography",Openness,Artistic
+Filmmaking,Activity,,,"Creativity, Storytelling, Technical Skills, Videography",Openness,Artistic
+Vlogging,Activity,,,"Creativity, Storytelling, Technical Skills, Videography",Openness,Realistic
+Car Modification,Activity,,,"Mechanical Skills, Patience, Problem Solving, Technical Knowledge",Openness,Realistic
+Car Restoration,Activity,,,"Mechanical Skills, Patience, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Motorcycle Riding,Activity,,,"Balance, Coordination, Focus, Risk Management",Openness,Realistic
+Go-Karting,Activity,,,"Focus, Hand-Eye Coordination, Reflexes, Strategy",Openness,Artistic
+Sim Racing,Activity,,,"Focus, Hand-Eye Coordination, Reflexes, Strategy",Openness,Realistic
+Bicycle Building,Activity,,,"Mechanical Skills, Patience, Problem Solving, Technical Knowledge",Conscientiousness,Realistic
+Volunteering,Activity,,,"Communication, Community Service, Compassion, Empathy",Extraversion,Social
+Mentoring,Activity,,,"Communication, Empathy, Knowledge Sharing, Leadership",Extraversion,Social
+Language Exchange,Activity,,,"Communication, Cultural Awareness, Language Skills, Persistence",Openness,Social
+Social Dancing,Activity,,,"Coordination, Partnership, Rhythm, Social Skills",Extraversion,Social
+Networking,Activity,,,"Communication, Professional Skills, Relationship Building, Social Skills",Extraversion,Social
+Cultural Associations,Activity,,,"Community, Cultural Awareness, Organization, Social Skills",Openness,Social
+Chinese Opera,Activity,,,"Artistic Expression, Cultural Knowledge, Preservation, Tradition",Openness,Realistic
+Traditional Crafts,Activity,,,"Artistic Expression, Cultural Knowledge, Preservation, Tradition",Openness,Artistic
+Bonsai,Activity,,,"Attention to Detail, Nurturing, Patience, Plant Care",Openness,Investigative
+Ikebana,Activity,,,"Artistic Expression, Cultural Knowledge, Preservation, Tradition",Openness,Realistic
+Paper Cutting,Activity,,,"Attention to Detail, Patience, Precision, Spatial Reasoning",Openness,Realistic
+Heritage Tours,Activity,,,"Artistic Expression, Cultural Knowledge, Preservation, Tradition",Openness,Realistic
+Traditional Cooking,Activity,,,"Creativity, Culinary Skills, Precision, Time Management",Openness,Realistic
+Storytelling,Activity,,,"Artistic Expression, Cultural Knowledge, Preservation, Tradition",Openness,Realistic
+Interior Design,Activity,,,"Aesthetic Sense, Creativity, Design, Spatial Reasoning",Openness,Artistic
+Woodworking,Activity,,,"Craftsmanship, Manual Dexterity, Patience, Precision",Openness,Realistic
+Wood Carving,Activity,,,"Craftsmanship, Manual Dexterity, Patience, Precision",Openness,Realistic
+DIY Home Improvement,Activity,,,"Manual Skills, Planning, Problem Solving, Technical Skills",Openness,Realistic
+Home Organization,Activity,,,"Decluttering, Organization, Planning, Systems Thinking",Conscientiousness,Realistic
+Candle Making,Activity,,,"Chemistry Knowledge, Craftsmanship, Creativity, Precision",Openness,Realistic
+Soap Making,Activity,,,"Chemistry Knowledge, Craftsmanship, Creativity, Precision",Openness,Realistic
+Perfume Making,Activity,,,"Chemistry Knowledge, Craftsmanship, Creativity, Precision",Openness,Realistic
+Dog Care,Activity,,,"Animal Care, Knowledge, Patience, Responsibility",Agreeableness,Realistic
+Cat Care,Activity,,,"Animal Care, Knowledge, Patience, Responsibility",Agreeableness,Realistic
+Small Pet Care,Activity,,,"Animal Care, Knowledge, Patience, Responsibility",Agreeableness,Social
+Bird Keeping,Activity,,,"Animal Care, Knowledge, Patience, Responsibility",Openness,Realistic
+Fish Keeping,Activity,,,"Animal Care, Knowledge, Patience, Responsibility",Openness,Realistic
+Reptile Keeping,Activity,,,"Animal Care, Knowledge, Patience, Responsibility",Openness,Realistic
+Pet Photography,Activity,,,"Observation, Photography, Technical Skills, Visual Composition",Openness,Artistic
+Animal Rescue,Activity,,,"Animal Care, Compassion, Empathy, First Aid",Agreeableness,Social
+Travel Planning,Activity,,,"Adaptability, Cultural Awareness, Independence, Planning",Openness,Realistic
+Travel Blogging,Activity,,,"Communication, Creativity, Expression, Writing",Openness,Artistic
+Backpacking,Activity,,,"Adaptability, Cultural Awareness, Independence, Planning",Openness,Realistic
+Solo Travel,Activity,,,"Adaptability, Cultural Awareness, Independence, Planning",Openness,Realistic
+Heritage Walks,Activity,,,"Artistic Expression, Cultural Knowledge, Preservation, Tradition",Openness,Realistic
+Food Tours,Activity,,,"Cultural Appreciation, Curiosity, Knowledge, Observation",Openness,Realistic
+Neighborhood Exploration,Activity,,,"Adventure, Navigation, Outdoor Skills, Physical Fitness",Openness,Realistic
+Staycations,Activity,,,"Enjoyment, Local Knowledge, Planning, Relaxation",Openness,Realistic
+Movie Watching,Activity,,,"Analysis, Appreciation, Cultural Knowledge, Relaxation",Openness,Realistic
+TV Series Watching,Activity,,,"Analysis, Appreciation, Cultural Knowledge, Relaxation",Openness,Realistic
+Anime,Activity,,,"Analysis, Appreciation, Cultural Knowledge, Relaxation",Openness,Realistic
+Manga,Activity,,,"Analysis, Appreciation, Cultural Knowledge, Relaxation",Openness,Realistic
+Podcasts,Activity,,,"Critical Thinking, Knowledge Acquisition, Listening",Openness,Realistic
+Live Music,Activity,,,"Appreciation, Confidence, Entertainment, Social Skills",Openness,Artistic
+Karaoke,Activity,,,"Appreciation, Confidence, Entertainment, Social Skills",Extraversion,Realistic
+Comedy Shows,Activity,,,"Confidence, Humor, Public Speaking, Timing",Extraversion,Realistic
+Trivia Nights,Activity,,,"General Knowledge, Memory, Quick Thinking, Recall",Extraversion,Investigative
+Bar Games,Activity,,,"Competition, Entertainment, General Knowledge, Social Skills",Extraversion,Realistic
+Arcade Gaming,Activity,,,"Competition, Entertainment, General Knowledge, Social Skills",Openness,Realistic
+Shopping,Activity,,,"Budget Management, Decision Making, Evaluation, Style",Openness,Realistic
+Museum Visits,Activity,,,"Cultural Appreciation, Knowledge, Learning, Observation",Openness,Realistic
+Skill Toys,Activity,,,"Coordination, Dexterity, Performance, Practice",Openness,Realistic
+Card Flourishing,Activity,,,"Coordination, Dexterity, Performance, Practice",Openness,Realistic
+Pen Spinning,Activity,,,"Coordination, Endurance, Physical Fitness, Rhythm",Openness,Realistic
+Lockpicking,Activity,,,"Dexterity, Mechanical Understanding, Patience, Problem Solving",Openness,Realistic
+Cubing,Activity,,,"Memory, Pattern Recognition, Problem Solving, Speed",Conscientiousness,Realistic
+Magic Tricks,Activity,,,"Dexterity, Entertainment, Performance, Practice",Openness,Realistic
+Spotting,Activity,,,"Identification, Knowledge, Observation, Patience",Openness,Realistic
+Diorama Building,Activity,,,"Attention to Detail, Craftsmanship, Creativity, Patience",Conscientiousness,Realistic
+Historical Reenactment,Activity,,,"Acting, Costuming, Historical Knowledge, Improvisation",Openness,Realistic
+LARP,Activity,,,"Acting, Costuming, Historical Knowledge, Improvisation",Openness,Realistic
+Survival Skills,Activity,,,"Knowledge, Outdoor Skills, Problem Solving, Resourcefulness",Openness,Realistic
+Knot Tying,Activity,,,"Manual Dexterity, Memory, Practical Skills, Precision",Openness,Realistic
+Carving,Activity,,,"Artistic Expression, Craftsmanship, Patience, Precision",Openness,Realistic
+Face Painting,Activity,,,"Artistic Expression, Creativity, Observation, Visual Arts",Openness,Artistic
