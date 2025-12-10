@@ -25,14 +25,14 @@ interface RecommendationResponse {
 }
 
 export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Grow');
   const [searchQuery, setSearchQuery] = useState('');
   const [userStage] = useState<'Secondary' | 'Post-Secondary'>('Post-Secondary');
   const [isLoading, setIsLoading] = useState(false);
   const [recommendations, setRecommendations] = useState<any[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
 
-  const filters = ['All', 'Courses', 'Events'];
+  const filters = ['Grow', 'Connect'];
   const defaultCommunities = [
     {
       name: 'Tech Creatives',
@@ -121,9 +121,8 @@ export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
 
   // Filter based on Course/Event selection
   const filteredItems = displayItems.filter(item => {
-    if (activeFilter === 'All') return true;
-    if (activeFilter === 'Courses') return item.tags.includes('Upskilling');
-    if (activeFilter === 'Events') return item.tags.includes('Holistic');
+    if (activeFilter === 'Grow') return item.tags.includes('Upskilling');
+    if (activeFilter === 'Connect') return item.tags.includes('Holistic');
     return true;
   });
 
@@ -131,82 +130,69 @@ export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
   const listItems = filteredItems.filter(c => c !== featuredCommunity);
 
   return (
-    <div className="min-h-screen px-6 pt-12 pb-8">
+    <div className="min-h-screen px-6 pt-6 pb-8">
+      {/* Toggle Tabs (Grow / Connect) */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <h1 className="mb-2" style={{ color: '#4A5568' }}>
-          Discover
-        </h1>
-        <p style={{ color: '#9CA3AF', fontSize: '14px' }}>
-          Find activities matching your personality
-        </p>
-      </motion.div>
-
-      {/* Search & Filter Bar */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}
-        className="mt-6 mb-4 space-y-3"
+        className="mt-6 mb-3 flex justify-center"
       >
         <div
-          className="flex items-center gap-3 px-4 py-3 rounded-2xl"
-          style={{
-            backgroundColor: '#FFFEF9',
-            boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.04)'
-          }}
+          className="flex bg-[#E2DED5] p-1.5 rounded-full w-full max-w-[380px] relative shadow-inner"
         >
-          <Search size={20} style={{ color: '#9CA3AF' }} />
-          <input
-            type="text"
-            placeholder="Describe yourself (e.g., 'I love coding')..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-            className="flex-1 bg-transparent outline-none"
-            style={{ color: '#4A5568' }}
-          />
-          {isLoading ? (
-            <Loader2 className="animate-spin" size={20} color="#7EB8B3" />
-          ) : (
+          {filters.map((filter) => (
             <button
-              className="px-4 py-2 rounded-full text-sm font-medium"
-              style={{ backgroundColor: '#7EB8B3', color: '#FFFEF9' }}
-              onClick={handleSearch}
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className="flex-1 py-4 rounded-full text-lg font-bold transition-all duration-300 relative z-10"
+              style={{
+                backgroundColor: activeFilter === filter ? '#FFFFFF' : 'transparent',
+                color: activeFilter === filter ? '#D4A574' : '#9CA3AF',
+                boxShadow: activeFilter === filter
+                  ? '0 2px 4px rgba(0,0,0,0.06)'
+                  : 'none'
+              }}
             >
-              Search
+              {filter}
             </button>
-          )}
+          ))}
         </div>
       </motion.div>
 
-      {/* Filter Chips */}
+      {/* Search Bar */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="flex gap-2 mb-6 overflow-x-auto pb-2"
+        className="mb-8"
       >
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className="px-4 py-2 rounded-full whitespace-nowrap transition-all duration-300"
-            style={{
-              backgroundColor: activeFilter === filter ? '#7EB8B3' : '#FFFEF9',
-              color: activeFilter === filter ? '#FFFEF9' : '#4A5568',
-              boxShadow: activeFilter === filter
-                ? '0 4px 12px rgba(126, 184, 179, 0.3)'
-                : '0 2px 8px rgba(0,0,0,0.04)',
-              fontSize: '14px'
-            }}
-          >
-            {filter}
-          </button>
-        ))}
+        <div
+          className="flex items-center gap-4 px-6 py-4 rounded-2xl"
+          style={{
+            backgroundColor: '#FFFFFF',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+          }}
+        >
+          <Search size={24} style={{ color: '#D4A574' }} />
+          <input
+            type="text"
+            placeholder="Search communities..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+            className="flex-1 bg-transparent outline-none text-lg"
+            style={{ color: '#4A5568' }}
+          />
+          {isLoading && (
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            >
+              <Loader2 size={24} color="#7EB8B3" />
+            </motion.div>
+          )}
+        </div>
       </motion.div>
 
       {/* Featured Community */}
