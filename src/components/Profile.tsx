@@ -145,6 +145,9 @@ export function Profile({
                     style={{ backgroundColor: personalityType.color }}
                   />
                 </div>
+                <span className="text-xs font-medium" style={{ color: personalityType.color, minWidth: '35px', textAlign: 'right' }}>
+                  {personalityType.value}%
+                </span>
               </div>
             </div>
 
@@ -166,6 +169,9 @@ export function Profile({
                     style={{ backgroundColor: careerInclination.color }}
                   />
                 </div>
+                <span className="text-xs font-medium" style={{ color: careerInclination.color, minWidth: '35px', textAlign: 'right' }}>
+                  {careerInclination.value}%
+                </span>
               </div>
             </div>
 
@@ -384,26 +390,44 @@ export function Profile({
           }}
         >
           <h3 className="mb-4" style={{ color: '#4A5568', fontSize: '16px', fontWeight: '600' }}>
-            Top Skills
+            Your Top Skills
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {topSkills.map((skillCount, index) => (
-              <motion.div
-                key={skillCount.skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                className="px-3 py-2 rounded-full"
-                style={{
-                  backgroundColor: '#7EB8B3',
-                  color: '#FFFEF9'
-                }}
-              >
-                <span className="text-sm font-medium">
-                  {skillCount.skill} {skillCount.count > 1 ? `${skillCount.count}x` : ''}
-                </span>
-              </motion.div>
-            ))}
+          <div className="space-y-3">
+            {topSkills.map((skillCount, index) => {
+              // Calculate max count for relative bar width
+              const maxCount = Math.max(...topSkills.map(s => s.count));
+              const percentage = (skillCount.count / maxCount) * 100;
+
+              return (
+                <motion.div
+                  key={skillCount.skill}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm font-medium" style={{ color: '#4A5568' }}>
+                      {skillCount.skill}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-xs" style={{ color: '#9CA3AF' }}>↗</span>
+                      <span className="text-xs font-medium" style={{ color: '#4A5568' }}>
+                        {skillCount.count}x
+                      </span>
+                    </div>
+                  </div>
+                  <div className="w-full h-2 rounded-full overflow-hidden" style={{ backgroundColor: '#E5E7EB' }}>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${percentage}%` }}
+                      transition={{ duration: 0.6, delay: 0.7 + index * 0.05 }}
+                      className="h-full rounded-full"
+                      style={{ backgroundColor: '#7EB8B3' }}
+                    />
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       )}
