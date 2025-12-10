@@ -141,6 +141,10 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
     return dateA.getTime() - dateB.getTime();
   });
 
+  const isBooked = (eventId: string) => {
+    return bookings.some(b => b.event_id === eventId);
+  };
+
   /* 
    * Booking Handler
    * Sends booking request to backend with event_date
@@ -276,7 +280,19 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
       {/* Today's Plan */}
       <div className="mb-8">
         <div className="px-6 mb-3">
-          <h2 className="text-base font-bold text-gray-800">Today's Plan</h2>
+          <h2 className="text-base font-bold text-gray-800">
+            {(() => {
+              if (!selectedDate) return "Today's Plan";
+              const today = new Date();
+              const isToday =
+                selectedDate.getDate() === today.getDate() &&
+                selectedDate.getMonth() === today.getMonth() &&
+                selectedDate.getFullYear() === today.getFullYear();
+
+              if (isToday) return "Today's Plan";
+              return `${selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}'s Plan`;
+            })()}
+          </h2>
         </div>
         <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
           {loading ? (
@@ -338,10 +354,9 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
               return (
                 <motion.div
                   key={`other-${i}`}
-                  className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0 cursor-pointer"
+                  className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
                   style={{ backgroundColor: '#FFFFFF' }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => handleBooking(item)}
+                  whileTap={{ scale: 1 }}
                 >
                   <div>
                     <h3 className="text-sm font-bold text-gray-700 mb-1">{item.title}</h3>
@@ -352,10 +367,20 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
                       <span className="text-xs text-gray-400">{item.participants}</span>
 
                       <div
-                        className="w-8 h-8 rounded-full flex items-center justify-center hover:size-16 transition-all duration-300"
+                        className="w-8 h-8 rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
                         style={{ backgroundColor: item.color }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (!isBooked(item.id)) {
+                            handleBooking(item);
+                          }
+                        }}
                       >
-                        <Heart size={14} className="text-gray-400" />
+                        <Heart
+                          size={14}
+                          className={isBooked(item.id) ? "text-[#c1934d]" : "text-gray-400"}
+                          fill={isBooked(item.id) ? "currentColor" : "none"}
+                        />
                       </div>
                     </div>
                   </div>
