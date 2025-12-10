@@ -212,16 +212,16 @@ export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
               boxShadow: '0 8px 24px rgba(0,0,0,0.08)'
             }}
           >
-            <div className="flex justify-between items-start">
-              <h3 className="text-xl font-bold font-serif pr-24" style={{ color: '#FFFEF9' }}>
+            <div className="flex justify-between items-start gap-4">
+              <h3 className="text-xl font-bold font-serif leading-tight" style={{ color: '#FFFEF9' }}>
                 {featuredCommunity.name}
               </h3>
               <div
-                className="absolute top-6 right-6 px-3 py-1 rounded-full flex items-center gap-1"
-                style={{ backgroundColor: 'rgba(255,255,255,0.3)', color: '#FFFEF9' }}
+                className="flex-shrink-0 px-3 py-1 rounded-full flex items-center gap-1"
+                style={{ backgroundColor: 'rgba(255,255,255,0.25)', color: '#FFFEF9' }}
               >
                 <Sparkles size={14} />
-                <span className="text-xs font-medium">Top Match</span>
+                <span className="text-xs font-bold">Top Match</span>
               </div>
             </div>
 
