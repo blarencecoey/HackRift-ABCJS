@@ -209,6 +209,21 @@ def get_user_bookings(user_id: int):
 
 if __name__ == "__main__":
     import uvicorn
+    import sys
+
+    # Auto-initialize DB if not exists
+    if not os.path.exists(DB_NAME):
+        print(f"[STARTUP] Database {DB_NAME} not found. Initializing...")
+        try:
+            from user_auth.init_user_db import init_db
+            init_db()
+        except ImportError:
+            # Fallback if running directly from api folder
+            from init_user_db import init_db
+            init_db()
+        print("[STARTUP] Database initialized successfully.")
+
     print("Starting User API Server...")
-    print("Documentation available at http://localhost:8001/docs")
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    port = int(os.getenv("PORT", 8001))
+    print(f"Listening on 0.0.0.0:{port}")
+    uvicorn.run(app, host="0.0.0.0", port=port)

@@ -16,7 +16,7 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
     const [password, setPassword] = useState('');
     const [educationLevel, setEducationLevel] = useState<'Secondary' | 'Post-Secondary'>('Post-Secondary');
 
-    const API_URL = 'http://localhost:8001';
+    const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -125,8 +125,8 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                                         type="button"
                                         onClick={() => setEducationLevel('Secondary')}
                                         className={`py-3 px-2 rounded-2xl text-sm transition-all ${educationLevel === 'Secondary'
-                                                ? 'bg-[#7EB8B3] text-white shadow-md'
-                                                : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
+                                            ? 'bg-[#7EB8B3] text-white shadow-md'
+                                            : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
                                             }`}
                                     >
                                         Secondary
@@ -135,8 +135,8 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                                         type="button"
                                         onClick={() => setEducationLevel('Post-Secondary')}
                                         className={`py-3 px-2 rounded-2xl text-sm transition-all ${educationLevel === 'Post-Secondary'
-                                                ? 'bg-[#7EB8B3] text-white shadow-md'
-                                                : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
+                                            ? 'bg-[#7EB8B3] text-white shadow-md'
+                                            : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
                                             }`}
                                     >
                                         Post-Secondary

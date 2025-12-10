@@ -1,2 +1,4 @@
 node_modules
 package-lock.json
+/api/local_vector_db
+/api/__pycache__

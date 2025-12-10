@@ -39,15 +39,11 @@ async def lifespan(app: FastAPI):
     """
     Manages application lifecycle.
     Loads ChromaDB client and embedding model once at startup.
+    Checks and auto-populates data if database is empty.
     """
     global chroma_client, embedding_model, upskilling_collection, holistic_collection
     
     print("[STARTUP] Initializing YUNO Recommendation System...")
-    
-    # Check if database exists
-    if not os.path.exists(CHROMA_DB_PATH):
-        print(f"[WARNING] Database not found at {CHROMA_DB_PATH}")
-        print("[WARNING] Please run upload.py first to initialize the database.")
     
     # Load embedding model
     print("[STARTUP] Loading embedding model...")
@@ -58,15 +54,43 @@ async def lifespan(app: FastAPI):
     print("[STARTUP] Connecting to ChromaDB...")
     chroma_client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
     
-    # Get collections
-    try:
-        upskilling_collection = chroma_client.get_collection("upskilling")
-        holistic_collection = chroma_client.get_collection("holistic")
-        print(f"[STARTUP] Upskilling collection: {upskilling_collection.count()} items")
-        print(f"[STARTUP] Holistic collection: {holistic_collection.count()} items")
-    except Exception as e:
-        print(f"[ERROR] Could not load collections: {e}")
-        print("[ERROR] Please run upload.py first to initialize the database.")
+    # Get or Create Collections
+    upskilling_collection = chroma_client.get_or_create_collection("upskilling")
+    holistic_collection = chroma_client.get_or_create_collection("holistic")
+    
+    # Auto-Populate if empty
+    if upskilling_collection.count() == 0:
+        print("[STARTUP] Database is empty. Generating synthetic data...")
+        try:
+            import init_vector_db
+            
+            # Upskilling
+            print("[STARTUP] Generating Upskilling Courses...")
+            upskilling_df = init_vector_db.generate_upskilling_data(n_samples=100)
+            
+            upskilling_collection.add(
+                ids=upskilling_df["id"].tolist(),
+                documents=upskilling_df["embedding_text"].tolist(),
+                metadatas=upskilling_df.drop(columns=["id", "embedding_text"]).to_dict("records")
+            )
+            print(f"[STARTUP] Added {len(upskilling_df)} courses.")
+
+            # Holistic
+            print("[STARTUP] Generating Holistic Events...")
+            holistic_df = init_vector_db.generate_holistic_data(n_samples=100)
+            
+            holistic_collection.add(
+                ids=holistic_df["id"].tolist(),
+                documents=holistic_df["embedding_text"].tolist(),
+                metadatas=holistic_df.drop(columns=["id", "embedding_text"]).to_dict("records")
+            )
+            print(f"[STARTUP] Added {len(holistic_df)} events.")
+            
+        except Exception as e:
+            print(f"[ERROR] Failed to auto-populate database: {e}")
+
+    print(f"[STARTUP] Upskilling collection: {upskilling_collection.count()} items")
+    print(f"[STARTUP] Holistic collection: {holistic_collection.count()} items")
     
     print("[STARTUP] YUNO is ready to serve recommendations!")
     print("=" * 50)
