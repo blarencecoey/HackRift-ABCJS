@@ -135,10 +135,28 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
       return;
     }
 
-    // Construct event date (e.g., set to 2pm on the selected date, or tomorrow if none)
-    // This ensures the booking appears on a specific date in the calendar
-    const targetDate = selectedDate ? new Date(selectedDate) : new Date();
-    targetDate.setHours(14, 0, 0, 0);
+    // Keyword mapping
+    const categorizeEvent = (title: string): string => {
+      const lowerTitle = title.toLowerCase();
+      if (lowerTitle.includes('yoga') || lowerTitle.includes('sports') || lowerTitle.includes('run')) return 'Sports';
+      if (lowerTitle.includes('art') || lowerTitle.includes('therapy') || lowerTitle.includes('workshop')) return 'Workshop';
+      if (lowerTitle.includes('tech') || lowerTitle.includes('code') || lowerTitle.includes('hack')) return 'Tech Meetup';
+      if (lowerTitle.includes('music') || lowerTitle.includes('jam') || lowerTitle.includes('social')) return 'Social';
+      return 'Social'; // Default
+    };
+
+    const category = categorizeEvent(item.title);
+
+    // Construct event date
+    // If the item already has an event_date, use it.
+    // Otherwise, default to 2pm on selected date or today.
+    let targetDate: Date;
+    if (item.event_date) {
+      targetDate = new Date(item.event_date);
+    } else {
+      targetDate = selectedDate ? new Date(selectedDate) : new Date();
+      targetDate.setHours(14, 0, 0, 0);
+    }
 
     // Format as YYYY-MM-DD HH:mm:ss
     const pad = (n: number) => n.toString().padStart(2, '0');
@@ -147,7 +165,7 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
     const payload = {
       user_id: userId,
       event_id: item.id || 'EVT_TEST',
-      event_type: item.type || 'event',
+      event_type: category, // Use the categorized type
       event_date: eventDateStr
     };
 
@@ -281,36 +299,54 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
           <h2 className="text-base font-bold text-gray-800">Others you might enjoy</h2>
         </div>
         <div className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide">
-          {[
-            { id: 'ART_001', type: 'event', title: 'Art Therapy', participants: '12 joined', color: '#F3E5F5' },
-            { id: 'YOGA_001', type: 'event', title: 'Yoga Basics', participants: '8 joined', color: '#E0F2F1' },
-            { id: 'JAM_001', type: 'event', title: 'Music Jam', participants: '24 joined', color: '#FFF3E0' }
-          ].map((item, i) => (
-            <motion.div
-              key={`other-${i}`}
-              className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0"
-              style={{ backgroundColor: '#FFFFFF' }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => handleBooking(item)}
-              className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0 cursor-pointer"
-            >
-              <div>
-                <h3 className="text-sm font-bold text-gray-700 mb-1">{item.title}</h3>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-gray-400">{item.participants}</span>
+          {(() => {
+            // Generate items with random dates just once (or rely on React to re-render)
+            // For stability in a real app useMemo, but here inline mapping is okay if we accept randomness on re-render.
+            // To prevent jumping dates, let's use a stable seed or just simple generation
+            const suggestions = [
+              { id: 'ART_001', type: 'event', title: 'Art Therapy', participants: '12 joined', color: '#F3E5F5' },
+              { id: 'YOGA_001', type: 'event', title: 'Yoga Basics', participants: '8 joined', color: '#E0F2F1' },
+              { id: 'JAM_001', type: 'event', title: 'Music Jam', participants: '24 joined', color: '#FFF3E0' }
+            ].map((item, i) => {
+              const date = new Date();
+              date.setDate(date.getDate() + (i + 1)); // Tomorrow, day after, etc.
+              date.setHours(10 + (i * 2), 0, 0, 0); // Staggered times
+              return { ...item, event_date: date };
+            });
 
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center hover:size-16 transition-all duration-300"
-                    style={{ backgroundColor: item.color }}
-                  >
-                    <Heart size={14} className="text-gray-400" />
+            return suggestions.map((item, i) => {
+              // Format for display
+              const dayStr = item.event_date.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric' });
+              const timeStr = item.event_date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+              return (
+                <motion.div
+                  key={`other-${i}`}
+                  className="min-w-[140px] h-[160px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between p-5 flex-shrink-0 cursor-pointer"
+                  style={{ backgroundColor: '#FFFFFF' }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => handleBooking(item)}
+                >
+                  <div>
+                    <h3 className="text-sm font-bold text-gray-700 mb-1">{item.title}</h3>
+                    <span className="text-[10px] text-gray-400 font-semibold block mb-1">
+                      {dayStr} • {timeStr}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-gray-400">{item.participants}</span>
+
+                      <div
+                        className="w-8 h-8 rounded-full flex items-center justify-center hover:size-16 transition-all duration-300"
+                        style={{ backgroundColor: item.color }}
+                      >
+                        <Heart size={14} className="text-gray-400" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-
-              </div>
-            </motion.div>
-          ))}
+                </motion.div>
+              );
+            });
+          })()}
         </div>
       </div>
 

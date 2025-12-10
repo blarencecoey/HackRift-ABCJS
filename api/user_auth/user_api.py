@@ -32,7 +32,7 @@ class BookingResponse(BaseModel):
     user_id: int
     event_id: str
     event_type: str
-    event_date: str
+    event_date: Optional[str] = None
     status: str
     booking_date: str
 
@@ -183,7 +183,8 @@ def create_booking(booking: BookingRequest):
             event_id=row["event_id"],
             event_type=row["event_type"],
             status=row["status"],
-            booking_date=str(row["booking_date"])
+            booking_date=str(row["booking_date"]),
+            event_date=str(row["event_date"]) if row["event_date"] else None
         )
     except Exception as e:
         conn.rollback()
