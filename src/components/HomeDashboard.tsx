@@ -1,8 +1,9 @@
 import { motion } from 'motion/react';
-import { ChevronLeft, ChevronRight, Home, Search, Heart, User } from 'lucide-react'; // Icons for bottom nav later
+import { ChevronLeft, ChevronRight, Home, Search, Heart, User, Award } from 'lucide-react'; // Icons for bottom nav later
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css'; // Ensure styles are imported
 import { useState } from 'react';
+import { SkillCount } from '../hooks/useUserProfile';
 
 // Custom styles for DayPicker to match the design
 const calendarStyles = `
@@ -40,9 +41,10 @@ const calendarStyles = `
 interface HomeDashboardProps {
   userName: string;
   onNavigate: (screen: string) => void;
+  topSkills: SkillCount[];
 }
 
-export function HomeDashboard({ userName, onNavigate }: HomeDashboardProps) {
+export function HomeDashboard({ userName, onNavigate, topSkills }: HomeDashboardProps) {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date(2021, 8, 19)); // Sept 19, 2021 from mockup
 
   return (
@@ -156,6 +158,41 @@ export function HomeDashboard({ userName, onNavigate }: HomeDashboardProps) {
           ))}
         </div>
       </div>
+
+      {/* Top Skills Section */}
+      {topSkills.length > 0 && (
+        <div className="mb-4">
+          <div className="px-6 mb-3">
+            <h2 className="text-base font-bold text-gray-800">Your Top Skills</h2>
+          </div>
+          <div className="flex gap-3 overflow-x-auto px-6 pb-4 scrollbar-hide">
+            {topSkills.map((skillCount, i) => (
+              <motion.div
+                key={`skill-${i}`}
+                className="min-w-[140px] h-[100px] rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-center items-center p-4 flex-shrink-0"
+                style={{ backgroundColor: '#FFFEF9' }}
+                whileTap={{ scale: 0.98 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.1 }}
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center mb-2"
+                  style={{ backgroundColor: '#7EB8B320' }}
+                >
+                  <Award size={20} style={{ color: '#7EB8B3' }} />
+                </div>
+                <h3 className="text-sm font-bold text-gray-700 text-center leading-tight mb-1">
+                  {skillCount.skill}
+                </h3>
+                <span className="text-xs text-gray-400">
+                  {skillCount.count > 1 ? `${skillCount.count}x` : '1x'}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
