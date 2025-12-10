@@ -68,6 +68,7 @@ interface Booking {
   event_type: string;
   status: string;
   booking_date: string; // "YYYY-MM-DD HH:mm:ss"
+  event_date?: string; // Optional because legacy data might miss it
 }
 
 export function HomeDashboard({ userName, userId, onNavigate, topSkills, selectedDate, setSelectedDate }: HomeDashboardProps) {
@@ -109,19 +110,24 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
     fetchBookings();
   }, [userId]); // Re-fetch if userId changes
 
-  const bookedDates = bookings.map(booking => parseBookingDate(booking.booking_date));
+  const bookedDates = bookings.map(booking => parseBookingDate(booking.event_date || booking.booking_date));
 
   const todaysBookings = bookings.filter(booking => {
     if (!selectedDate) return false;
-    const bookingDay = parseBookingDate(booking.booking_date);
+    // Prefer event_date if available, otherwise fallback to booking_date
+    const timeToUse = booking.event_date || booking.booking_date;
+    const bookingDay = parseBookingDate(timeToUse);
+
     return (
       bookingDay.getDate() === selectedDate.getDate() &&
       bookingDay.getMonth() === selectedDate.getMonth() &&
       bookingDay.getFullYear() === selectedDate.getFullYear()
     );
   }).sort((a, b) => {
-    const dateA = parseBookingDate(a.booking_date);
-    const dateB = parseBookingDate(b.booking_date);
+    const timeA = a.event_date || a.booking_date;
+    const timeB = b.event_date || b.booking_date;
+    const dateA = parseBookingDate(timeA);
+    const dateB = parseBookingDate(timeB);
     return dateA.getTime() - dateB.getTime();
   });
 
@@ -282,7 +288,7 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
                   </div>
                 </div>
                 <div>
-                  <span className="text-xs text-gray-400 font-medium block mb-1">{formatTime(booking.booking_date)}</span>
+                  <span className="text-xs text-gray-400 font-medium block mb-1">{formatTime(booking.event_date || booking.booking_date)}</span>
                   <h3 className="text-sm font-bold text-gray-700 leading-tight">{booking.event_type}</h3>
                 </div>
               </motion.div>
