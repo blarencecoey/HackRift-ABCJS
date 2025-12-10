@@ -83,35 +83,36 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                 >
                     <form onSubmit={handleSubmit} className="space-y-4">
                         {/* Username */}
-                        <div className="space-y-1">
-                            <label className="text-sm font-medium text-[#4A5568] ml-1">Username</label>
-                            <div className="relative">
-                                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                <input
-                                    type="text"
-                                    value={username}
-                                    onChange={(e) => setUsername(e.target.value)}
-                                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
-                                    placeholder="Enter your username"
-                                    required
-                                />
-                            </div>
+                        {/* Username */}
+                        <div className="space-y-2">
+                            <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
+                                <User size={18} />
+                                <span>Username</span>
+                            </label>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                className="w-full px-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                placeholder="Enter your username"
+                                required
+                            />
                         </div>
 
                         {/* Password */}
-                        <div className="space-y-1">
-                            <label className="text-sm font-medium text-[#4A5568] ml-1">Password</label>
-                            <div className="relative">
-                                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
-                                    placeholder="Enter your password"
-                                    required
-                                />
-                            </div>
+                        <div className="space-y-2">
+                            <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
+                                <Lock size={18} />
+                                <span>Password</span>
+                            </label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                className="w-full px-4 py-3 rounded-2xl bg-[#F5F0EB] text-[#4A5568] focus:outline-none focus:ring-2 focus:ring-[#7EB8B3]/50 transition-all placeholder-gray-400"
+                                placeholder="Enter your password"
+                                required
+                            />
                         </div>
 
                         {/* Registration Extra Fields */}
@@ -119,16 +120,19 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                             <motion.div
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: 'auto' }}
-                                className="space-y-1 overflow-hidden"
+                                className="space-y-2 overflow-hidden"
                             >
-                                <label className="text-sm font-medium text-[#4A5568] ml-1">Education Level</label>
-                                <div className="grid grid-cols-2 gap-2 mt-1">
+                                <label className="flex items-center gap-2 text-sm font-medium text-[#4A5568] ml-1">
+                                    <GraduationCap size={18} />
+                                    <span>Education Level</span>
+                                </label>
+                                <div className="grid grid-cols-2 gap-2 p-1 bg-[#F5F0EB] rounded-2xl">
                                     <button
                                         type="button"
                                         onClick={() => setEducationLevel('Secondary')}
-                                        className={`py-3 px-2 rounded-2xl text-sm transition-all ${educationLevel === 'Secondary'
-                                            ? 'bg-[#7EB8B3] text-white shadow-md'
-                                            : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
+                                        className={`py-2 px-2 rounded-xl text-sm font-medium transition-all duration-200 ${educationLevel === 'Secondary'
+                                            ? 'bg-white text-[#4A5568] shadow-sm'
+                                            : 'text-gray-400 hover:text-gray-600'
                                             }`}
                                     >
                                         Secondary
@@ -136,9 +140,9 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                                     <button
                                         type="button"
                                         onClick={() => setEducationLevel('Post-Secondary')}
-                                        className={`py-3 px-2 rounded-2xl text-sm transition-all ${educationLevel === 'Post-Secondary'
-                                            ? 'bg-[#7EB8B3] text-white shadow-md'
-                                            : 'bg-[#F5F0EB] text-[#9CA3AF] hover:bg-gray-100'
+                                        className={`py-2 px-2 rounded-xl text-sm font-medium transition-all duration-200 ${educationLevel === 'Post-Secondary'
+                                            ? 'bg-white text-[#4A5568] shadow-sm'
+                                            : 'text-gray-400 hover:text-gray-600'
                                             }`}
                                     >
                                         Post-Secondary
@@ -162,7 +166,10 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full bg-[#7EB8B3] text-white py-4 rounded-2xl font-semibold shadow-lg shadow-[#7EB8B3]/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-4"
+                            className={`w-full text-white py-4 rounded-2xl font-semibold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-6 ${isLogin
+                                ? 'bg-[#7EB8B3] shadow-[#7EB8B3]/30'
+                                : 'bg-[#D4A574] shadow-[#D4A574]/30'
+                                }`}
                         >
                             {isLoading ? (
                                 <Loader2 className="animate-spin" size={20} />
