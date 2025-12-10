@@ -279,7 +279,7 @@ if __name__ == "__main__":
     import uvicorn
     import sys
 
-    # Auto-initialize DB if not exists
+    # Auto-initialize DB if db file not found
     if not os.path.exists(DB_NAME):
         print(f"[STARTUP] Database {DB_NAME} not found. Initializing...")
         try:

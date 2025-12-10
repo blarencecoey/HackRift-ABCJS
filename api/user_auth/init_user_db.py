@@ -4,8 +4,10 @@ import random
 import bcrypt
 from faker import Faker
 
+import os
+
 # Configuration
-DB_NAME = "users.db"
+DB_NAME = os.path.join(os.path.dirname(__file__), "users.db")
 NUM_USERS = 15
 DEFAULT_PASSWORD = "password123"
 
