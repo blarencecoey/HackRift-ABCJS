@@ -101,7 +101,8 @@ export function HomeDashboard({ userName, userId, onNavigate, topSkills, selecte
     }
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8001/user/${userId}/bookings`);
+      const API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8001';
+      const res = await fetch(`${API_URL}/user/${userId}/bookings`);
       if (res.ok) {
         const data = await res.json();
         console.log("HomeDashboard: Fetched bookings:", data);
