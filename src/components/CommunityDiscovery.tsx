@@ -61,7 +61,8 @@ export function CommunityDiscovery({ onNavigate }: CommunityDiscoveryProps) {
     setHasSearched(true);
 
     try {
-      const response = await fetch('http://localhost:8000/recommend', {
+      const API_URL = import.meta.env.VITE_REC_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_URL}/recommend`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

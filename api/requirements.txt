@@ -4,3 +4,6 @@ chromadb
 sentence-transformers
 pydantic
 bcrypt
+pandas
+numpy
+faker
