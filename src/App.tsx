@@ -131,6 +131,9 @@ export default function App() {
         return <CommunityDiscovery
           onNavigate={navigateTo}
           onSelectCommunity={(community) => setSelectedCommunity(community)}
+          oceanScores={userData.oceanScores}
+          riasecCode={userData.riasecCode}
+          userId={userData.userId || undefined}
         />;
       case 'community-detail':
         return <CommunityDetail
