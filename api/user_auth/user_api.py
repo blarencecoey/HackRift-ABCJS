@@ -165,6 +165,25 @@ def create_booking(booking: BookingRequest):
     cursor = conn.cursor()
     
     try:
+        # Check for duplicate booking
+        cursor.execute("""
+            SELECT * FROM bookings 
+            WHERE user_id = ? AND event_id = ? AND event_date = ?
+        """, (booking.user_id, booking.event_id, booking.event_date))
+        existing_booking = cursor.fetchone()
+        
+        if existing_booking:
+            conn.close()
+            return BookingResponse(
+                booking_id=existing_booking["booking_id"],
+                user_id=existing_booking["user_id"],
+                event_id=existing_booking["event_id"],
+                event_type=existing_booking["event_type"],
+                status=existing_booking["status"],
+                booking_date=str(existing_booking["booking_date"]),
+                event_date=str(existing_booking["event_date"]) if existing_booking["event_date"] else None
+            )
+
         cursor.execute("""
             INSERT INTO bookings (user_id, event_id, event_type, status, event_date)
             VALUES (?, ?, ?, 'confirmed', ?)
