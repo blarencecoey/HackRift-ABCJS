@@ -28,9 +28,12 @@ const NavItem = ({ icon: Icon, label, active, onClick }: { icon: any, label: str
   );
 };
 
+import { CommunityData } from './components/CommunityDiscovery';
+
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<string>('splash');
   const [userName, setUserName] = useState('Guest');
+  const [selectedCommunity, setSelectedCommunity] = useState<CommunityData | null>(null); // Lifted state for navigation
   const { completedActivities, addActivity, removeActivity, getTopSkills } = useUserProfile();
   const [userData, setUserData] = useState<{
     userId: number | null;
@@ -125,11 +128,15 @@ export default function App() {
       case 'results':
         return <ResultsProfile onNavigate={navigateTo} />;
       case 'discover':
-        return <CommunityDiscovery onNavigate={navigateTo} />;
+        return <CommunityDiscovery
+          onNavigate={navigateTo}
+          onSelectCommunity={(community) => setSelectedCommunity(community)}
+        />;
       case 'community-detail':
-        return <CommunityDetail onNavigate={navigateTo} />;
-      case 'community-detail':
-        return <CommunityDetail onNavigate={navigateTo} />;
+        return <CommunityDetail
+          onNavigate={navigateTo}
+          community={selectedCommunity}
+        />;
       case 'reflection':
         return <ReflectionPage onNavigate={navigateTo} />;
       case 'profile':
