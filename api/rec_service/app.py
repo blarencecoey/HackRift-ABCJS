@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 from contextlib import asynccontextmanager
 import chromadb
-from sentence_transformers import SentenceTransformer
+import google.generativeai as genai
 import os
 
 # =============================================================================
@@ -19,14 +19,15 @@ import os
 # =============================================================================
 
 CHROMA_DB_PATH = "./local_vector_db"
-EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+# Embedding Model Name (Gemini)
+EMBEDDING_MODEL = "models/text-embedding-004"
+
 
 # =============================================================================
 # GLOBAL STATE (Loaded once at startup)
 # =============================================================================
 
 chroma_client: chromadb.PersistentClient = None
-embedding_model: SentenceTransformer = None
 upskilling_collection = None
 holistic_collection = None
 
@@ -38,17 +39,21 @@ holistic_collection = None
 async def lifespan(app: FastAPI):
     """
     Manages application lifecycle.
-    Loads ChromaDB client and embedding model once at startup.
+    Configures Gemini API and loads ChromaDB client.
     Checks and auto-populates data if database is empty.
     """
-    global chroma_client, embedding_model, upskilling_collection, holistic_collection
+    global chroma_client, upskilling_collection, holistic_collection
     
-    print("[STARTUP] Initializing YUNO Recommendation System...")
+    print("[STARTUP] Initializing YUNO Recommendation System (Gemini Powered)...")
     
-    # Load embedding model
-    print("[STARTUP] Loading embedding model...")
-    embedding_model = SentenceTransformer(EMBEDDING_MODEL)
-    print("[STARTUP] Embedding model loaded!")
+    # Configure Gemini
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        print("[WARNING] GEMINI_API_KEY environment variable not set. Recommendations will fail!")
+    else:
+        genai.configure(api_key=api_key)
+        print("[STARTUP] Gemini API Configured.")
+
     
     # Connect to ChromaDB
     print("[STARTUP] Connecting to ChromaDB...")
@@ -60,7 +65,7 @@ async def lifespan(app: FastAPI):
     
     # Auto-Populate if empty
     if upskilling_collection.count() == 0:
-        print("[STARTUP] Database is empty. Generating synthetic data...")
+        print("[STARTUP] Database is empty. Generating synthetic data using Gemini...")
         try:
             import init_vector_db
             
@@ -71,6 +76,7 @@ async def lifespan(app: FastAPI):
             upskilling_collection.add(
                 ids=upskilling_df["id"].tolist(),
                 documents=upskilling_df["embedding_text"].tolist(),
+                embeddings=[init_vector_db.get_embedding(text) for text in upskilling_df["embedding_text"].tolist()],
                 metadatas=upskilling_df.drop(columns=["id", "embedding_text"]).to_dict("records")
             )
             print(f"[STARTUP] Added {len(upskilling_df)} courses.")
@@ -82,6 +88,7 @@ async def lifespan(app: FastAPI):
             holistic_collection.add(
                 ids=holistic_df["id"].tolist(),
                 documents=holistic_df["embedding_text"].tolist(),
+                embeddings=[init_vector_db.get_embedding(text) for text in holistic_df["embedding_text"].tolist()],
                 metadatas=holistic_df.drop(columns=["id", "embedding_text"]).to_dict("records")
             )
             print(f"[STARTUP] Added {len(holistic_df)} events.")
@@ -106,7 +113,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="YUNO Recommendation API",
-    description="Personality-based activity recommendations for Singapore students (ages 13-25)",
+    description="Personality-based activity recommendations for Singapore students (ages 13-25) using Gemini Embeddings",
     version="1.0.0",
     lifespan=lifespan
 )
@@ -289,7 +296,16 @@ async def get_recommendations(query: UserQuery):
         )
     
     # Generate embedding for user query
-    query_embedding = embedding_model.encode(query.user_query).tolist()
+    try:
+        embedding_result = genai.embed_content(
+            model=EMBEDDING_MODEL,
+            content=query.user_query,
+            task_type="retrieval_query"
+        )
+        query_embedding = embedding_result['embedding']
+    except Exception as e:
+        print(f"[ERROR] Gemini Embedding Failed: {e}")
+        raise HTTPException(status_code=500, detail="Failed to generate embedding for query")
     
     # Build audience filter
     audience_filter = build_audience_filter(query.user_stage)
