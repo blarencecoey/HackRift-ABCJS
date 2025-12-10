@@ -1,29 +1,32 @@
 version: '3.8'
 
 services:
-  # Python Backend Service
+  # Python Backend Service (Recommendation)
   backend:
     build: 
-      context: ./api
+      context: ./api/rec_service
     ports:
       - "8000:8000"
     volumes:
-      # Mount the api directory for hot reloading
-      - ./api:/app
+      # Mount the rec_service directory for hot reloading
+      - ./api/rec_service:/app
       # Ensure the local database is accessible and persisted
-      - ./api/local_vector_db:/app/local_vector_db
+      # Note: We mount to parent's local_vector_db so it's shared/persistent outside the service folder if needed
+      # but for now, let's keep it simple and assume init script works relative to app
+      - ./api/rec_service/local_vector_db:/app/local_vector_db
     environment:
       - PYTHONUNBUFFERED=1
 
   # User Auth API Service
   auth-backend:
     build:
-      context: ./api
+      context: ./api/user_auth
     ports:
       - "8001:8001"
     volumes:
-      - ./api:/app
-    command: uvicorn user_auth.user_api:app --host 0.0.0.0 --port 8001 --reload
+      - ./api/user_auth:/app
+    # Note: user_auth is now the root of this service, so user_api is at root
+    command: uvicorn user_api:app --host 0.0.0.0 --port 8001 --reload
     environment:
       - PYTHONUNBUFFERED=1
 

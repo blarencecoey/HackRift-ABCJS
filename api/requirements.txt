@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-chromadb
-sentence-transformers
-pydantic
-bcrypt
-pandas
-numpy
-faker
