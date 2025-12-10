@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+chromadb
+sentence-transformers
+# Data generation dependencies
+pandas
+numpy
+faker
+# Explicitly use CPU-only PyTorch to save massive space
+torch --index-url https://download.pytorch.org/whl/cpu

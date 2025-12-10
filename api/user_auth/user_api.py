@@ -215,12 +215,11 @@ if __name__ == "__main__":
     if not os.path.exists(DB_NAME):
         print(f"[STARTUP] Database {DB_NAME} not found. Initializing...")
         try:
-            from user_auth.init_user_db import init_db
-            init_db()
-        except ImportError:
-            # Fallback if running directly from api folder
             from init_user_db import init_db
             init_db()
+        except ImportError:
+            # Fallback path if needed, though structure is simpler now
+            print("[ERROR] Could not import init_db")
         print("[STARTUP] Database initialized successfully.")
 
     print("Starting User API Server...")
