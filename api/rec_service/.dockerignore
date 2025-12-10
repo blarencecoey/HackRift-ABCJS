@@ -1,0 +1,4 @@
+__pycache__
+local_vector_db
+*.pyc
+*.pyo
