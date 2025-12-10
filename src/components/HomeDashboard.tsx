@@ -36,13 +36,22 @@ const calendarStyles = `
   .rdp-nav_button {
     color: #888888;
   }
-  .rdp-day_booked {
-    background-color: #F0F0F0; /* Light grey for booked dates */
-    color: #555555;
-    border-radius: 50%;
+  .my-booked {
+    position: relative;
+    /* Remove previous background/border styles if any */
+    background-color: transparent;
+    color: inherit;
   }
-  .rdp-day_booked:not(.rdp-day_selected) {
-    border: 1px dashed #D69E2E; /* Gold border for booked but not selected */
+  .my-booked:not(.rdp-day_selected)::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #D69E2E; /* Gold/Yellow dot */
+    border-radius: 50%;
   }
   .my-today {
     background-color: #E2E8F0; /* Solid gray circle for today */
