@@ -2,7 +2,7 @@
 
 YUNO is a mobile-responsive web application designed to help users discover their potential through personality assessments, skill tracking, and community connections. It features a modern, clean UI and personalized recommendations for courses and events.
 
-![YUNO UI Demo](https://via.placeholder.com/800x400?text=YUNO+App+Preview)
+![YUNO UI Demo](https://devpost.com/software/project-yuno800x400?text=YUNO+App+Preview)
 
 ## 🚀 Key Features
 
