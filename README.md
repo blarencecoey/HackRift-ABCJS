@@ -2,10 +2,7 @@
 
 YUNO is a mobile-responsive web application designed to help users discover their potential through personality assessments, skill tracking, and community connections. It features a modern, clean UI and personalized recommendations for courses and events.
 
-<img width="480" height="270" alt="DecoPLanLLM" src="src/assets/YUNO.png" />
-
-[View YUNO Demo](https://devpost.com/software/project-yuno)
-
+[![YUNO](src/assets/YUNO.png)](https://devpost.com/software/project-yuno)
 ## 🚀 Key Features
 
 *   **Personality Assessment**: Interactive onboarding flow to determine OCEAN and RIASEC scores.
